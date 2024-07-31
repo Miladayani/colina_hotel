@@ -1,0 +1,49 @@
+{% extends '_base.html' %}
+
+{% block page_title %}
+    List Of Rooms
+{% endblock %}
+
+{% block content %}
+    <!-- ========================  Rooms ======================== -->
+    <section class="rooms rooms-widget rooms-inner">
+
+        <!-- === rooms header === -->
+        <div class="section-header">
+            <div class="container">
+                <h2 class="title">Rooms accommodation <a href="rooms-category.html" class="btn btn-sm btn-clean">View
+                    all</a></h2>
+                <p>Designed as a privileged almost private place where you'll feel right at home</p>
+            </div>
+        </div>
+        <!-- === rooms content === -->
+        <div class="container">
+            <div class="owl-rooms owl-theme">
+                {% for room in rooms %}
+                    <div class="item">
+                        <article>
+                            <div class="image">
+                                <img src="{{ room.image.url }}" alt="{{ room.name }}"/>
+                            </div>
+                            <div class="details">
+                                <div class="text">
+                                    <h3 class="title"><a href="{% url 'room_detail' room.pk %}">{{ room.name }}</a></h3>
+                                    <p>{{ room.description }}</p>
+                                </div>
+                                <div class="book">
+                                    <div>
+                                        <a href="{% url 'room_detail' room.pk %}" class="btn btn-main">Book now</a>
+                                    </div>
+                                    <div>
+                                        <span class="price h4">{{ room.price_per_night }}</span>
+                                        <span>per night</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                {% endfor %}
+            </div><!--/owl-rooms-->
+        </div> <!--/container-->
+    </section>
+{% endblock %}

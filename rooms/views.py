@@ -7,15 +7,15 @@ from .forms import CommentForm
 
 class RoomsListView(ListView):
     model = Room
-    queryset = Room.objects.filter(active=True)
-    template_name = 'rooms/rooms_list.html'
+    queryset = Room.objects.all()
+    template_name = 'rooms/room_list.html'
     context_object_name = 'rooms'
 
-
-class RoomsDetailView(DetailView):
-    model = Room
-    template_name = 'rooms/rooms_detail.html'
-    context_object_name = 'room'
+#
+# class RoomsDetailView(DetailView):
+#     model = Room
+#     template_name = 'rooms/room_detail.html'
+#     context_object_name = 'room'
 
 
 class CommentCreateView(CreateView):

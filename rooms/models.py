@@ -8,14 +8,11 @@ class Room(models.Model):
     description = models.TextField()
     price_per_night = models.PositiveIntegerField()
     num_beds = models.IntegerField()
-    image = models.ImageField(upload_to='media/images')
+    image = models.ImageField(upload_to='room/room_cover', null=True, blank=True)
     active = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
-
-    def get_absolute_url(self):
-        return reverse('rooms_detail', args={self.pk})
 
 
 class ActiveCommentManager(models.Manager):

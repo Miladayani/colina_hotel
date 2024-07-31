@@ -1,0 +1,41 @@
+{% extends '_base.html' %}
+
+{% block content %}
+<body>
+
+    <div class="page-loader"></div>
+
+    <div class="wrapper">
+        <!-- ========================  404 ======================== -->
+
+        <section class="not-found">
+            <div class="container">
+                <h1 class="title" data-title="404">404</h1>
+                <div class="h4 subtitle">Sorry! Page not found.</div>
+                <p>The requested URL was not found on this server. That’s all we know.</p>
+                <p>Click <a href="#">here</a> to get to the front page? </p>
+            </div>
+        </section>
+
+
+
+        <!-- ========================  Subscribe ======================== -->
+
+        <section class="subscribe">
+            <div class="container">
+                <div class="box">
+                    <h2 class="title">Subscribe</h2>
+                    <div class="text">
+                        <p>& receive free premium gifts</p>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" value="" placeholder="Subscribe" class="form-control" />
+                        <button class="btn btn-sm btn-main">Go</button>
+                    </div>
+                </div>
+            </div>
+        </section> 
+    </div> <!--/wrapper-->
+</body>
+
+{% endblock %}

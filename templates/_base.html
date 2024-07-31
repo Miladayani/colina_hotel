@@ -1,13 +1,229 @@
+{% load static %}
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>{% block page_title %}{% endblock %}</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Mobile Web-app fullscreen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Meta tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+
+
+    <!--CSS styles-->
+    <link rel="stylesheet" media="all" href="{% static 'css/bootstrap.css' %}"/>
+    <link rel="stylesheet" media="all" href="{% static 'css/animate.css' %}"/>
+    <link rel="stylesheet" media="all" href="{% static 'css/font-awesome.css' %}"/>
+    <link rel="stylesheet" media="all" href="{% static 'css/linear-icons.css' %}"/>
+    <link rel="stylesheet" media="all" href="{% static 'css/hotel-icons.css' %}"/>
+    <link rel="stylesheet" media="all" href="{% static 'css/magnific-popup.css' %}"/>
+    <link rel="stylesheet" media="all" href="{% static 'css/owl-carousel.css' %}"/>
+    <link rel="stylesheet" media="all" href="{% static 'css/datepicker.css' %}"/>
+    <link rel="stylesheet" media="all" href="{% static 'css/theme.css' %}"/>
+
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&amp;subset=latin-ext" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
 
+<header>
+
+    <!-- ======================== Navigation ======================== -->
+
+    <div class="container">
+
+        <!-- === navigation-top === -->
+
+        <nav class="navigation-top clearfix">
+
+            <!-- navigation-top-left -->
+
+            <div class="navigation-top-left">
+                <a class="box" href="#">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="box" href="#">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="box" href="#">
+                    <i class="fa fa-youtube"></i>
+                </a>
+            </div>
+
+            <!-- navigation-top-right -->
+
+            <div class="navigation-top-right">
+                <a class="box" href="#">
+                    <i class="icon icon-star"></i>
+                    Special offers
+                </a>
+                <a class="box" href="reservation-1.html">
+                    <i class="icon icon-tag"></i>
+                    Reservations
+                </a>
+                <a class="box" href="#">
+                    <i class="icon icon-phone-handset"></i>
+                    (01) 252-3333
+                </a>
+            </div>
+        </nav>
+
+        <!-- === navigation-main === -->
+
+        <nav class="navigation-main clearfix">
+
+            <!-- logo -->
+
+            <div class="logo animated fadeIn">
+                <a href="{% url 'home' %}">
+                    <img class="logo-desktop" src="{% static 'assets/images/logo.png' %}" alt="Alternate Text"/>
+                    <img class="logo-mobile" src="{% static 'assets/images/logo-mobile.png' %}" alt="Alternate Text"/>
+                </a>
+            </div>
+
+            <!-- toggle-menu -->
+
+            <div class="toggle-menu"><i class="icon icon-menu"></i></div>
+
+            <!-- navigation-block -->
+
+            <div class="navigation-block clearfix">
+
+                <!-- navigation-left -->
+
+                <ul class="navigation-left">
+                    <li>
+                        <a href="{% url 'home' %}">Home <span class="open-dropdown"><i
+                                class="fa fa-angle-down"></i></span></a>
+                        <ul>
+                            <li><a href="{% url 'home' %}">Home - Booking intro</a></li>
+                            <li><a href="{% url 'home2' %}">Home - Booking box</a></li>
+                            <li><a href="{% url 'home3' %}">Home - Rooms intro</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Pages <span class="open-dropdown"><i class="fa fa-angle-down"></i></span></a>
+                        <ul>
+                            <li><a href="{% url 'aboutus' %}">About us</a></li>
+                            <li><a href="{% url 'category' %}">Rooms category</a></li>
+                            <li><a href="{% url 'overview' %}">Room overview</a></li>
+                            <li><a href="{% url '404' %}">404 Not found</a></li>
+{#                            <li><a href="shortcodes.html">Shortcodes</a></li>#}
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Booking <span class="open-dropdown"><i class="fa fa-angle-down"></i></span></a>
+                        <ul>
+                            <li><a href="reservation-1.html">Booking step 1</a></li>
+                            <li><a href="reservation-2.html">Booking step 2</a></li>
+                            <li><a href="reservation-3.html">Booking step 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- navigation-right -->
+
+                <ul class="navigation-right">
+                    <li>
+                        <a href="{% url 'facilities' %}">Facilities</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog <span class="open-dropdown"><i class="fa fa-angle-down"></i></span></a>
+                        <ul>
+                            <li><a href="{% url 'blog_category' %}">Blog category</a></li>
+                            <li><a href="{% url 'blog_item' %}">Blog item</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+            </div> <!--/navigation-block-->
+
+        </nav>
+    </div> <!--/container-->
+
+</header>
+
+<!-- ========================  Header content ======================== -->
+
 {% block content %}
 {% endblock %}
+
+
+<!--JS files-->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery-ui.js' %}"></script>
+<script src="{% static 'js/jquery.bootstrap.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.js' %}"></script>
+<script src="{% static 'js/jquery.owl.carousel.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+<footer>
+    <div class="container">
+
+        <!--footer links-->
+        <div class="footer-links">
+            <div class="row">
+                <div class="col-sm-6 footer-left">
+                    <a href="#">Sitemap</a> &nbsp; | &nbsp; <a href="#">Privacy policy</a> | &nbsp; <a href="#">Guest
+                    book</a>
+                </div>
+                <div class="col-sm-6 footer-right">
+                    <a href="#">Gallery</a> &nbsp; | &nbsp; <a href="#">Reservations</a> | &nbsp; <a href="#">Help
+                    center</a>
+                </div>
+            </div>
+        </div>
+
+        <!--footer social-->
+
+        <div class="footer-social">
+            <div class="row">
+                <div class="col-sm-12 text-center hidden">
+                    <a href="" class="footer-logo"><img src="{% static 'assets/images/logo.png' %}"
+                                                        alt="Alternate Text"/></a>
+                </div>
+                <div class="col-sm-12 icons">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 copyright">
+                    <small>Copyright &copy; 2017 &nbsp; | &nbsp; <a
+                            href="https://themeforest.net/item/colina-hotel-website-template/20977257">Buy
+                        Colina Template</a></small>
+                </div>
+                <div class="col-sm-12 text-center">
+                    <img src="{% static 'assets/images/logo-footer.png' %}" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
