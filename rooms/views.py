@@ -11,11 +11,11 @@ class RoomsListView(ListView):
     template_name = 'rooms/room_list.html'
     context_object_name = 'rooms'
 
-#
-# class RoomsDetailView(DetailView):
-#     model = Room
-#     template_name = 'rooms/room_detail.html'
-#     context_object_name = 'room'
+
+class RoomsDetailView(DetailView):
+    model = Room
+    template_name = 'rooms/room_detail.html'
+    context_object_name = 'room'
 
 
 class CommentCreateView(CreateView):

@@ -30,6 +30,7 @@
     <link rel="stylesheet" media="all" href="{% static 'css/owl-carousel.css' %}"/>
     <link rel="stylesheet" media="all" href="{% static 'css/datepicker.css' %}"/>
     <link rel="stylesheet" media="all" href="{% static 'css/theme.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"/>
 
     <!--Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500&amp;subset=latin-ext" rel="stylesheet">
@@ -124,7 +125,7 @@
                         <ul>
                             <li><a href="{% url 'aboutus' %}">About us</a></li>
                             <li><a href="{% url 'category' %}">Rooms category</a></li>
-                            <li><a href="{% url 'overview' %}">Room overview</a></li>
+{#                            <li><a href="{{ room.get_absolute_url }}">Room overview</a></li>#}
                             <li><a href="{% url '404' %}">404 Not found</a></li>
 {#                            <li><a href="shortcodes.html">Shortcodes</a></li>#}
                         </ul>
@@ -153,7 +154,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="{% url 'contact' %}">Contact</a>
                     </li>
                 </ul>
 
@@ -177,6 +178,24 @@
 <script src="{% static 'js/jquery.magnific-popup.js' %}"></script>
 <script src="{% static 'js/jquery.owl.carousel.js' %}"></script>
 <script src="{% static 'js/main.js' %}"></script>
+
+
+        <!-- ========================  Subscribe ======================== -->
+
+        <section class="subscribe">
+            <div class="container">
+                <div class="box">
+                    <h2 class="title">Subscribe</h2>
+                    <div class="text">
+                        <p>& receive free premium gifts</p>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" value="" placeholder="Subscribe" class="form-control" />
+                        <button class="btn btn-sm btn-main">Go</button>
+                    </div>
+                </div>
+            </div>
+        </section> 
 
 <footer>
     <div class="container">

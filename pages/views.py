@@ -22,8 +22,8 @@ class RoomsCategoryPageView(TemplateView):
     template_name = 'pages/rooms_category.html'
 
 
-class RoomOverviewPageView(TemplateView):
-    template_name = 'pages/room_overview.html'
+# class RoomOverviewPageView(TemplateView):
+#     template_name = 'pages/room_overview.html'
 
 
 class NotFound(TemplateView):

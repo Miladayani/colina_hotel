@@ -1,9 +1,9 @@
 from django.urls import path
 
-from .views import RoomsListView, CommentCreateView
+from . import views
 
 urlpatterns = [
-    path('', RoomsListView.as_view(), name='rooms_list'),
-    # path('room/<int:pk>/', RoomsDetailView.as_view(), name='room_detail'),
-    path('comment/<int:rooms_id>/', CommentCreateView.as_view(), name='comment_create'),
+    path('', views.RoomsListView.as_view(), name='rooms_list'),
+    path('<int:pk>/', views.RoomsDetailView.as_view(), name='room_detail'),
+    path('comment/<int:rooms_id>/', views.CommentCreateView.as_view(), name='comment_create'),
 ]

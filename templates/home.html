@@ -2,14 +2,15 @@
 {% load static %}
 
 {% block page_title %}
-    Colina Hotel
+    Home - Booking Intro
 {% endblock %}
+
 
 {% block content %}
 	
 <body>
 
-{#    <div class="page-loader"></div>#}
+    <div class="page-loader"></div>
 
     <div class="wrapper">
 
@@ -266,7 +267,7 @@
 
                 <!-- === stretcher item === -->
 
-                <li class="stretcher-item" style="background-image:url({% static 'assets/images/services-1.jpg' %});">
+                <li class="stretcher-item" style="background-image:url({% static 'assets/images/stretcher.png' %});">
                     <!--logo-item-->
                     <div class="stretcher-logo">
                         <div class="text">
@@ -279,12 +280,12 @@
                         <figcaption>Unparalleled devotion to luxury</figcaption>
                     </figure>
                     <!--anchor-->
-                    <a href="facility.html">Anchor link</a>
+                    <a href="{% url 'facilities' %}">Anchor link</a>
                 </li>
 
                 <!-- === stretcher item === -->
 
-                <li class="stretcher-item" style="background-image:url({% static 'assets/images/services-2.jpg' %});">
+                <li class="stretcher-item" style="background-image:url({% static 'assets/images/stretcher.png' %});">
                     <!--logo-item-->
                     <div class="stretcher-logo">
                         <div class="text">
@@ -297,12 +298,12 @@
                         <figcaption>Care about results</figcaption>
                     </figure>
                     <!--anchor-->
-                    <a href="facility.html">Anchor link</a>
+                    <a href="{% url 'facilities' %}">Anchor link</a>
                 </li>
 
                 <!-- === stretcher item === -->
 
-                <li class="stretcher-item" style="background-image:url({% static 'assets/images/services-3.jpg' %});">
+                <li class="stretcher-item" style="background-image:url({% static 'assets/images/stretcher.png' %});">
                     <!--logo-item-->
                     <div class="stretcher-logo">
                         <div class="text">
@@ -314,12 +315,12 @@
                         <figcaption>Your daily activities</figcaption>
                     </figure>
                     <!--anchor-->
-                    <a href="facility.html">Anchor link</a>
+                    <a href="{% url 'facilities' %}">Anchor link</a>
                 </li>
 
                 <!-- === stretcher item === -->
 
-                <li class="stretcher-item" style="background-image:url({% static 'assets/images/services-4.jpg' %});">
+                <li class="stretcher-item" style="background-image:url({% static 'assets/images/stretcher.png' %});">
 
 
                     <!--logo-item-->
@@ -334,7 +335,7 @@
                         <figcaption>Hair salons and spas</figcaption>
                     </figure>
                     <!--anchor-->
-                    <a href="facility.html">Anchor link</a>
+                    <a href="{% url 'facilities' %}">Anchor link</a>
                 </li>
 
                 <!-- === stretcher item more === -->
@@ -343,7 +344,7 @@
                     <div class="more-icon">
                         <span data-title-show="Show more" data-title-hide="+"></span>
                     </div>
-                    <a href="facility.html">Anchor link</a>
+                    <a href="{% url 'facilities' %}">Anchor link</a>
                 </li>
 
             </ul>
@@ -791,23 +792,6 @@
                     </div>
                 </div> <!--/row-->
             </div> <!--/container-->
-        </section>
-
-        <!-- ========================  Subscribe ======================== -->
-
-        <section class="subscribe">
-            <div class="container">
-                <div class="box">
-                    <h2 class="title">Subscribe</h2>
-                    <div class="text">
-                        <p>& receive free premium gifts</p>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" value="" placeholder="Subscribe" class="form-control" />
-                        <button class="btn btn-sm btn-main">Go</button>
-                    </div>
-                </div>
-            </div>
         </section>
     </div> <!--/wrapper-->
 

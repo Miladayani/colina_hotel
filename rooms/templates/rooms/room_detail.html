@@ -1,0 +1,422 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block page_title %}
+    Room OverView - Colina Hotel
+{% endblock %}
+
+{% block content %}
+    <body>
+
+    <!-- ========================  Room ======================== -->
+
+    <section class="page">
+
+        <!-- ===  Page header === -->
+
+        <div class="page-header" style="background-image:url({% static 'assets/images/header-1.jpg' %})">
+            <div class="container">
+                <h2 class="title">{{ room.name }}</h2>
+                <p>{{ room.price_per_night }}</p>
+            </div>
+        </div>
+
+        <div class="room">
+
+            <!-- === Room gallery === -->
+
+            <div class="room">
+                <div class="container">
+
+                        <!-- === slide item === -->
+                        {% if room.image %}
+                        <div class="item" style="background-image:url(assets/images/room-4.jpg)">
+                            <img src="{{ room.image.url }}" alt="{{ room.name }}"/>
+                        </div>
+                        {% endif %} 
+                    
+
+                </div>
+            </div> <!--/room-gallery-->
+            <!-- === Booking === -->
+
+            <div class="booking booking-inner">
+
+                <div class="container">
+
+                    <div class="booking-wrapper">
+                        <div class="row">
+
+                            <!--=== date arrival ===-->
+
+                            <div class="col-xs-4 col-sm-3">
+                                <div class="date" id="dateArrival" data-text="Arrival">
+                                    <input class="datepicker" readonly="readonly"/>
+                                    <div class="date-value"></div>
+                                </div>
+                            </div>
+
+                            <!--=== date departure ===-->
+
+                            <div class="col-xs-4 col-sm-3">
+                                <div class="date" id="dateDeparture" data-text="Departure">
+                                    <input class="datepicker" readonly="readonly"/>
+                                    <div class="date-value"></div>
+                                </div>
+                            </div>
+
+                            <!--=== guests ===-->
+
+                            <div class="col-xs-4 col-sm-2">
+
+                                <div class="guests" data-text="Guests">
+                                    <div class="result">
+                                        <input class="qty-result" type="text" value="2" id="qty-result"
+                                               readonly="readonly"/>
+                                        <div class="qty-result-text date-value" id="qty-result-text"></div>
+                                    </div>
+                                    <!--=== guests list ===-->
+                                    <ul class="guest-list">
+
+                                        <li class="header">
+                                            Please choose number of guests <span class="qty-apply"><i
+                                                class="icon icon-cross"></i></span>
+                                        </li>
+
+                                        <!--=== adults ===-->
+
+                                        <li class="clearfix">
+
+                                            <!--=== Adults value ===-->
+
+                                            <div>
+                                                <input class="qty-amount" value="2" type="text" id="ticket-adult"
+                                                       data-value="2" readonly="readonly"/>
+                                            </div>
+
+                                            <div>
+                                                <span>Adults <small>16+ years</small></span>
+                                            </div>
+
+                                            <!--=== Add/remove quantity buttons ===-->
+
+                                            <div>
+                                                <input class="qty-btn qty-minus" value="-" type="button"
+                                                       data-field="ticket-adult"/>
+                                                <input class="qty-btn qty-plus" value="+" type="button"
+                                                       data-field="ticket-adult"/>
+                                            </div>
+
+                                        </li>
+
+                                        <!--=== chilrens ===-->
+
+                                        <li class="clearfix">
+
+                                            <!--=== Adults value ===-->
+
+                                            <div>
+                                                <input class="qty-amount" value="0" type="text" id="ticket-children"
+                                                       data-value="0" readonly="readonly"/>
+                                            </div>
+
+                                            <!--=== Label ===-->
+
+                                            <div>
+                                                <span>Children <small>2-11 years</small></span>
+                                            </div>
+
+
+                                            <!--=== Add/remove quantity buttons ===-->
+
+                                            <div>
+                                                <input class="qty-btn qty-minus" value="-" type="button"
+                                                       data-field="ticket-children"/>
+                                                <input class="qty-btn qty-plus" value="+" type="button"
+                                                       data-field="ticket-children"/>
+                                            </div>
+
+                                        </li>
+
+                                        <!--=== Infants ===-->
+
+                                        <li class="clearfix">
+
+                                            <!--=== Adults value ===-->
+
+                                            <div>
+                                                <input class="qty-amount" value="0" type="text" id="ticket-infants"
+                                                       data-value="0" readonly="readonly"/>
+                                            </div>
+
+                                            <!--=== Label ===-->
+
+                                            <div>
+                                                <span>Infants <small>Under 2 years</small></span>
+                                            </div>
+
+                                            <!--=== Add/remove quantity buttons ===-->
+
+                                            <div>
+                                                <input class="qty-btn qty-minus" value="-" type="button"
+                                                       data-field="ticket-infants"/>
+                                                <input class="qty-btn qty-plus" value="+" type="button"
+                                                       data-field="ticket-infants"/>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!--=== button ===-->
+
+                            <div class="col-xs-12 col-sm-4">
+                                <a href="reservation-1.html" class="btn btn-clean">
+                                    Book now
+                                    <small>Best Prices Guaranteed</small>
+                                </a>
+                            </div>
+
+                        </div> <!--/row-->
+                    </div><!--/booking-wrapper-->
+                </div> <!--/container-->
+            </div> <!--/booking-->
+            <!-- ===  Room overview === -->
+
+            <div class="room-overview">
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+                            <!-- === Room aminities === -->
+
+                            <div class="room-block room-aminities">
+
+                                <h2 class="title">Room aminities</h2>
+
+                                <div class="row">
+
+                                    <!--=== item ===-->
+
+                                    <div class="col-xs-6 col-sm-2">
+                                        <figure>
+                                            <figcaption>
+                                                <span class="hotelicon hotelicon-air-condition"></span>
+                                                <p>Aircondition</p>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+
+                                    <!--=== item ===-->
+
+                                    <div class="col-xs-6 col-sm-2">
+                                        <figure>
+                                            <figcaption>
+                                                <span class="hotelicon hotelicon-king-bed"></span>
+                                                <p>1 Kingsize bed</p>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+
+                                    <!--=== item ===-->
+
+                                    <div class="col-xs-6 col-sm-2">
+                                        <figure>
+                                            <figcaption>
+                                                <span class="hotelicon hotelicon-guest"></span>
+                                                <p>2 People</p>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+
+                                    <!--=== item ===-->
+
+                                    <div class="col-xs-6 col-sm-2">
+                                        <figure>
+                                            <figcaption>
+                                                <span class="hotelicon hotelicon-wifi"></span>
+                                                <p>Internet</p>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+
+                                    <!--=== item ===-->
+
+                                    <div class="col-xs-6 col-sm-2">
+                                        <figure>
+                                            <figcaption>
+                                                <span class="hotelicon hotelicon-washer"></span>
+                                                <p>Washer</p>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+
+                                    <!--=== item ===-->
+
+                                    <div class="col-xs-6 col-sm-2">
+                                        <figure>
+                                            <figcaption>
+                                                <span class="hotelicon hotelicon-roomservice"></span>
+                                                <p>Room service</p>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- === Room block === -->
+
+                            <div class="room-block">
+                                <h2 class="title">Room overview</h2>
+                                <p>
+                                    The Superior Rooms pay tribute to fashion and craftsmanship. The rooms are
+                                    approximately 19m2 with views of Rue d'Alger and Jardin des Tuileries.
+                                    The selection and pairing of materials has been carefully chosen to give you a cool
+                                    experience. The super soft bed topper is simply extravagant!
+                                    Every room is different but the colour palette uses unique and expertly matched
+                                    hues.
+                                    An openwork brass screen separates the bathroom from the bedroom. This original
+                                    feature helps make every room your very own cosy and peaceful haven.
+                                    Bathrobes, slippers and SOTHYS toiletries are provided in the bathroom to pamper
+                                    you.
+                                </p>
+                            </div>
+
+                            <!-- === Room block === -->
+
+                            <div class="room-block">
+
+                                <h2 class="title">House rules</h2>
+
+                                <!-- === box === -->
+
+                                <div class="box">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <p><strong>Check-In</strong></p>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p>14:00 - 22:00</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- === box === -->
+
+                                <div class="box">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <p><strong>Check-out</strong></p>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p>14:00 - 22:00</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- === box === -->
+
+                                <div class="box">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <p><strong>Luggage storage</strong></p>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p>14:00 - 22:00</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- === box === -->
+
+                                <div class="box">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <p><strong>Cancellation/prepayment</strong></p>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p>
+                                                Cancellation and prepayment policies vary according to room type. Please
+                                                enter the dates of your stay and check the conditions of your required
+                                                room.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- === box === -->
+
+                                <div class="box">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <p><strong>Children and extra beds</strong></p>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p>All children are welcome.</p>
+                                            <p>One child under 6 years is charged EUR 50 per night when using existing
+                                                beds.</p>
+                                            <p>There is no capacity for extra beds in the room.</p>
+                                            <p>Supplements are not calculated automatically in the total costs and will
+                                                have to be paid for separately during your stay. </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- === box === -->
+
+                                <div class="box">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <p><strong>Pets</strong></p>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p>Pets are not allowed.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- === box === -->
+
+                                <div class="box">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <p><strong>Additional info</strong></p>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p>Please note that the restaurant is closed each Sunday.</p>
+                                            <p>The restaurant will also be closed during Christmas (25-26 December).</p>
+                                            <p>Please note that parking spaces cannot be reserved or guaranteed.</p>
+                                            <p>
+                                                For a group booking more than 5 rooms up to 4 weeks prior to arrival
+                                                cancellation is
+                                                100% free of charge, within 2 until 4 weeks 50% free of charge, and
+                                                within 2 weeks the
+                                                property will charge you in full. Please note that Ozo hotel always
+                                                charges city tax
+                                                prior to your arrival with the non-refundable rate or group booking.
+                                            </p>
+                                            <p>
+                                                Please note that the credit card that is used for the booking needs to
+                                                be present at check-in.
+                                                When this credit card is not available please bring a photocopy of the
+                                                credit card with
+                                                authorization of the owner.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div> <!--/col-sm-10-->
+                    </div> <!--/row-->
+                </div> <!--/container-->
+            </div> <!--/room-overview-->
+        </div>
+
+    </section>
+    </body>
+
+{% endblock %}

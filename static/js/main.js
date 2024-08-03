@@ -371,7 +371,7 @@
         }
     });
 
-    // Toggle contact form
+    // Toggle contacts form
     // ----------------------------------------------------------------
 
     $('.open-form').on('click', function () {
@@ -380,11 +380,11 @@
         parent.toggleClass('active');
         if (parent.hasClass('active')) {
             $this.text($this.data('text-close'));
-            $('.contact-form').slideDown();
+            $('.contacts-form').slideDown();
         }
         else {
             $this.text($this.data('text-open'));
-            $('.contact-form').slideUp();
+            $('.contacts-form').slideUp();
         }
 
     });
