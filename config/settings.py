@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'facilities',
     'blogs',
     'contacts',
+    'cart',
 
     # third party
     'allauth',
