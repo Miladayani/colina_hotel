@@ -30,7 +30,7 @@
 
                         <!-- === slide item === -->
                         {% if room.image %}
-                        <div class="item" style="background-image:url(assets/images/room-4.jpg)">
+                        <div class="item" style="background-image:url({% static 'assets/images/header-1.jpg' %})">
                             <img src="{{ room.image.url }}" alt="{{ room.name }}"/>
                         </div>
                         {% endif %} 
@@ -272,16 +272,17 @@
                             <div class="room-block">
                                 <h2 class="title">Room overview</h2>
                                 <p>
-                                    The Superior Rooms pay tribute to fashion and craftsmanship. The rooms are
-                                    approximately 19m2 with views of Rue d'Alger and Jardin des Tuileries.
-                                    The selection and pairing of materials has been carefully chosen to give you a cool
-                                    experience. The super soft bed topper is simply extravagant!
-                                    Every room is different but the colour palette uses unique and expertly matched
-                                    hues.
-                                    An openwork brass screen separates the bathroom from the bedroom. This original
-                                    feature helps make every room your very own cosy and peaceful haven.
-                                    Bathrobes, slippers and SOTHYS toiletries are provided in the bathroom to pamper
-                                    you.
+                                    {{ room.description }}
+{#                                    The Superior Rooms pay tribute to fashion and craftsmanship. The rooms are#}
+{#                                    approximately 19m2 with views of Rue d'Alger and Jardin des Tuileries.#}
+{#                                    The selection and pairing of materials has been carefully chosen to give you a cool#}
+{#                                    experience. The super soft bed topper is simply extravagant!#}
+{#                                    Every room is different but the colour palette uses unique and expertly matched#}
+{#                                    hues.#}
+{#                                    An openwork brass screen separates the bathroom from the bedroom. This original#}
+{#                                    feature helps make every room your very own cosy and peaceful haven.#}
+{#                                    Bathrobes, slippers and SOTHYS toiletries are provided in the bathroom to pamper#}
+{#                                    you.#}
                                 </p>
                             </div>
 

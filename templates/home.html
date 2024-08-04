@@ -59,7 +59,6 @@
                                 as an anonymous "celebrity" entrance, for ultimate privacy.
                             </div>
                             <div class="animated" data-animation="fadeInUp">
-                                <a href="#" class="btn btn-clean">Virtual tour</a>
                             </div>
                         </div>
                     </div>
@@ -81,7 +80,6 @@
                             <div class="desc animated" data-animation="fadeInUp">The elegant Champagne Bar, the stylish Colina Club.</div>
                             <div class="desc animated" data-animation="fadeInUp">Guestrooms and luxurious suites</div>
                             <div class="animated" data-animation="fadeInUp">
-                                <a href="#" class="btn btn-clean">Get insipred</a>
                             </div>
                         </div>
                     </div>
@@ -230,22 +228,6 @@
             </div> <!--/container-->
         </section>
 
-        <!-- ========================  Rooms ======================== -->
-
-        <section class="rooms rooms-widget">
-
-            <!-- === rooms header === -->
-
-            <div class="section-header">
-                <div class="container">
-                    <h2 class="title">Rooms accommodation <a href="rooms-category.html" class="btn btn-sm btn-clean-dark">View all</a></h2>
-                    <p>Designed as a privileged almost private place where you'll feel right at home</p>
-                </div>
-            </div>
-
-            <!-- === rooms content === -->
-        </section>
-
         <!-- ========================  Stretcher widget ======================== -->
 
         <section class="stretcher-wrapper">
@@ -254,7 +236,7 @@
 
             <div class="section-header">
                 <div class="container">
-                    <h2 class="title">Resort facilities <a href="facility.html" class="btn btn-sm btn-clean-dark">Explore more</a></h2>
+                    <h2 class="title">Resort facilities <a href="{% url 'facilities' %}" class="btn btn-sm btn-clean-dark">Explore more</a></h2>
                     <p>
                         With the best luxury spa, salon and fitness experiences
                     </p>
@@ -358,7 +340,7 @@
 
             <div class="section-header">
                 <div class="container">
-                    <h2 class="title">Latest news <a href="blog-category.html" class="btn btn-sm btn-clean-dark">Explore more</a></h2>
+                    <h2 class="title">Latest news <a href="{% url 'blog_category' %}" class="btn btn-sm btn-clean-dark">Explore more</a></h2>
                     <p>
                         Events, place to go, tour info & more
                     </p>
@@ -371,7 +353,7 @@
                     <!-- === article item === -->
 
                     <div class="col-sm-4">
-                        <a href="blog-item.html">
+                        <a href="{% url 'blog_item' %}">
                             <article>
                                 <div class="image">
                                     <img src="{% static 'assets/images/activity-3.jpg' %}" alt="" />
@@ -393,7 +375,7 @@
                     <!-- === article item === -->
 
                     <div class="col-sm-4">
-                        <a href="blog-item.html">
+                        <a href="{% url 'blog_item' %}">
                             <article>
                                 <div class="image">
                                     <img src="{% static 'assets/images/activity-4.jpg' %}" alt="" />
@@ -415,7 +397,7 @@
                     <!-- === article item === -->
 
                     <div class="col-sm-4">
-                        <a href="blog-item.html">
+                        <a href="{% url 'blog_item' %}">
                             <article>
                                 <div class="image">
                                     <img src="{% static 'assets/images/activity-5.jpg' %}" alt="" />
@@ -521,164 +503,164 @@
 
             <div class="section-header" style="background-image:url({% static 'assets/images/header-1.jpg' %})">
                 <div class="container">
-                    <h2 class="title">Apartment residences <a href="rooms-category.html" class="btn btn-sm btn-clean">View all</a></h2>
+                    <h2 class="title">Apartment residences <a href="{% url 'rooms_list' %}" class="btn btn-sm btn-clean">View all</a></h2>
                     <p>At home while on the road. </p>
                 </div>
             </div>
 
-            <div class="container">
-
-                <!--item block -->
-                <div class="blocks blocks-left">
-                    <div class="item">
-                        <div class="text">
-
-                            <!-- === room info === -->
-
-                            <h2 class="title">Presidential <br />Suite</h2>
-                            <p>
-                                Newly refurnished luxury accommodation with finest quality linen & quality decor.
-                                Air Conditioning Electric Blankets, Ironing Boards, Mini Bar, Flat Screen & Free Inhouse Movies, WiFi
-                                and Housekeeping by request.
-                            </p>
-
-                            <!-- === room facilities === -->
-
-                            <div class="room-facilities">
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-guest"></i> 4 Persons</figcaption>
-                                </figure>
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-roomservice"></i> Room service</figcaption>
-                                </figure>
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-king-bed"></i> Kingsize bed</figcaption>
-                                </figure>
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-kitchen"></i> All inclusive</figcaption>
-                                </figure>
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-compas"></i> 460 sqft room</figcaption>
-                                </figure>
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-tv"></i> TV</figcaption>
-                                </figure>
-
-                            </div>
-
-                            <!-- === booking === -->
-
-                            <div class="book">
-                                <div>
-                                    <a href="room-overview.html" class="btn btn-danger btn-lg">Book</a>
-                                </div>
-                                <div>
-                                    <span class="price h2">$ 129,00</span>
-                                    <span>per night</span>
-                                </div>
-                            </div> <!--/booking-->
-
-                        </div><!--/text-->
-                    </div> <!--/item-->
-
-                    <div class="image" style="background-image:url({% static 'assets/images/apartment-1.jpg' %})">
-                        <img src="{% static 'assets/images/apartment-1.jpg' %}" alt="" />
-                    </div>
-                </div>
-
-                <!--item block -->
-                <div class="blocks blocks-right">
-                    <div class="item">
-                        <div class="text">
-
-                            <!-- === room info === -->
-
-                            <h2 class="title">Luxury <br />appartment</h2>
-                            <p>
-                                The highest level of living with luxury. Residences are distinctively designed and exquisitely appointed,
-                                creating ideal places where memories are made and experiences are genuine.
-                            </p>
-
-                            <!-- === room facilities === -->
-
-                            <div class="room-facilities">
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-guest"></i> 4 Persons</figcaption>
-                                </figure>
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-king-bed"></i> Kingsize bed</figcaption>
-                                </figure>
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-roomservice"></i> Room service</figcaption>
-                                </figure>
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-kitchen"></i> All inclusive</figcaption>
-                                </figure>
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-compas"></i> 460 sqft room</figcaption>
-                                </figure>
-
-                                <!--=== icon ===-->
-
-                                <figure>
-                                    <figcaption><i class="hotelicon hotelicon-tv"></i> TV</figcaption>
-                                </figure>
-
-                            </div>
-
-                            <!-- === booking === -->
-
-                            <div class="book">
-                                <div>
-                                    <a href="room-overview.html" class="btn btn-danger btn-lg">Book</a>
-                                </div>
-                                <div>
-                                    <span class="price h2">$ 229,00</span>
-                                    <span>per night</span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="image" style="background-image:url({% static 'assets/images/apartment-2.jpg' %})">
-                        <img src="{% static 'assets/images/apartment-2.jpg' %}" alt="" />
-                    </div>
-                </div>
-
-            </div> <!--/container-->
+{#            <div class="container">#}
+{##}
+{#                <!--item block -->#}
+{#                <div class="blocks blocks-left">#}
+{#                    <div class="item">#}
+{#                        <div class="text">#}
+{##}
+{#                            <!-- === room info === -->#}
+{##}
+{#                            <h2 class="title">Presidential <br />Suite</h2>#}
+{#                            <p>#}
+{#                                Newly refurnished luxury accommodation with finest quality linen & quality decor.#}
+{#                                Air Conditioning Electric Blankets, Ironing Boards, Mini Bar, Flat Screen & Free Inhouse Movies, WiFi#}
+{#                                and Housekeeping by request.#}
+{#                            </p>#}
+{##}
+{#                            <!-- === room facilities === -->#}
+{##}
+{#                            <div class="room-facilities">#}
+{##}
+{#                                <!--=== icon ===-->#}
+{##}
+{#                                <figure>#}
+{#                                    <figcaption><i class="hotelicon hotelicon-guest"></i> 4 Persons</figcaption>#}
+{#                                </figure>#}
+{##}
+{#                                <!--=== icon ===-->#}
+{##}
+{#                                <figure>#}
+{#                                    <figcaption><i class="hotelicon hotelicon-roomservice"></i> Room service</figcaption>#}
+{#                                </figure>#}
+{##}
+{#                                <!--=== icon ===-->#}
+{##}
+{#                                <figure>#}
+{#                                    <figcaption><i class="hotelicon hotelicon-king-bed"></i> Kingsize bed</figcaption>#}
+{#                                </figure>#}
+{##}
+{#                                <!--=== icon ===-->#}
+{##}
+{#                                <figure>#}
+{#                                    <figcaption><i class="hotelicon hotelicon-kitchen"></i> All inclusive</figcaption>#}
+{#                                </figure>#}
+{##}
+{#                                <!--=== icon ===-->#}
+{##}
+{#                                <figure>#}
+{#                                    <figcaption><i class="hotelicon hotelicon-compas"></i> 460 sqft room</figcaption>#}
+{#                                </figure>#}
+{##}
+{#                                <!--=== icon ===-->#}
+{##}
+{#                                <figure>#}
+{#                                    <figcaption><i class="hotelicon hotelicon-tv"></i> TV</figcaption>#}
+{#                                </figure>#}
+{##}
+{#                            </div>#}
+{##}
+{#                            <!-- === booking === -->#}
+{##}
+{#                            <div class="book">#}
+{#                                <div>#}
+{#                                    <a href="room-overview.html" class="btn btn-danger btn-lg">Book</a>#}
+{#                                </div>#}
+{#                                <div>#}
+{#                                    <span class="price h2">$ 129,00</span>#}
+{#                                    <span>per night</span>#}
+{#                                </div>#}
+{#                            </div> <!--/booking-->#}
+{##}
+{#                        </div><!--/text-->#}
+{#                    </div> <!--/item-->#}
+{##}
+{#                    <div class="image" style="background-image:url({% static 'assets/images/apartment-1.jpg' %})">#}
+{#                        <img src="{% static 'assets/images/apartment-1.jpg' %}" alt="" />#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                <!--item block -->#}
+{#                <div class="blocks blocks-right">#}
+{#                    <div class="item">#}
+{#                        <div class="text">#}
+{##}
+{#                            <!-- === room info === -->#}
+{##}
+{#                            <h2 class="title">Luxury <br />appartment</h2>#}
+{#                            <p>#}
+{#                                The highest level of living with luxury. Residences are distinctively designed and exquisitely appointed,#}
+{#                                creating ideal places where memories are made and experiences are genuine.#}
+{#                            </p>#}
+{##}
+{#                            <!-- === room facilities === -->#}
+{##}
+{#                            <div class="room-facilities">#}
+{##}
+{#                                <!--=== icon ===-->#}
+{##}
+{#                                <figure>#}
+{#                                    <figcaption><i class="hotelicon hotelicon-guest"></i> 4 Persons</figcaption>#}
+{#                                </figure>#}
+{##}
+{#                                <!--=== icon ===-->#}
+{##}
+{#                                <figure>#}
+{#                                    <figcaption><i class="hotelicon hotelicon-king-bed"></i> Kingsize bed</figcaption>#}
+{#                                </figure>#}
+{##}
+{#                                <!--=== icon ===-->#}
+{##}
+{#                                <figure>#}
+{#                                    <figcaption><i class="hotelicon hotelicon-roomservice"></i> Room service</figcaption>#}
+{#                                </figure>#}
+{##}
+{#                                <!--=== icon ===-->#}
+{##}
+{#                                <figure>#}
+{#                                    <figcaption><i class="hotelicon hotelicon-kitchen"></i> All inclusive</figcaption>#}
+{#                                </figure>#}
+{##}
+{#                                <!--=== icon ===-->#}
+{##}
+{#                                <figure>#}
+{#                                    <figcaption><i class="hotelicon hotelicon-compas"></i> 460 sqft room</figcaption>#}
+{#                                </figure>#}
+{##}
+{#                                <!--=== icon ===-->#}
+{##}
+{#                                <figure>#}
+{#                                    <figcaption><i class="hotelicon hotelicon-tv"></i> TV</figcaption>#}
+{#                                </figure>#}
+{##}
+{#                            </div>#}
+{##}
+{#                            <!-- === booking === -->#}
+{##}
+{#                            <div class="book">#}
+{#                                <div>#}
+{#                                    <a href="room-overview.html" class="btn btn-danger btn-lg">Book</a>#}
+{#                                </div>#}
+{#                                <div>#}
+{#                                    <span class="price h2">$ 229,00</span>#}
+{#                                    <span>per night</span>#}
+{#                                </div>#}
+{#                            </div>#}
+{##}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="image" style="background-image:url({% static 'assets/images/apartment-2.jpg' %})">#}
+{#                        <img src="{% static 'assets/images/apartment-2.jpg' %}" alt="" />#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#            </div> <!--/container-->#}
         </section>
 
         <!-- ======================== Quotes ======================== -->
