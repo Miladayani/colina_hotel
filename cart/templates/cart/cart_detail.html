@@ -1,0 +1,185 @@
+{% extends '_base.html' %}
+
+{% block page_title %}
+    Colina - Cart
+{% endblock %}
+
+{% block content %}
+
+    <body>
+
+    <div class="page-loader"></div>
+
+    <div class="wrapper">
+
+
+        <!-- ========================  Checkout ======================== -->
+
+        <section class="page">
+
+            <!-- ===  Page header === -->
+
+            <div class="page-header" style="background-image:url(assets/images/header-1.jpg)">
+                <div class="container">
+                    <h2 class="title">Make a reservation</h2>
+                    <p>Proceed to booking step 2</p>
+                </div>
+            </div>
+
+            <!-- ===  Checkout steps === -->
+
+            <div class="step-wrapper">
+                <div class="container">
+                    <div class="stepper">
+                        <ul class="row">
+                            <li class="col-md-4 active">
+                                <a><span data-text="Room & rates"></span></a>
+                            </li>
+                            <li class="col-md-4">
+                                <a><span data-text="Reservation"></span></a>
+                            </li>
+                            <li class="col-md-4">
+                                <a><span data-text="Checkout"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===  Checkout === -->
+
+            <div class="checkout">
+
+                <div class="container">
+
+                    <div class="clearfix">
+
+                        <!-- ========================  Cart wrapper ======================== -->
+
+                        {% if cart %}
+                            <div class="cart-wrapper">
+
+                                <!--cart header -->
+
+                                <div class="cart-block cart-block-header clearfix">
+                                    <div>
+                                        <span>Room type</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span>Price</span>
+                                    </div>
+                                </div>
+
+                                {% for item in cart %}
+
+                                    <!--cart items-->
+
+                                    <div class="clearfix">
+
+                                        <div class="cart-block cart-block-item clearfix">
+                                            <div class="image">
+                                                <a href="{{ item.room_obj.get_absolute_url }}"><img
+                                                        src="{{ item.room_obj.image.url }}"
+                                                        alt=""/></a>
+                                            </div>
+                                            
+                                            <div class="title">
+                                                <div class="h2"><a
+                                                        href="{{ item.room_obj.get_absolute_url }}">{{ item.room_obj.name }}</a>
+                                                </div>
+                                                {% for item in cart %}
+                                                    
+                                                    <p>
+                                                        <strong>Arrival date</strong> <br/> {{ item.arrival_date }}
+                                                    </p>
+                                                    <p>
+                                                        <strong>Guests</strong> <br/> {{ item.adults }} adults
+                                                        <br/>{{ item.children }} children
+                                                        <br/>{{ item.infants }} infants
+                                                    </p>
+                                                    <p>
+                                                        <strong>Departure date</strong> <br/> {{ item.departure_date }}
+                                                    </p>
+                                                    
+                                                {% endfor %}
+                                                
+                                            </div>
+                                            <div class="price">
+                                                <span class="final h3">{{ item.room_obj.price_per_night }}</span>
+                                                {#                                        <span class="discount">$ 2.666</span>#}
+                                            </div>
+                                            <!--delete-this-item-->
+
+                                            <a href="{% url 'cart:remove_to_cart' item.room_obj.id %}">
+                                                <span class="icon icon-cross icon-delete"></span>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <form action="{% url 'cart:cart_add' item.room_obj.id %}" method="POST">
+                                        {% csrf_token %}
+
+                                        {{ item.room_update_quantity_form.inplace }}
+                                        <button type="submit" class="btn btn-clean-dark">Change</button>
+
+                                    </form>
+
+                                    <!--cart final price -->
+
+                                    <div class="clearfix">
+                                        <div class="cart-block cart-block-footer cart-block-footer-price clearfix">
+                                            <div>
+                                        <span class="checkbox">
+                                        </span>
+                                            </div>
+                                            <div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                {% endfor %}
+
+
+                                <!-- ========================  Cart navigation ======================== -->
+
+                                <div class="clearfix">
+                                    <div class="cart-block cart-block-footer cart-block-footer-price clearfix">
+
+
+                                        {#                                    <form action="{% url 'cart:cart_add' room.id %}" method="POST">#}
+                                        {#                                        {% csrf_token %}#}
+                                        {##}
+                                        {#                                        {{ item.room_update_quantity_form.inplace }}#}
+                                        {#                                        <button type="submit" class="btn btn-clean-dark">Change</button>#}
+                                        {##}
+                                        {#                                    </form>#}
+
+                                        <span>
+                                        <div class="h2 title">{{ cart.get_total }}</div>
+                                    </span>
+
+                                        <div>
+                                            <a href="reservation-2.html" class="btn btn-main">Reservation <span
+                                                    class="icon icon-chevron-right"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        {% else %}
+                            <p> Cart is Empty! please add rooms to the cart</p>
+                                <a href="{% url 'rooms_list' %}">List Of Rooms</a>
+                        {% endif %}
+                        
+                    </div>
+
+                </div> <!--/container-->
+            </div> <!--/checkout-->
+
+        </section>
+
+    </div> <!--/wrapper-->
+    </body>
+
+{% endblock %}

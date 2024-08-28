@@ -7,7 +7,6 @@ class Room(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField()
     price_per_night = models.PositiveIntegerField()
-    num_beds = models.IntegerField()
     image = models.ImageField(upload_to='room/room_cover', blank=True)
     active = models.BooleanField(default=True)
 
@@ -16,6 +15,23 @@ class Room(models.Model):
 
     def get_absolute_url(self):
         return reverse('room_detail', args={self.pk})
+
+
+class Booking(models.Model):
+    user = models.ForeignKey(get_user_model(), on_delete=models.PROTECT)
+    room = models.ForeignKey(Room, on_delete=models.PROTECT)
+    arrival_date = models.DateField()
+    departure_date = models.DateField()
+
+    # guests = models.PositiveIntegerField()
+    adults = models.PositiveIntegerField(default=0)
+    children = models.PositiveIntegerField(default=0)
+    infants = models.PositiveIntegerField(default=0)
+
+    date_created = models.DateTimeField(auto_now_add=True, )
+
+    def __str__(self):
+        return f'{self.room.name} booked by {self.user} from {self.arrival_date} to {self.departure_date}'
 
 
 class ActiveCommentManager(models.Manager):

@@ -28,17 +28,25 @@
             <div class="room">
                 <div class="container">
 
-                        <!-- === slide item === -->
-                        {% if room.image %}
+                    <!-- === slide item === -->
+                    {% if room.image %}
                         <div class="item" style="background-image:url({% static 'assets/images/header-1.jpg' %})">
                             <img src="{{ room.image.url }}" alt="{{ room.name }}"/>
                         </div>
-                        {% endif %} 
-                    
+                    {% endif %}
+
 
                 </div>
             </div> <!--/room-gallery-->
+
             <!-- === Booking === -->
+        
+         <form method="POST" action="{% url 'cart:cart_add' room.id %}">
+            {% csrf_token %}
+            {{ add_to_cart_form}}
+            {{ booking_form.as_p }}
+            <button type="submit">Add to Cart</button>
+        </form>
 
             <div class="booking booking-inner">
 
@@ -46,141 +54,171 @@
 
                     <div class="booking-wrapper">
                         <div class="row">
-
+                            
+{#                            <form method="POST" action="{% url 'cart:cart_add' room.id %}">#}
+{#                                {% csrf_token %}#}
+{#                                {{ add_to_cart_form}}#}
+{#                                {{ booking_form.as_p }}#}
+{#                                <button type="submit">Add to Cart</button>#}
+{#                            </form>#}
+                            
                             <!--=== date arrival ===-->
-
-                            <div class="col-xs-4 col-sm-3">
-                                <div class="date" id="dateArrival" data-text="Arrival">
-                                    <input class="datepicker" readonly="readonly"/>
-                                    <div class="date-value"></div>
-                                </div>
-                            </div>
+{#                            <form action="{% url 'cart:cart_add' room.id %}" method="POST">#}
+{#                                {% csrf_token %}#}
+{#                                <div class="col-xs-4 col-sm-3">#}
+{#                                    <div class="date" data-text="Arrival">#}
+{#                                        {{ booking_form.arrival_date }}#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </form>#}
+                            {#                                                        <div class="col-xs-4 col-sm-3">#}
+                            {#                                                            <div class="date" id="dateArrival" data-text="Arrival">#}
+                            {#                                                                <input class="datepicker" />#}
+                            {#                                                                <div class="date-value"></div>#}
+                            {#                                                            </div>#}
+                            {#                                                        </div>#}
 
                             <!--=== date departure ===-->
+{#                            <form action="{% url 'cart:cart_add' room.id %}" method="POST">#}
+{#                                {% csrf_token %}#}
+{#                                <div class="col-xs-4 col-sm-3">#}
+{#                                    <div class="date" data-text="Departure">#}
+{#                                        {{ booking_form.departure_date }}#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </form>#}
 
-                            <div class="col-xs-4 col-sm-3">
-                                <div class="date" id="dateDeparture" data-text="Departure">
-                                    <input class="datepicker" readonly="readonly"/>
-                                    <div class="date-value"></div>
-                                </div>
-                            </div>
+                            {#                            <div class="col-xs-4 col-sm-3">#}
+                            {#                                <div class="date" id="dateDeparture" data-text="Departure">#}
+                            {#                                    <input class="datepicker" readonly="readonly"/>#}
+                            {#                                    <div class="date-value"></div>#}
+                            {#                                </div>#}
+                            {#                            </div>#}
 
                             <!--=== guests ===-->
 
-                            <div class="col-xs-4 col-sm-2">
-
-                                <div class="guests" data-text="Guests">
-                                    <div class="result">
-                                        <input class="qty-result" type="text" value="2" id="qty-result"
-                                               readonly="readonly"/>
-                                        <div class="qty-result-text date-value" id="qty-result-text"></div>
-                                    </div>
-                                    <!--=== guests list ===-->
-                                    <ul class="guest-list">
-
-                                        <li class="header">
-                                            Please choose number of guests <span class="qty-apply"><i
-                                                class="icon icon-cross"></i></span>
-                                        </li>
+{#                            <div class="col-xs-4 col-sm-2">#}
+{##}
+{#                                <div class="guests" data-text="Guests">#}
+{#                                    <div class="result">#}
+{#                                        <input class="qty-result" type="text" value="quantity" id="qty-result"#}
+{#                                               readonly="readonly"/>#}
+{#                                        <div class="qty-result-text date-value" id="qty-result-text"></div>#}
+{#                                    </div>#}
+{#                                    <!--=== guests list ===-->#}
+{#                                    <ul class="guest-list">#}
+{##}
+{#                                        <li class="header">#}
+{#                                            Please choose number of guests <span class="qty-apply"><i#}
+{#                                                class="icon icon-cross"></i></span>#}
+{#                                        </li>#}
 
                                         <!--=== adults ===-->
 
-                                        <li class="clearfix">
-
-                                            <!--=== Adults value ===-->
-
-                                            <div>
-                                                <input class="qty-amount" value="2" type="text" id="ticket-adult"
-                                                       data-value="2" readonly="readonly"/>
-                                            </div>
-
-                                            <div>
-                                                <span>Adults <small>16+ years</small></span>
-                                            </div>
+{#                                        <li class="clearfix">#}
+{##}
+{#                                            <!--=== Adults value ===-->#}
+{##}
+{#                                            <div>#}
+{#                                                {{ booking_form.adults }}#}
+                                                {#                                                <input class="qty-amount" value="2" type="text" id="ticket-adult"#}
+                                                {#                                                       data-value="0" readonly="readonly"/>#}
+{#                                            </div>#}
+{##}
+{#                                            <div>#}
+{#                                                <span>Adults <small>16+ years</small></span>#}
+{#                                            </div>#}
 
                                             <!--=== Add/remove quantity buttons ===-->
 
-                                            <div>
-                                                <input class="qty-btn qty-minus" value="-" type="button"
-                                                       data-field="ticket-adult"/>
-                                                <input class="qty-btn qty-plus" value="+" type="button"
-                                                       data-field="ticket-adult"/>
-                                            </div>
+{#                                            <div>#}
+{#                                                <input class="qty-btn qty-minus" value="-" type="button"#}
+{#                                                       data-field="ticket-adult"/>#}
+{#                                                <input class="qty-btn qty-plus" value="+" type="button"#}
+{#                                                       data-field="ticket-adult"/>#}
+{#                                            </div>#}
+{##}
+{#                                        </li>#}
 
-                                        </li>
+                                        <!--=== children ===-->
+{##}
+{#                                        <li class="clearfix">#}
 
-                                        <!--=== chilrens ===-->
+                                            <!--=== Children value ===-->
 
-                                        <li class="clearfix">
-
-                                            <!--=== Adults value ===-->
-
-                                            <div>
-                                                <input class="qty-amount" value="0" type="text" id="ticket-children"
-                                                       data-value="0" readonly="readonly"/>
-                                            </div>
+{#                                            <div>#}
+{#                                                {{ booking_form.children }}#}
+                                                {#                                                <input class="qty-amount" value="0" type="text" id="ticket-children"#}
+                                                {#                                                       data-value="0" readonly="readonly"/>#}
+{#                                            </div>#}
 
                                             <!--=== Label ===-->
 
-                                            <div>
-                                                <span>Children <small>2-11 years</small></span>
-                                            </div>
+{#                                            <div>#}
+{#                                                <span>Children <small>2-11 years</small></span>#}
+{#                                            </div>#}
 
 
                                             <!--=== Add/remove quantity buttons ===-->
 
-                                            <div>
-                                                <input class="qty-btn qty-minus" value="-" type="button"
-                                                       data-field="ticket-children"/>
-                                                <input class="qty-btn qty-plus" value="+" type="button"
-                                                       data-field="ticket-children"/>
-                                            </div>
-
-                                        </li>
+{#                                            <div>#}
+{#                                                <input class="qty-btn qty-minus" value="-" type="button"#}
+{#                                                       data-field="ticket-children"/>#}
+{#                                                <input class="qty-btn qty-plus" value="+" type="button"#}
+{#                                                       data-field="ticket-children"/>#}
+{#                                            </div>#}
+{##}
+{#                                        </li>#}
 
                                         <!--=== Infants ===-->
 
-                                        <li class="clearfix">
-
-                                            <!--=== Adults value ===-->
-
-                                            <div>
-                                                <input class="qty-amount" value="0" type="text" id="ticket-infants"
-                                                       data-value="0" readonly="readonly"/>
-                                            </div>
-
-                                            <!--=== Label ===-->
-
-                                            <div>
-                                                <span>Infants <small>Under 2 years</small></span>
-                                            </div>
+{#                                        <li class="clearfix">#}
+{##}
+{#                                            <!--=== Infants value ===-->#}
+{##}
+{#                                            <div>#}
+{#                                                {{ booking_form.infants }}#}
+                                                {#                                                <input class="qty-amount" value="0" type="text" id="ticket-infants"#}
+                                                {#                                                       data-value="0" readonly="readonly"/>#}
+{#                                            </div>#}
+{##}
+{#                                            <!--=== Label ===-->#}
+{##}
+{#                                            <div>#}
+{#                                                <span>Infants <small>Under 2 years</small></span>#}
+{#                                            </div>#}
 
                                             <!--=== Add/remove quantity buttons ===-->
 
-                                            <div>
-                                                <input class="qty-btn qty-minus" value="-" type="button"
-                                                       data-field="ticket-infants"/>
-                                                <input class="qty-btn qty-plus" value="+" type="button"
-                                                       data-field="ticket-infants"/>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+{#                                            <div>#}
+{#                                                <input class="qty-btn qty-minus" value="-" type="button"#}
+{#                                                       data-field="ticket-infants"/>#}
+{#                                                <input class="qty-btn qty-plus" value="+" type="button"#}
+{#                                                       data-field="ticket-infants"/>#}
+{#                                            </div>#}
+{#                                        </li>#}
+{#                                    </ul>#}
+{#                                </div>#}
+{#                            </div>#}
 
                             <!--=== button ===-->
+{#                            <div class="col-xs-12 col-sm-4">#}
+{#                                <form action="{% url 'cart:cart_add' room.id %}" method="POST">#}
+{#                                    {% csrf_token %}#}
+{#                                    {{ add_to_cart_form }}#}
+{#                                    <button type="submit" class="btn btn-clean">#}
+{#                                        Book now#}
+{#                                        <small>Best Prices Guaranteed</small>#}
+{#                                    </button>#}
+{#                                </form>#}
+{#                            </div>#}
 
-                            <div class="col-xs-12 col-sm-4">
-                                <a href="reservation-1.html" class="btn btn-clean">
-                                    Book now
-                                    <small>Best Prices Guaranteed</small>
-                                </a>
-                            </div>
 
                         </div> <!--/row-->
                     </div><!--/booking-wrapper-->
                 </div> <!--/container-->
             </div> <!--/booking-->
+
             <!-- ===  Room overview === -->
 
             <div class="room-overview">
@@ -273,16 +311,16 @@
                                 <h2 class="title">Room overview</h2>
                                 <p>
                                     {{ room.description }}
-{#                                    The Superior Rooms pay tribute to fashion and craftsmanship. The rooms are#}
-{#                                    approximately 19m2 with views of Rue d'Alger and Jardin des Tuileries.#}
-{#                                    The selection and pairing of materials has been carefully chosen to give you a cool#}
-{#                                    experience. The super soft bed topper is simply extravagant!#}
-{#                                    Every room is different but the colour palette uses unique and expertly matched#}
-{#                                    hues.#}
-{#                                    An openwork brass screen separates the bathroom from the bedroom. This original#}
-{#                                    feature helps make every room your very own cosy and peaceful haven.#}
-{#                                    Bathrobes, slippers and SOTHYS toiletries are provided in the bathroom to pamper#}
-{#                                    you.#}
+                                    {#                                    The Superior Rooms pay tribute to fashion and craftsmanship. The rooms are#}
+                                    {#                                    approximately 19m2 with views of Rue d'Alger and Jardin des Tuileries.#}
+                                    {#                                    The selection and pairing of materials has been carefully chosen to give you a cool#}
+                                    {#                                    experience. The super soft bed topper is simply extravagant!#}
+                                    {#                                    Every room is different but the colour palette uses unique and expertly matched#}
+                                    {#                                    hues.#}
+                                    {#                                    An openwork brass screen separates the bathroom from the bedroom. This original#}
+                                    {#                                    feature helps make every room your very own cosy and peaceful haven.#}
+                                    {#                                    Bathrobes, slippers and SOTHYS toiletries are provided in the bathroom to pamper#}
+                                    {#                                    you.#}
                                 </p>
                             </div>
 

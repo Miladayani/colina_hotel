@@ -1,8 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic import ListView, DetailView, CreateView
 
 from .models import Room, Comment
 from .forms import CommentForm
+from cart.forms import AddToCartRoomForm, BookingForm
 
 
 class RoomsListView(ListView):
@@ -16,6 +17,12 @@ class RoomsDetailView(DetailView):
     model = Room
     template_name = 'rooms/room_detail.html'
     context_object_name = 'room'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['add_to_cart_form'] = AddToCartRoomForm()
+        context['booking_form'] = BookingForm()
+        return context
 
 
 class CommentCreateView(CreateView):

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Room, Comment
+from .models import Room, Comment, Booking
 
 
 class CommentsInline(admin.TabularInline):
@@ -18,6 +18,12 @@ class RoomAdmin(admin.ModelAdmin):
     ]
 
 
+@admin.register(Booking)
+class BookingAdmin(admin.ModelAdmin):
+    list_display = ['id', 'user', 'room', 'arrival_date', 'departure_date']
+
+
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('rooms', 'body', 'author', 'active')
+
