@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.views.decorators.http import require_POST
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
@@ -26,39 +28,29 @@ def add_to_cart_view(request, room_id):
     cart = Cart(request)
     room = get_object_or_404(Room, id=room_id)
 
-    # فرم‌ها را تعریف کنید
-    add_to_cart_form = AddToCartRoomForm(request.POST)
-    booking_form = BookingForm(request.POST)
+    arrival_date = request.POST.get('arrival_date')
+    departure_date = request.POST.get('departure_date')
+    adults = request.POST.get('adults', 0)
+    children = request.POST.get('children', 0)
+    infants = request.POST.get('infants', 0)
 
-    if add_to_cart_form.is_valid() and booking_form.is_valid():
-        add_to_cart_data = add_to_cart_form.cleaned_data
-        booking_data = booking_form.cleaned_data
+    # تبدیل تاریخ به رشته
+    if arrival_date:
+        arrival_date = str(arrival_date)
+    if departure_date:
+        departure_date = str(departure_date)
 
-        # استخراج داده‌های فرم
-        arrival_date = booking_data['arrival_date']
-        departure_date = booking_data['departure_date']
-        adults = booking_data['adults']
-        children = booking_data['children']
-        infants = booking_data['infants']
+    # افزودن به سبد خرید
+    cart.add(
+        room=room,
+        arrival_date=arrival_date,
+        departure_date=departure_date,
+        adults=adults,
+        children=children,
+        infants=infants
+    )
 
-        # تبدیل تاریخ به رشته
-        arrival_date = arrival_date.isoformat() if arrival_date else None
-        departure_date = departure_date.isoformat() if departure_date else None
-
-        # افزودن به سبد خرید
-        cart.add(
-            room=room,
-            arrival_date=arrival_date,
-            departure_date=departure_date,
-            adults=adults,
-            children=children,
-            infants=infants
-        )
-
-        return redirect('cart:cart_detail')
-    else:
-        # در صورت نامعتبر بودن فرم‌ها، به صفحه قبل برگردد
-        return redirect(request.META.get('HTTP_REFERER'))
+    return redirect('cart:cart_detail')
 
 # @require_POST
 # def add_to_cart_view(request, room_id):

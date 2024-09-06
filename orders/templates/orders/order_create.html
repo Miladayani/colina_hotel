@@ -1,0 +1,316 @@
+{% extends '_base.html' %}
+
+{% block page_title %}
+    Colina - Orders
+{% endblock %}
+
+{% block content %}
+
+    <body>
+
+    <div class="page-loader"></div>
+
+    <div class="wrapper">
+
+        <!-- ========================  Checkout ======================== -->
+
+        <section class="page">
+
+            <!-- ===  Page header === -->
+
+            <div class="page-header" style="background-image:url(assets/images/header-1.jpg)">
+                <div class="container">
+                    <h2 class="title">Confirm your reservation</h2>
+                    <p>Guest information</p>
+                </div>
+            </div>
+
+            <!-- ===  Step wrapper === -->
+
+            <div class="step-wrapper">
+                <div class="container">
+                    <div class="stepper">
+                        <ul class="row">
+                            <li class="col-md-4 active">
+                                <span data-text="Room & rates"></span>
+                            </li>
+                            <li class="col-md-4 active">
+                                <span data-text="Reservation"></span>
+                            </li>
+                            <li class="col-md-4">
+                                <span data-text="Checkout"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===  Checkout === -->
+
+            <div class="checkout">
+
+                <div class="container">
+
+                    <div class="clearfix">
+
+                        <!-- ========================  Note block ======================== -->
+
+                        <div class="cart-wrapper">
+
+                            <div class="note-block">
+
+                                <div class="row">
+
+                                    <!-- === left content === -->
+
+                                    <form action="" method="POST">
+                                        {% csrf_token %}
+                                        {% if form.errors %}
+                                            <div class="alert alert-danger">
+                                                {{ form.errors }}
+                                            </div>
+                                        {% endif %}
+
+                                        <div class="col-md-6">
+
+                                            <!-- === login-wrapper === -->
+
+                                            <div class="login-wrapper">
+
+                                                <div class="white-block">
+
+                                                    <!--signin-->
+
+                                                    <div class="login-block login-block-signin">
+
+                                                        <div class="h4">Sign in <a href="javascript:void(0);"
+                                                                                   class="btn btn-main btn-xs btn-register pull-right">create
+                                                            an account</a></div>
+
+                                                        <hr/>
+
+                                                        <div class="row">
+
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <input type="text" value="" class="form-control"
+                                                                           placeholder="User ID">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <input type="password" value="" class="form-control"
+                                                                           placeholder="Password">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-xs-6">
+                                                            <span class="checkbox">
+                                                                <input type="checkbox" id="checkBoxId3">
+                                                                <label for="checkBoxId3">Remember me</label>
+                                                            </span>
+                                                            </div>
+
+                                                            <div class="col-xs-6 text-right">
+                                                                <a href="#" class="btn btn-main">Login</a>
+                                                            </div>
+                                                        </div>
+                                                    </div> <!--/signin-->
+                                                    <!--signup-->
+
+                                                    <div class="login-block login-block-signup">
+
+                                                        <div class="h4">Register now <a href="javascript:void(0);"
+                                                                                        class="btn btn-main btn-xs btn-login pull-right">Log
+                                                            in</a></div>
+
+                                                        <hr/>
+
+                                                        <div class="row">
+
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <input type="text" name="first_name" value=""
+                                                                           class="form-control"
+                                                                           placeholder="First name: *">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <input type="text" name="last_name" value=""
+                                                                           class="form-control"
+                                                                           placeholder="Last name: *">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-8">
+                                                                <div class="form-group">
+                                                                    <input type="text" name="address" value=""
+                                                                           class="form-control"
+                                                                           placeholder="address: *">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <input type="text" name="phone_number" value=""
+                                                                           class="form-control"
+                                                                           placeholder="Phone: *">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">
+                                                                    <input type="text" name="order_note" value=""
+                                                                           class="form-control"
+                                                                           placeholder="Phone: *">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-12">
+                                                                <hr/>
+                                                                <span class="checkbox">
+                                                                <input type="checkbox" id="checkBoxId1">
+                                                                <label for="checkBoxId1">I have read and accepted the
+                                                                        terms, as well as read and understood our terms of
+                                                                        business conditions</label>
+                                                            </span>
+                                                                <hr/>
+                                                            </div>
+
+                                                            <div class="col-md-12">
+                                                                <button type="submit" class="btn btn-main btn-block">
+                                                                    Create
+                                                                    account
+                                                                </button>
+                                                            </div>
+
+                                                        </div>
+                                                    </div> <!--/signup-->
+                                                </div>
+                                            </div> <!--/login-wrapper-->
+                                        </div> <!--/col-md-6-->
+                                    </form>
+                                    <!-- === right content === -->
+
+                                    <div class="col-md-6">
+
+                                        <div class="white-block">
+
+                                            <div class="h4">Choose payment</div>
+
+                                            <hr/>
+
+                                            <span class="checkbox">
+                                                <input type="radio" id="paymentCart" name="paymentOption">
+                                                <label for="paymentCart">
+                                                    <strong>Zarin pall</strong> <br/>
+                                                </label>
+                                            </span>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ========================  Cart wrapper ======================== -->
+
+                        <div class="cart-wrapper">
+
+                            <!--cart header -->
+
+                            <div class="cart-block cart-block-header clearfix">
+                                <div>
+                                    <span>Room type</span>
+                                </div>
+                                <div class="text-right">
+                                    <span>Price</span>
+                                </div>
+                            </div>
+
+                            <!--cart items-->
+
+                            {% for item in cart %}
+
+                                <div class="clearfix">
+
+                                    <div class="cart-block cart-block-item clearfix">
+
+                                        <div class="image">
+                                            <a href="{{ item.room_obj.get_absolute_url }}"><img
+                                                    src="{{ item.room_obj.image.url }}"
+                                                    alt=""/></a>
+                                        </div>
+                                        
+                                        <div class="title">
+                                            <div class="h2"><a
+                                                    href="{{ item.room_obj.get_absolute_url }}">{{ item.room_obj.name }}</a>
+                                            </div>
+
+                                            <p>
+                                                <strong>Arrival date</strong> <br/> {{ item.arrival_date }}
+                                            </p>
+                                            <p>
+                                                <strong>Guests</strong> <br/> {{ item.adults }} adults
+                                                <br/>{{ item.children }} children
+                                                <br/>{{ item.infants }} infants
+                                            </p>
+                                            <p>
+                                                <strong>Departure date</strong> <br/> {{ item.departure_date }}
+                                            </p>
+
+                                        </div>
+                                        <div class="price">
+                                            <span class="final h3">{{ item.room_obj.price_per_night }}$</span>
+                                        </div>
+                                        <!--delete-this-item-->
+
+                                        <a href="{% url 'cart:remove_to_cart' item.room_obj.id %}">
+                                            <span class="icon icon-cross icon-delete"></span>
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <hr>
+                            {% endfor %}
+
+
+                            <!--cart final price -->
+
+                            <div class="clearfix">
+                                <div class="cart-block cart-block-footer cart-block-footer-price clearfix">
+                                    <span><div class="h2 title">{{ cart.get_total }}$</div></span>
+                                </div>
+                            </div>
+
+
+                            <!-- ========================  Cart navigation ======================== -->
+
+                            <div class="clearfix">
+                                <div class="cart-block cart-block-footer cart-block-footer-price clearfix">
+                                    <div>
+                                        <a href="{% url 'cart:cart_detail' %}" class="btn btn-clean-dark">Back</a>
+                                    </div>
+                                    <div>
+                                        <a href="reservation-3.html" class="btn btn-main">Checkout <span
+                                                class="icon icon-chevron-right"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div> <!--/container-->
+            </div> <!--/checkout-->
+
+        </section>
+
+    </div> <!--/wrapper-->
+    </body>
+{% endblock %}

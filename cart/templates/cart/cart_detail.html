@@ -82,13 +82,12 @@
                                                         src="{{ item.room_obj.image.url }}"
                                                         alt=""/></a>
                                             </div>
-                                            
+
                                             <div class="title">
                                                 <div class="h2"><a
                                                         href="{{ item.room_obj.get_absolute_url }}">{{ item.room_obj.name }}</a>
                                                 </div>
-                                                {% for item in cart %}
-                                                    
+
                                                     <p>
                                                         <strong>Arrival date</strong> <br/> {{ item.arrival_date }}
                                                     </p>
@@ -100,13 +99,10 @@
                                                     <p>
                                                         <strong>Departure date</strong> <br/> {{ item.departure_date }}
                                                     </p>
-                                                    
-                                                {% endfor %}
-                                                
+
                                             </div>
                                             <div class="price">
-                                                <span class="final h3">{{ item.room_obj.price_per_night }}</span>
-                                                {#                                        <span class="discount">$ 2.666</span>#}
+                                                <span class="final h3">{{ item.room_obj.price_per_night }}$</span>
                                             </div>
                                             <!--delete-this-item-->
 
@@ -124,20 +120,6 @@
 
                                     </form>
 
-                                    <!--cart final price -->
-
-                                    <div class="clearfix">
-                                        <div class="cart-block cart-block-footer cart-block-footer-price clearfix">
-                                            <div>
-                                        <span class="checkbox">
-                                        </span>
-                                            </div>
-                                            <div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
                                 {% endfor %}
 
 
@@ -145,33 +127,19 @@
 
                                 <div class="clearfix">
                                     <div class="cart-block cart-block-footer cart-block-footer-price clearfix">
-
-
-                                        {#                                    <form action="{% url 'cart:cart_add' room.id %}" method="POST">#}
-                                        {#                                        {% csrf_token %}#}
-                                        {##}
-                                        {#                                        {{ item.room_update_quantity_form.inplace }}#}
-                                        {#                                        <button type="submit" class="btn btn-clean-dark">Change</button>#}
-                                        {##}
-                                        {#                                    </form>#}
-
-                                        <span>
-                                        <div class="h2 title">{{ cart.get_total }}</div>
-                                    </span>
-
+                                        <span><div class="h2 title">{{ cart.get_total }}$</div></span>
                                         <div>
-                                            <a href="reservation-2.html" class="btn btn-main">Reservation <span
+                                            <a href="{% url 'orders:order_create' %}" class="btn btn-main">Reservation <span
                                                     class="icon icon-chevron-right"></span></a>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         {% else %}
                             <p> Cart is Empty! please add rooms to the cart</p>
-                                <a href="{% url 'rooms_list' %}">List Of Rooms</a>
+                            <a href="{% url 'rooms_list' %}">List Of Rooms</a>
                         {% endif %}
-                        
+
                     </div>
 
                 </div> <!--/container-->

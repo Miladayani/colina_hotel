@@ -1,0 +1,129 @@
+{% load static %}
+
+<header>
+
+    {% if messages %}
+        <div class="container">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <!-- ======================== Navigation ======================== -->
+
+    <div class="container">
+
+        <!-- === navigation-top === -->
+
+        <nav class="navigation-top clearfix">
+
+            <!-- navigation-top-left -->
+
+            <div class="navigation-top-left">
+                <a class="box" href="{% url '404' %}">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="box" href="{% url '404' %}">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="box" href="{% url '404' %}">
+                    <i class="fa fa-youtube"></i>
+                </a>
+            </div>
+
+            <!-- navigation-top-right -->
+
+            <div class="navigation-top-right">
+                <a class="box" href="{% url '404' %}">
+                    <i class="icon icon-star"></i>
+                    Special offers
+                </a>
+                <a class="box" href="{% url 'cart:cart_detail' %}">
+                    <i class="icon icon-tag"></i>
+                    Reservations
+                </a>
+                <a class="box" href="{% url 'contact' %}">
+                    <i class="icon icon-phone-handset"></i>
+                    09917303269
+                </a>
+            </div>
+        </nav>
+
+        <!-- === navigation-main === -->
+
+        <nav class="navigation-main clearfix">
+
+            <!-- logo -->
+
+            <div class="logo animated fadeIn">
+                <a href="{% url 'home' %}">
+                    <img class="logo-desktop" src="{% static 'assets/images/logo.png' %}" alt="Alternate Text"/>
+                    <img class="logo-mobile" src="{% static 'assets/images/logo-mobile.png' %}" alt="Alternate Text"/>
+                </a>
+            </div>
+
+            <!-- toggle-menu -->
+
+            <div class="toggle-menu"><i class="icon icon-menu"></i></div>
+
+            <!-- navigation-block -->
+
+            <div class="navigation-block clearfix">
+
+                <!-- navigation-left -->
+
+                <ul class="navigation-left">
+                    <li>
+                        <a href="{% url 'home' %}">Home <span class="open-dropdown"><i
+                                class="fa fa-angle-down"></i></span></a>
+                        <ul>
+                            <li><a href="{% url 'home' %}">Home - Booking intro</a></li>
+                            <li><a href="{% url 'home2' %}">Home - Booking box</a></li>
+                            <li><a href="{% url 'home3' %}">Home - Rooms intro</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Pages <span class="open-dropdown"><i class="fa fa-angle-down"></i></span></a>
+                        <ul>
+                            <li><a href="{% url 'aboutus' %}">About us</a></li>
+                            <li><a href="{% url 'category' %}">Rooms category</a></li>
+                            {#                            <li><a href="{{ room.get_absolute_url }}">Room overview</a></li>#}
+{#                            <li><a href="{% url '404' %}">404 Not found</a></li>#}
+                            {#                            <li><a href="shortcodes.html">Shortcodes</a></li>#}
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Booking <span class="open-dropdown"><i class="fa fa-angle-down"></i></span></a>
+                        <ul>
+                            <li><a href="{% url 'cart:cart_detail' %}">Booking step 1</a></li>
+                            <li><a href="{% url 'orders:order_create' %}">Booking step 2</a></li>
+                            <li><a href="reservation-3.html">Booking step 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- navigation-right -->
+
+                <ul class="navigation-right">
+                    <li>
+                        <a href="{% url 'facilities' %}">Facilities</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog <span class="open-dropdown"><i class="fa fa-angle-down"></i></span></a>
+                        <ul>
+                            <li><a href="{% url 'blog_category' %}">Blog category</a></li>
+                            <li><a href="{% url 'blog_item' %}">Blog item</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{% url 'contact' %}">Contact</a>
+                    </li>
+                </ul>
+
+            </div> <!--/navigation-block-->
+
+        </nav>
+    </div> <!--/container-->
+
+</header>
