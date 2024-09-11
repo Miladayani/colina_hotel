@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'contacts',
     'cart',
     'orders',
+    'payment',
 
     # third party
     'allauth',
@@ -177,3 +178,4 @@ ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 
+ZARINPAL_MERCHANT_ID = env('DJANGO_ZARINPAL_MERCHANT_ID')

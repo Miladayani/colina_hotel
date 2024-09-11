@@ -6,7 +6,7 @@ from django.contrib.auth import get_user_model
 class Room(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField()
-    price_per_night = models.PositiveIntegerField()
+    price_per_night = models.IntegerField()
     image = models.ImageField(upload_to='room/room_cover', blank=True)
     active = models.BooleanField(default=True)
 
