@@ -1,5 +1,7 @@
 {% extends '_base.html' %}
 
+{% load static %}
+
 {% block page_title %}
     Colina - Cart
 {% endblock %}
@@ -19,7 +21,7 @@
 
             <!-- ===  Page header === -->
 
-            <div class="page-header" style="background-image:url(assets/images/header-1.jpg)">
+            <div class="page-header" style="background-image:url({% static 'assets/images/header.jpg' %})">
                 <div class="container">
                     <h2 class="title">Make a reservation</h2>
                     <p>Proceed to booking step 2</p>

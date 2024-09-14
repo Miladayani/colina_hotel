@@ -1,11 +1,10 @@
-.room-list{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.custom-rooms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.room-item{
-    flex: 1 1 calc(33.333% - 20px);
-    box-sizing: border-box;
+.item {
+  flex: 1 1 30%; /* اندازه دلخواه برای هر کارت */
+  margin: 10px;
 }
-

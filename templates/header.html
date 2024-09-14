@@ -80,44 +80,33 @@
                         <ul>
                             <li><a href="{% url 'home' %}">Home - Booking intro</a></li>
                             <li><a href="{% url 'home2' %}">Home - Booking box</a></li>
-                            <li><a href="{% url 'home3' %}">Home - Rooms intro</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Pages <span class="open-dropdown"><i class="fa fa-angle-down"></i></span></a>
-                        <ul>
-                            <li><a href="{% url 'aboutus' %}">About us</a></li>
-                            <li><a href="{% url 'category' %}">Rooms category</a></li>
-                            {#                            <li><a href="{{ room.get_absolute_url }}">Room overview</a></li>#}
-{#                            <li><a href="{% url '404' %}">404 Not found</a></li>#}
-                            {#                            <li><a href="shortcodes.html">Shortcodes</a></li>#}
-                        </ul>
+                        <a href="{% url 'rooms_list' %}">List Of Rooms</a>
                     </li>
+
                     <li>
-                        <a href="#">Booking <span class="open-dropdown"><i class="fa fa-angle-down"></i></span></a>
-                        <ul>
-                            <li><a href="{% url 'cart:cart_detail' %}">Booking step 1</a></li>
-                            <li><a href="{% url 'orders:order_create' %}">Booking step 2</a></li>
-                            <li><a href="reservation-3.html">Booking step 3</a></li>
-                        </ul>
+                        <a href="{% url 'cart:cart_detail' %}">Cart</a>
                     </li>
+
                 </ul>
 
                 <!-- navigation-right -->
 
                 <ul class="navigation-right">
+
+                    <li>
+                        <a href="{% url 'aboutus' %}">About us</a>
+                    </li>
                     <li>
                         <a href="{% url 'facilities' %}">Facilities</a>
                     </li>
                     <li>
-                        <a href="#">Blog <span class="open-dropdown"><i class="fa fa-angle-down"></i></span></a>
-                        <ul>
-                            <li><a href="{% url 'blog_category' %}">Blog category</a></li>
-                            <li><a href="{% url 'blog_item' %}">Blog item</a></li>
-                        </ul>
+                        <a href="{% url 'contact' %}">Contact</a>
                     </li>
                     <li>
-                        <a href="{% url 'contact' %}">Contact</a>
+                        <a href="{% url 'blog_item' %}">Blog</a>
                     </li>
                 </ul>
 

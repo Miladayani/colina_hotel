@@ -529,5 +529,15 @@ $(window).on('load', function () {
     }, 1000);
 });
 
+$(document).ready(function(){
+    $('.owl-slider').owlCarousel({
+        items: 3,  // تعداد آیتم‌هایی که در هر اسلاید نمایش داده می‌شوند
+        loop: true,
+        nav: true,
+        dots: false,
+        margin: 10
+    });
+});
+
 
 

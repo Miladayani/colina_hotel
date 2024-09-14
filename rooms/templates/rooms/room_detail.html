@@ -14,7 +14,7 @@
 
         <!-- ===  Page header === -->
 
-        <div class="page-header" style="background-image:url({% static 'assets/images/header-1.jpg' %})">
+        <div class="page-header" style="background-image:url({% static 'assets/images/header.jpg' %})">
             <div class="container">
                 <h2 class="title">{{ room.name }}</h2>
                 <p>{{ room.price_per_night }}</p>
@@ -25,18 +25,21 @@
 
             <!-- === Room gallery === -->
 
-            <div class="room">
+            <div class="room-gallery">
                 <div class="container">
+                    <div class="">
 
-                    <!-- === slide item === -->
-                    {% if room.image %}
-                        <div class="item" style="background-image:url({% static 'assets/images/header-1.jpg' %})">
+                        <!-- === slide item === -->
+
+                        <div class="item" style="">
                             <img src="{{ room.image.url }}" alt="{{ room.name }}"/>
                         </div>
-                    {% endif %}
+
+
+                    </div> <!--/owl-slider-->
+
                 </div>
             </div> <!--/room-gallery-->
-
             <!-- === Booking === -->
 
             <form method="POST" action="{% url 'cart:cart_add' room.id %}">
@@ -279,16 +282,6 @@
                                 <h2 class="title">Room overview</h2>
                                 <p>
                                     {{ room.description }}
-                                    {#                                    The Superior Rooms pay tribute to fashion and craftsmanship. The rooms are#}
-                                    {#                                    approximately 19m2 with views of Rue d'Alger and Jardin des Tuileries.#}
-                                    {#                                    The selection and pairing of materials has been carefully chosen to give you a cool#}
-                                    {#                                    experience. The super soft bed topper is simply extravagant!#}
-                                    {#                                    Every room is different but the colour palette uses unique and expertly matched#}
-                                    {#                                    hues.#}
-                                    {#                                    An openwork brass screen separates the bathroom from the bedroom. This original#}
-                                    {#                                    feature helps make every room your very own cosy and peaceful haven.#}
-                                    {#                                    Bathrobes, slippers and SOTHYS toiletries are provided in the bathroom to pamper#}
-                                    {#                                    you.#}
                                 </p>
                             </div>
 
@@ -417,6 +410,148 @@
                                 </div>
                             </div>
 
+                            <!-- === room comments === -->
+
+                            <div class="comments">
+                                <div class="comment-wrapper">
+
+                                    <!-- === comment === -->
+
+                                    <div class="comment-block">
+                                        <div class="comment-user">
+                                            <div><img src="assets/images/user-2.jpg"  width="70"/>
+                                            </div>
+                                            <div>
+                                                <h5>
+                                                    John Doe
+                                                    <a href="#" class="btn btn-sm btn-main pull-right"><i
+                                                            class="fa fa-reply"></i>
+                                                        Reply</a>
+                                                    <small>03.05.2017</small>
+                                                </h5>
+                                            </div>
+                                        </div>
+
+                                        <!-- comment description -->
+
+                                        <div class="comment-desc">
+                                            <p>
+                                                In vestibulum tellus ut nunc accumsan eleifend. Donec mattis cursus
+                                                ligula, id
+                                                iaculis dui feugiat nec. Etiam ut ante sed neque lacinia volutpat.
+                                                Maecenas
+                                                ultricies tempus nibh, sit amet facilisis mauris vulputate in. Phasellus
+                                                tempor justo et mollis facilisis. Donec placerat at nulla sed suscipit.
+                                                Praesent
+                                                accumsan, sem sit amet euismod ullamcorper, justo sapien cursus nisl,
+                                                nec
+                                                gravida
+                                            </p>
+                                        </div>
+
+                                        <!-- comment reply -->
+
+                                        <div class="comment-block">
+                                            <div class="comment-user">
+                                                <div><img src="assets/images/user-2.jpg" alt="Alternate Text"
+                                                          width="70"/></div>
+                                                <div>
+                                                    <h5>
+                                                        John Doe
+                                                        <a href="#" class="btn btn-sm btn-main pull-right"><i
+                                                                class="fa fa-reply"></i> Reply</a>
+                                                        <small>08.05.2017</small>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div class="comment-desc">
+                                                <p>
+                                                    Curabitur sit amet elit quis tellus tincidunt efficitur. Cras
+                                                    lobortis id
+                                                    elit eu vehicula. Sed porttitor nulla vitae nisl varius luctus.
+                                                    Quisque
+                                                    a enim nisl. Maecenas facilisis, felis sed blandit scelerisque,
+                                                    sapien
+                                                    nisl egestas diam, nec blandit diam ipsum eget dolor. Maecenas
+                                                    ultricies
+                                                    tempus nibh, sit amet facilisis mauris vulputate in.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <!--/reply-->
+                                    </div>
+
+                                    <!-- === comment === -->
+
+                                    <div class="comment-block">
+                                        <div class="comment-user">
+                                            <div><img src="assets/images/user-2.jpg" alt="Alternate Text" width="70"/>
+                                            </div>
+                                            <div>
+                                                <h5>
+                                                    John Doe
+                                                    <a href="#" class="btn btn-sm btn-main pull-right"><i
+                                                            class="fa fa-reply"></i>
+                                                        Reply</a>
+                                                    <small>21.03.2017</small>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class="comment-desc">
+                                            <p>
+                                                Cras lobortis id elit eu vehicula. Sed porttitor nulla vitae nisl varius
+                                                luctus.
+                                                Quisque a enim nisl. Maecenas facilisis, felis sed blandit scelerisque,
+                                                sapien
+                                                nisl egestas diam, nec blandit diam ipsum eget dolor. In vestibulum
+                                                tellus
+                                                ut nunc accumsan eleifend. Donec mattis cursus ligula, id iaculis dui
+                                                feugiat
+                                                nec. Etiam ut ante sed neque lacinia volutpat. Maecenas ultricies tempus
+                                                nibh, sit amet facilisis mauris vulputate in. Phasellus tempor justo et
+                                                mollis
+                                                facilisis. Donec placerat at nulla sed suscipit. Praesent accumsan, sem
+                                                sit
+                                                amet euismod ullamcorper, justo sapien cursus nisl, nec gravida
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div><!--/comment-wrapper-->
+
+                                <div class="comment-header">
+                                    <a href="#" class="btn btn-clean-dark">12 comments</a>
+                                </div> <!--/comment-header-->
+                                <!-- === add comment === -->
+
+                                <div class="comment-add">
+
+                                    <div class="comment-reply-message">
+                                        <div class="h3 title">Leave a Reply</div>
+                                        <p>Your email address will not be published.</p>
+                                    </div>
+
+                                    <form action="#" method="post">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="name" value=""
+                                                   placeholder="Your Name"
+                                                   required="required"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="name" value=""
+                                                   placeholder="Your Email"
+                                                   required="required"/>
+                                        </div>
+                                        <div class="form-group">
+                                        <textarea rows="10" class="form-control" placeholder="Your comment"
+                                                  required="required"></textarea>
+                                        </div>
+                                        <div class="clearfix text-center">
+                                            <input type="submit" class="btn btn-main" value="Add comment"/>
+                                        </div>
+                                    </form>
+
+                                </div><!--/comment-add-->
+                            </div> <!--/comments-->
                         </div> <!--/col-sm-10-->
                     </div> <!--/row-->
                 </div> <!--/container-->

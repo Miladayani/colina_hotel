@@ -1,5 +1,7 @@
 {% extends '_base.html' %}
 
+{% load static %}
+
 {% block page_title %} 
     Facilities - Colina Hotel
 {% endblock %}
@@ -17,9 +19,9 @@
 
             <!-- ===  Page header === -->
 
-            <div class="page-header" style="background-image:url(assets/images/header-1.jpg)">
+            <div class="page-header" style="background-image:url({% static 'assets/images/head.jpg' %})">
                 <div class="container text-center">
-                    <h2 class="title">Resurant</h2>
+                    <h2 class="title">Restaurant</h2>
                     <p>Restaurants & In-Room Dining</p>
                 </div>
             </div>
@@ -32,19 +34,19 @@
 
                             <!-- === slide item === -->
 
-                            <div class="item" style="background-image:url(assets/images/item-2.jpg)">
-                                <img src="assets/images/item-2.jpg" alt="" />
+                            <div class="item" style="background-image:url({% static 'assets/images/resturan.jpg' %})">
+                                <img src="{% static 'assets/images/resturan.jpg' %}" alt="" />
                             </div>
 
                             <!-- === slide item === -->
 
-                            <div class="item" style="background-image:url(assets/images/item-1.jpg)">
-                                <img src="assets/images/item-1.jpg" alt="" />
+                            <div class="item" style="background-image:url({% static 'assets/images/dining.jpg' %})">
+                                <img src="{% static 'assets/images/dining.jpg' %}" alt="" />
                             </div>
 
                         </div> <!--/owl-slider-->
 
-                    </div> <!--/facilty-gallery-->
+                    </div> <!--/facility-gallery-->
 
                     <div class="row">
                         <div class="col-md-10 col-md-offset-1">
@@ -117,10 +119,10 @@
 
                                                     <div class="col-xs-12 col-md-6">
                                                         <figure>
-                                                            <figcaption style="background-image:url(assets/images/food-1.jpg)">
+                                                            <figcaption style="background-image:url({% static 'assets/images/breakfast.jpg' %})">
                                                                 <img src="assets/images/food-1.jpg" alt="" />
                                                             </figcaption>
-                                                            <a href="#" class="btn btn-clean" onclick="">Breakfast</a>
+                                                            <a href="{% url '404' %}" class="btn btn-clean" onclick="">Breakfast</a>
                                                         </figure>
                                                     </div>
 
@@ -128,10 +130,10 @@
 
                                                     <div class="col-xs-6 col-md-6">
                                                         <figure>
-                                                            <figcaption style="background-image:url(assets/images/food-2.jpg)">
+                                                            <figcaption style="background-image:url({% static 'assets/images/lunch.jpg' %})">
                                                                 <img src="assets/images/food-2.jpg" alt="" />
                                                             </figcaption>
-                                                            <a href="#" class="btn btn-clean">Lunch</a>
+                                                            <a href="{% url '404' %}" class="btn btn-clean">Lunch</a>
                                                         </figure>
                                                     </div>
 
@@ -139,10 +141,10 @@
 
                                                     <div class="col-xs-6 col-md-6">
                                                         <figure>
-                                                            <figcaption style="background-image:url(assets/images/food-3.jpg)">
+                                                            <figcaption style="background-image:url({% static 'assets/images/dinner.jpg' %})">
                                                                 <img src="assets/images/food-3.jpg" alt="" />
                                                             </figcaption>
-                                                            <a href="#" class="btn btn-clean">Dinner</a>
+                                                            <a href="{% url '404' %}" class="btn btn-clean">Dinner</a>
                                                         </figure>
                                                     </div>
 
@@ -150,10 +152,10 @@
 
                                                     <div class="col-xs-6 col-md-6">
                                                         <figure>
-                                                            <figcaption style="background-image:url(assets/images/food-4.jpg)">
+                                                            <figcaption style="background-image:url({% static 'assets/images/in-room.jpg' %})">
                                                                 <img src="assets/images/food-4.jpg" alt="" />
                                                             </figcaption>
-                                                            <a href="#" class="btn btn-clean">In-room</a>
+                                                            <a href="{% url '404' %}" class="btn btn-clean">In-room</a>
                                                         </figure>
                                                     </div>
 
@@ -182,7 +184,7 @@
                                                             <p>Et no odio ipsum est eirmod lorem at accusam sit sea eros at sit justo sed suscipit doming sadipscing dolore aliquyam et no accusam dolores</p>
                                                         </div>
                                                     </div>
-                                                    <div class="image" style="background-image:url(assets/images/user-1.jpg)">
+                                                    <div class="image" style="background-image:url({% static 'assets/images/chef-1.jpg' %})">
                                                         <img src="assets/images/user-1.jpg" alt="" />
                                                     </div>
                                                 </div>
@@ -198,7 +200,7 @@
                                                             <p>Et no odio ipsum est eirmod lorem at accusam sit sea eros at sit justo sed suscipit doming sadipscing dolore aliquyam et no accusam dolores</p>
                                                         </div>
                                                     </div>
-                                                    <div class="image" style="background-image:url(assets/images/user-2.jpg)">
+                                                    <div class="image" style="background-image:url({% static 'assets/images/chef-2.jpg' %})">
                                                         <img src="assets/images/user-2.jpg" alt="" />
                                                     </div>
                                                 </div>
@@ -226,7 +228,7 @@
 
                                                                 <!--=== event item ===-->
 
-                                                                <a href="#">
+                                                                <a href="{% url '404' %}">
                                                                     <div class="event">
                                                                         <div class="date">
                                                                             <div class="date-card">
@@ -242,7 +244,7 @@
 
                                                                 <!--=== event item ===-->
 
-                                                                <a href="#">
+                                                                <a href="{% url '404' %}">
                                                                     <div class="event">
                                                                         <div class="date">
                                                                             <div class="date-card">
@@ -260,7 +262,7 @@
 
                                                         </div> <!--/text-->
                                                     </div> <!--/item-->
-                                                    <div class="image" style="background-image:url(assets/images/event-1.jpg)">
+                                                    <div class="image" style="background-image:url({% static 'assets/images/event-1.jpg' %})">
                                                         <img src="assets/images/event-1.jpg" alt="" />
                                                     </div>
                                                 </div> <!--/blocks-->
@@ -273,7 +275,7 @@
 
                                                                 <!--=== event item ===-->
 
-                                                                <a href="#">
+                                                                <a href="{% url '404' %}">
                                                                     <div class="event">
                                                                         <div class="date">
                                                                             <div class="date-card">
@@ -289,7 +291,7 @@
 
                                                                 <!--=== event item ===-->
 
-                                                                <a href="#">
+                                                                <a href="{% url '404' %}">
                                                                     <div class="event">
                                                                         <div class="date">
                                                                             <div class="date-card">
@@ -306,7 +308,7 @@
                                                             </div> <!--/events-->
                                                         </div>
                                                     </div>
-                                                    <div class="image" style="background-image:url(assets/images/event-2.jpg)">
+                                                    <div class="image" style="background-image:url({% static 'assets/images/event-2.jpg' %})">
                                                         <img src="assets/images/event-2.jpg" alt="" />
                                                     </div>
                                                 </div>
@@ -338,7 +340,7 @@
 
             <div class="section-header hidden">
                 <div class="container">
-                    <h2 class="title">Wellness & spa <a href="#" class="btn btn-sm btn-clean-dark">Explore more</a></h2>
+                    <h2 class="title">Wellness & spa <a href="{% url '404' %}" class="btn btn-sm btn-clean-dark">Explore more</a></h2>
                     <p>
                         With the best luxury spa, salon and fitness experiences
                     </p>
@@ -351,7 +353,7 @@
 
                 <!-- === stretcher item === -->
 
-                <li class="stretcher-item" style="background-image:url(assets/images/services-1.jpg);">
+                <li class="stretcher-item" style="background-image:url({% static 'assets/images/spacenter.jpg' %});">
                     <!--logo-item-->
                     <div class="stretcher-logo">
                         <div class="text">
@@ -364,12 +366,12 @@
                         <figcaption>Unparalleled devotion to luxury</figcaption>
                     </figure>
                     <!--anchor-->
-                    <a href="#">Anchor link</a>
+                    <a href="{% url '404' %}">Anchor link</a>
                 </li>
 
                 <!-- === stretcher item === -->
 
-                <li class="stretcher-item" style="background-image:url(assets/images/services-2.jpg);">
+                <li class="stretcher-item" style="background-image:url({% static 'assets/images/gym.jpg' %});">
                     <!--logo-item-->
                     <div class="stretcher-logo">
                         <div class="text">
@@ -382,12 +384,12 @@
                         <figcaption>Care about results</figcaption>
                     </figure>
                     <!--anchor-->
-                    <a href="#">Anchor link</a>
+                    <a href="{% url '404' %}">Anchor link</a>
                 </li>
 
                 <!-- === stretcher item === -->
 
-                <li class="stretcher-item" style="background-image:url(assets/images/services-3.jpg);">
+                <li class="stretcher-item" style="background-image:url({% static 'assets/images/fitness.jpg' %});">
                     <!--logo-item-->
                     <div class="stretcher-logo">
                         <div class="text">
@@ -399,12 +401,12 @@
                         <figcaption>Your daily activities</figcaption>
                     </figure>
                     <!--anchor-->
-                    <a href="#">Anchor link</a>
+                    <a href="{% url '404' %}">Anchor link</a>
                 </li>
 
                 <!-- === stretcher item === -->
 
-                <li class="stretcher-item" style="background-image:url(assets/images/services-4.jpg);">
+                <li class="stretcher-item" style="background-image:url({% static 'assets/images/beautysalon.jpg' %});">
 
 
                     <!--logo-item-->
@@ -419,7 +421,7 @@
                         <figcaption>Hair salons and spas</figcaption>
                     </figure>
                     <!--anchor-->
-                    <a href="#">Anchor link</a>
+                    <a href="{% url '404' %}">Anchor link</a>
                 </li>
 
                 <!-- === stretcher item more === -->
@@ -428,7 +430,6 @@
                     <div class="more-icon">
                         <span data-title-show="Show more" data-title-hide="+"></span>
                     </div>
-                    <a href="#"></a>
                 </li>
 
             </ul>
@@ -442,7 +443,7 @@
 
             <div class="section-header">
                 <div class="container">
-                    <h2 class="title">Near by <a href="#" class="btn btn-sm btn-clean-dark">View all</a></h2>
+                    <h2 class="title">Near by <a href="{% url '404' %}" class="btn btn-sm btn-clean-dark">View all</a></h2>
                     <p>Here's a selection of ionic sites related to art, fashion and design.</p>
                 </div>
             </div>
@@ -454,10 +455,10 @@
 
                     <div class="col-xs-12 col-md-8">
                         <figure>
-                            <figcaption style="background-image:url(assets/images/activity-1.jpg)">
-                                <img src="assets/images/activity-1.jpg" alt="" />
+                            <figcaption style="background-image:url({% static 'assets/images/museum.jpg' %})">
+                                <img src="{% static 'assets/images/activity-1.jpg' %}" alt=""/>
                             </figcaption>
-                            <a href="#" class="btn btn-clean" onclick="">Museums</a>
+                            <a href="{% url '404' %}" class="btn btn-clean" onclick="">Museums</a>
                         </figure>
                     </div>
 
@@ -465,10 +466,10 @@
 
                     <div class="col-xs-6 col-md-4">
                         <figure>
-                            <figcaption style="background-image:url(assets/images/activity-2.jpg)">
-                                <img src="assets/images/activity-2.jpg" alt="" />
+                            <figcaption style="background-image:url({% static 'assets/images/night.jpg' %})">
+                                <img src="{% static 'assets/images/activity-2.jpg"' %} alt="" />
                             </figcaption>
-                            <a href="#" class="btn btn-clean">Nightlife</a>
+                            <a href="{% url '404' %}" class="btn btn-clean">Nightlife</a>
                         </figure>
                     </div>
 
@@ -476,10 +477,10 @@
 
                     <div class="col-xs-6 col-md-4">
                         <figure>
-                            <figcaption style="background-image:url(assets/images/activity-3.jpg)">
-                                <img src="assets/images/activity-3.jpg" alt="" />
+                            <figcaption style="background-image:url({% static 'assets/images/food-drink.jpg' %})">
+                                <img src="{% static 'assets/images/activity-2.jpg' %}" alt=""/>
                             </figcaption>
-                            <a href="#" class="btn btn-clean">Food & drink</a>
+                            <a href="{% url '404' %}" class="btn btn-clean">Food & drink</a>
                         </figure>
                     </div>
 
@@ -487,10 +488,10 @@
 
                     <div class="col-xs-6 col-md-4">
                         <figure>
-                            <figcaption style="background-image:url(assets/images/activity-4.jpg)">
-                                <img src="assets/images/activity-4.jpg" alt="" />
+                            <figcaption style="background-image:url({% static 'assets/images/shopping.jpg' %})">
+                                <img src="{% static 'assets/images/activity-4.jpg' %}" alt=""/>
                             </figcaption>
-                            <a href="#" class="btn btn-clean">Shopping</a>
+                            <a href="{% url '404' %}" class="btn btn-clean">Shopping</a>
                         </figure>
                     </div>
 
@@ -498,10 +499,10 @@
 
                     <div class="col-xs-6 col-md-4">
                         <figure>
-                            <figcaption style="background-image:url(assets/images/activity-5.jpg)">
-                                <img src="assets/images/activity-5.jpg" alt="" />
+                            <figcaption style="background-image:url({% static 'assets/images/city-life.jpg' %})">
+                                <img src="{% static 'assets/images/activity-5.jpg' %}" alt=""/>
                             </figcaption>
-                            <a href="#" class="btn btn-clean">The City</a>
+                            <a href="{% url '404' %}" class="btn btn-clean">The City</a>
                         </figure>
                     </div>
 

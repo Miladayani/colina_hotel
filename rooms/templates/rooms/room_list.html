@@ -7,8 +7,8 @@
 
 
 {% block content %}
-    
-<body>
+
+    <body>
 
     <div class="page-loader"></div>
 
@@ -16,11 +16,11 @@
         <!-- ========================  Header content ======================== -->
 
         <section class="frontpage-slider">
-            <div class="owl-slider owl-slider-header owl-slider-fullscreen">
+            <div class="owl-carousel owl-slider owl-slider-header owl-slider-fullscreen">
 
                 <!-- === slide item === -->
 
-                <div class="item" style="background-image:url(assets/images/slide-3.jpg)">
+                <div class="item" style="background-image:url({% static 'assets/images/room-3.jpg' %})">
                     <div class="box text-center">
                         <div class="container">
                             <div class="rating animated" data-animation="fadeInDown">
@@ -31,7 +31,7 @@
                                 <i class="fa fa-star"></i>
                             </div>
                             <h2 class="title animated h1" data-animation="fadeInDown">
-                                A moment of <br /> <span>pure prestige</span>
+                                A moment of <br/> <span>pure prestige</span>
                             </h2>
                             <div class="desc animated" data-animation="fadeInUp">
                                 Lavish social and business events
@@ -47,15 +47,15 @@
 
                 <!-- === slide item === -->
 
-                <div class="item" style="background-image:url(assets/images/slide-1.jpg)">
+                <div class="item" style="background-image:url({% static 'assets/images/room-1.jpg' %})">
                     <div class="box text-center">
                         <div class="container">
                             <h2 class="title animated h1" data-animation="fadeInDown">
-                                The privacy and <br />
+                                The privacy and <br/>
                                 individuality of a custom
                             </h2>
                             <div class="desc animated" data-animation="fadeInUp">
-                                The Residences have their own dedicated private entrance as well <br />
+                                The Residences have their own dedicated private entrance as well <br/>
                                 as an anonymous "celebrity" entrance, for ultimate privacy.
                             </div>
                             <div class="animated" data-animation="fadeInUp">
@@ -66,7 +66,7 @@
 
                 <!-- === slide item === -->
 
-                <div class="item" style="background-image:url(assets/images/slide-2.jpg)">
+                <div class="item" style="background-image:url({% static 'assets/images/room-2.jpg' %})">
                     <div class="box text-center">
                         <div class="container">
                             <div class="rating animated" data-animation="fadeInDown">
@@ -77,7 +77,9 @@
                                 <i class="fa fa-star"></i>
                             </div>
                             <h2 class="title animated h1" data-animation="fadeInDown">Fairmont managed!</h2>
-                            <div class="desc animated" data-animation="fadeInUp">The elegant Champagne Bar, the stylish Colina Club.</div>
+                            <div class="desc animated" data-animation="fadeInUp">The elegant Champagne Bar, the stylish
+                                Colina Club.
+                            </div>
                             <div class="desc animated" data-animation="fadeInUp">Guestrooms and luxurious suites</div>
                             <div class="animated" data-animation="fadeInUp">
                             </div>
@@ -92,28 +94,21 @@
 
         <section class="rooms rooms-widget">
 
-            <!-- === rooms header === -->
-
-            <div class="section-header">
-                <div class="container">
-                    <h2 class="title">Rooms accommodation <a href="{% url 'category' %}" class="btn btn-sm btn-clean-dark">View all</a></h2>
-                    <p>Designed as a privileged almost private place where you'll feel right at home</p>
-                </div>
-            </div>
-
             <!-- === rooms content === -->
 
-          <div class="container">
-                <div class="room-list">
+            <div class="container">
+
+                <div class="custom-rooms owl-theme">
+
+                    <!-- === rooms item === -->
                     {% for room in rooms %}
-                        <div class="room-item">
+
+                        <div class="item">
                             <article>
-                                <div class="room-image">
-                                    <a href="{{ room.get_absolute_url }}">
-                                        {% if room.image %}
-                                    <img  src="{{ room.image.url }}" alt="{{ room.name }}"/>
-                                        {% endif %}
-                                    </a>
+                                <div class="image">
+                                    {% if room.image %}
+                                        <img src="{{ room.image.url }}" alt="{{ room.name }}"/>
+                                    {% endif %}
                                 </div>
                                 <div class="details">
                                     <div class="text">
@@ -122,7 +117,7 @@
                                     </div>
                                     <div class="book">
                                         <div>
-                                            <a href="{{ room.get_absolute_url }}" class="btn btn-primary">Book now</a>
+                                            <a href="{{ room.get_absolute_url }}" class="btn btn-main">Book now</a>
                                         </div>
                                         <div>
                                             <span class="price h4">{{ room.price_per_night }}</span>
@@ -133,10 +128,12 @@
                             </article>
                         </div>
                     {% endfor %}
+
                 </div><!--/owl-rooms-->
+
             </div> <!--/container-->
 
         </section>
     </div> <!--/wrapper-->
-</body>
+    </body>
 {% endblock %}

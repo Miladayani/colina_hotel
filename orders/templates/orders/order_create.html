@@ -1,5 +1,7 @@
 {% extends '_base.html' %}
 
+{% load static %}
+
 {% block page_title %}
     Colina - Orders
 {% endblock %}
@@ -18,7 +20,7 @@
 
             <!-- ===  Page header === -->
 
-            <div class="page-header" style="background-image:url(assets/images/header-1.jpg)">
+            <div class="page-header" style="background-image:url({% static 'assets/images/header.jpg' %})">
                 <div class="container">
                     <h2 class="title">Confirm your reservation</h2>
                     <p>Guest information</p>
@@ -283,23 +285,19 @@
                             <div class="clearfix">
                                 <div class="cart-block cart-block-footer cart-block-footer-price clearfix">
                                     <span><div class="h2 title">{{ cart.get_total }}$</div></span>
+                                    <div><a href="{% url 'cart:cart_detail' %}" class="btn btn-clean-dark">Back</a></div>
                                 </div>
                             </div>
 
 
                             <!-- ========================  Cart navigation ======================== -->
 
-                            <div class="clearfix">
-                                <div class="cart-block cart-block-footer cart-block-footer-price clearfix">
-                                    <div>
-                                        <a href="{% url 'cart:cart_detail' %}" class="btn btn-clean-dark">Back</a>
-                                    </div>
-                                    <div>
-                                        <a href="reservation-3.html" class="btn btn-main">Checkout <span
-                                                class="icon icon-chevron-right"></span></a>
-                                    </div>
-                                </div>
-                            </div>
+{#                            <div class="clearfix">#}
+{#                                <div class="cart-block cart-block-footer cart-block-footer-price clearfix">#}
+{#                                    #}
+{#                                    #}
+{#                                </div>#}
+{#                            </div>#}
 
                         </div>
 
