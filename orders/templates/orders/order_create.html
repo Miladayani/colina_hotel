@@ -1,6 +1,7 @@
 {% extends '_base.html' %}
 
 {% load static %}
+{% load humanize %}
 
 {% block page_title %}
     Colina - Orders
@@ -80,52 +81,9 @@
                                             <div class="login-wrapper">
 
                                                 <div class="white-block">
-
-                                                    <!--signin-->
-
-                                                    <div class="login-block login-block-signin">
-
-                                                        <div class="h4">Sign in <a href="javascript:void(0);"
-                                                                                   class="btn btn-main btn-xs btn-register pull-right">create
-                                                            an account</a></div>
-
-                                                        <hr/>
-
-                                                        <div class="row">
-
-                                                            <div class="col-md-12">
-                                                                <div class="form-group">
-                                                                    <input type="text" value="" class="form-control"
-                                                                           placeholder="User ID">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-12">
-                                                                <div class="form-group">
-                                                                    <input type="password" value="" class="form-control"
-                                                                           placeholder="Password">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-xs-6">
-                                                            <span class="checkbox">
-                                                                <input type="checkbox" id="checkBoxId3">
-                                                                <label for="checkBoxId3">Remember me</label>
-                                                            </span>
-                                                            </div>
-
-                                                            <div class="col-xs-6 text-right">
-                                                                <a href="#" class="btn btn-main">Login</a>
-                                                            </div>
-                                                        </div>
-                                                    </div> <!--/signin-->
                                                     <!--signup-->
 
                                                     <div class="login-block login-block-signup">
-
-                                                        <div class="h4">Register now <a href="javascript:void(0);"
-                                                                                        class="btn btn-main btn-xs btn-login pull-right">Log
-                                                            in</a></div>
 
                                                         <hr/>
 
@@ -246,7 +204,7 @@
                                                     src="{{ item.room_obj.image.url }}"
                                                     alt=""/></a>
                                         </div>
-                                        
+
                                         <div class="title">
                                             <div class="h2"><a
                                                     href="{{ item.room_obj.get_absolute_url }}">{{ item.room_obj.name }}</a>
@@ -263,10 +221,17 @@
                                             <p>
                                                 <strong>Departure date</strong> <br/> {{ item.departure_date }}
                                             </p>
+                                            <p>
+                                                <strong>Nights</strong> <br/> {{ item.nights }}
+                                            </p>
 
                                         </div>
                                         <div class="price">
-                                            <span class="final h3">{{ item.room_obj.price_per_night }}$</span>
+                                            <span class="final h3">{{ item.room_obj.price_per_night|intcomma:False }}</span>
+                                            <span>price per night</span>
+                                            <br>
+                                            <span class="final h3">{{ item.totally_price|intcomma:False }}</span>
+                                            <span>total price</span>
                                         </div>
                                         <!--delete-this-item-->
 
@@ -276,7 +241,7 @@
                                     </div>
 
                                 </div>
-                                <hr>
+                                <br>
                             {% endfor %}
 
 
@@ -284,20 +249,11 @@
 
                             <div class="clearfix">
                                 <div class="cart-block cart-block-footer cart-block-footer-price clearfix">
-                                    <span><div class="h2 title">{{ cart.get_total }}$</div></span>
-                                    <div><a href="{% url 'cart:cart_detail' %}" class="btn btn-clean-dark">Back</a></div>
+                                    <span><div class="h2 title">{{ total_sum|intcomma:False }}</div></span>
+                                    <div><a href="{% url 'cart:cart_detail' %}" class="btn btn-clean-dark">Back</a>
+                                    </div>
                                 </div>
                             </div>
-
-
-                            <!-- ========================  Cart navigation ======================== -->
-
-{#                            <div class="clearfix">#}
-{#                                <div class="cart-block cart-block-footer cart-block-footer-price clearfix">#}
-{#                                    #}
-{#                                    #}
-{#                                </div>#}
-{#                            </div>#}
 
                         </div>
 

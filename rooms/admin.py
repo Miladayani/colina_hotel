@@ -18,12 +18,6 @@ class RoomAdmin(admin.ModelAdmin):
     ]
 
 
-@admin.register(Booking)
-class BookingAdmin(admin.ModelAdmin):
-    list_display = ['id', 'user', 'room', 'arrival_date', 'departure_date']
-
-
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('rooms', 'body', 'author', 'active')
-
+    list_display = ('rooms', 'body', 'author', 'active', )

@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 <header>
 
@@ -37,11 +38,11 @@
             <div class="navigation-top-right">
                 <a class="box" href="{% url '404' %}">
                     <i class="icon icon-star"></i>
-                    Special offers
+                    {% trans 'Special offers' %}
                 </a>
                 <a class="box" href="{% url 'cart:cart_detail' %}">
                     <i class="icon icon-tag"></i>
-                    Reservations
+                    {% trans 'Reservations' %}
                 </a>
                 <a class="box" href="{% url 'contact' %}">
                     <i class="icon icon-phone-handset"></i>
@@ -75,19 +76,19 @@
 
                 <ul class="navigation-left">
                     <li>
-                        <a href="{% url 'home' %}">Home <span class="open-dropdown"><i
+                        <a href="{% url 'home' %}"> {% trans 'Home' %} <span class="open-dropdown"><i
                                 class="fa fa-angle-down"></i></span></a>
                         <ul>
-                            <li><a href="{% url 'home' %}">Home - Booking intro</a></li>
-                            <li><a href="{% url 'home2' %}">Home - Booking box</a></li>
+                            <li><a href="{% url 'home' %}">{% trans 'Home - Booking intro' %}</a></li>
+                            <li><a href="{% url 'home2' %}">{% trans 'Home - Booking box' %}</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="{% url 'rooms_list' %}">List Of Rooms</a>
+                        <a href="{% url 'rooms_list' %}">{% trans 'List Of Rooms' %}</a>
                     </li>
 
                     <li>
-                        <a href="{% url 'cart:cart_detail' %}">Cart</a>
+                        <a href="{% url 'cart:cart_detail' %}">{% trans 'Cart' %}</a>
                     </li>
 
                 </ul>
@@ -97,16 +98,16 @@
                 <ul class="navigation-right">
 
                     <li>
-                        <a href="{% url 'aboutus' %}">About us</a>
+                        <a href="{% url 'aboutus' %}">{% trans 'About us' %}</a>
                     </li>
                     <li>
-                        <a href="{% url 'facilities' %}">Facilities</a>
+                        <a href="{% url 'facilities' %}">{% trans 'Facilities' %}</a>
                     </li>
                     <li>
-                        <a href="{% url 'contact' %}">Contact</a>
+                        <a href="{% url 'contact' %}">{% trans 'Contact' %}</a>
                     </li>
                     <li>
-                        <a href="{% url 'blog_item' %}">Blog</a>
+                        <a href="{% url 'blog_item' %}">{% trans 'Blog' %}</a>
                     </li>
                 </ul>
 

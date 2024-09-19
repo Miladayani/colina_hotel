@@ -21,7 +21,7 @@ class Cart:
 
     def add(self, room, quantity=1, replace_current_quantity=False,
             arrival_date=None, departure_date=None,
-            adults=0, children=0, infants=0):
+            adults=0, children=0, infants=0, totally_price=0, nights=None):
 
         room_id = str(room.id)
 
@@ -32,7 +32,9 @@ class Cart:
                 'departure_date': departure_date,
                 'adults': adults,
                 'children': children,
-                'infants': infants
+                'infants': infants,
+                'totally_price': totally_price,
+                'nights': nights,
             }
 
         if replace_current_quantity:
@@ -45,33 +47,10 @@ class Cart:
         self.cart[room_id]['adults'] = adults or self.cart[room_id]['adults']
         self.cart[room_id]['children'] = children or self.cart[room_id]['children']
         self.cart[room_id]['infants'] = infants or self.cart[room_id]['infants']
+        self.cart[room_id]['nights'] = nights or self.cart[room_id]['nights']
+        self.cart[room_id]['totally_price'] = totally_price or self.cart[room_id]['totally_price']
 
         self.save()
-    # def add(self, room, quantity=1, replace_current_quantity=False, arrival_date=None, departure_date=None,
-    #         adults=0, children=0, infants=0):
-    #     """
-    #     Add the specified room to the cart if it exists
-    #     """
-    #     room_id = str(room.id)
-    #
-    #     if room_id not in self.cart:
-    #         self.cart[room_id] = {'quantity': 0, 'arrival_date': arrival_date, 'departure_date': departure_date,
-    #                               'adults': adults, 'children': children, 'infants': infants}
-    #
-    #     if replace_current_quantity:
-    #         self.cart[room_id]['quantity'] = quantity
-    #     else:
-    #         self.cart[room_id]['quantity'] += quantity
-    #
-    #     self.cart[room_id]['arrival_date'] = arrival_date or self.cart[room_id]['arrival_date']
-    #     self.cart[room_id]['departure_date'] = departure_date or self.cart[room_id]['departure_date']
-    #     self.cart[room_id]['adults'] = adults or self.cart[room_id]['adults']
-    #     self.cart[room_id]['children'] = children or self.cart[room_id]['children']
-    #     self.cart[room_id]['infants'] = infants or self.cart[room_id]['infants']
-    #
-    #     messages.success(self.request, 'Room successfully added to cart')
-    #
-    #     self.save()
 
     def remove(self, room):
         """
@@ -112,10 +91,10 @@ class Cart:
         del self.session['cart']
         self.save()
 
-    def get_total(self):
-        room_ids = self.cart.keys()
-
-        return sum(item['quantity'] * item['room_obj'].price_per_night for item in self.cart.values())
+    # def get_total(self):
+    #     room_ids = self.cart.keys()
+    #
+    #     return sum(item['totally_price'] for item in self.cart.values())
 
     def is_empty(self):
         if self.cart:

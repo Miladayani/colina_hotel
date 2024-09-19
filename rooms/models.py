@@ -39,8 +39,33 @@ class ActiveCommentManager(models.Manager):
         return super(ActiveCommentManager, self).get_queryset().filter(active=True)
 
 
+# class Comment(models.Model):
+#     rooms = models.ForeignKey('Room', on_delete=models.CASCADE, related_name='comments')
+#     author = models.ForeignKey(
+#         get_user_model(),
+#         on_delete=models.CASCADE,
+#         related_name='comments'
+#     )
+#     content = models.TextField()
+#     parent = models.ForeignKey('self', null=True, blank=True, related_name='replies', on_delete=models.CASCADE)
+#     created_at = models.DateTimeField(auto_now_add=True)
+#     active = models.BooleanField(default=True,)
+#
+#     objects = models.Manager()
+#     active_comments_manager = ActiveCommentManager()
+#
+#     def str(self):
+#         return f'Comment by {self.user} on {self.rooms}'
+#
+#     def get_absolute_url(self):
+#         return reverse('room_detail', args={self.rooms.id})
+#
+#     def is_parent(self):
+#         return self.parent is None
+
+
 class Comment(models.Model):
-    rooms = models.ForeignKey(Room, on_delete=models.CASCADE)
+    rooms = models.ForeignKey(Room, on_delete=models.CASCADE, related_name='comments')
     author = models.ForeignKey(
         get_user_model(),
         on_delete=models.CASCADE,
@@ -53,3 +78,6 @@ class Comment(models.Model):
 
     objects = models.Manager()
     active_comments_manager = ActiveCommentManager()
+
+    def get_absolute_url(self):
+        return reverse('room_detail', args={self.rooms.id})

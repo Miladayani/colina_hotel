@@ -1,9 +1,9 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views.generic import ListView, DetailView, CreateView
 
 from .models import Room, Comment
 from .forms import CommentForm
-from cart.forms import AddToCartRoomForm, BookingForm
+from cart.forms import AddToCartRoomForm
 
 
 class RoomsListView(ListView):
@@ -21,8 +21,30 @@ class RoomsDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['add_to_cart_form'] = AddToCartRoomForm()
-        context['booking_form'] = BookingForm()
         return context
+
+
+# def add_comment(request, room_id):
+#     room = get_object_or_404(Room, id=room_id)
+#     if request.method == 'POST':
+#         form = CommentForm(request.POST)
+#         if form.is_valid():
+#             parent_id = request.POST.get('parent_id')
+#             print(f"Parent ID: {parent_id}")
+#             parent_comment = None
+#             if parent_id:
+#                 try:
+#                     parent_comment = Comment.objects.get(id=parent_id)
+#                 except Comment.DoesNotExist:
+#                     parent_comment = None
+#             comment = Comment(
+#                 rooms=room,
+#                 author=request.user,
+#                 content=form.cleaned_data['content'],
+#                 parent=parent_comment
+#             )
+#             comment.save()
+#     return redirect('room_detail', pk=room.id)
 
 
 class CommentCreateView(CreateView):
@@ -33,8 +55,8 @@ class CommentCreateView(CreateView):
         obj = form.save(commit=False)
         obj.author = self.request.user
 
-        rooms_id = int(self.kwargs['rooms_id'])
-        product = get_object_or_404(Room, id=rooms_id)
-        obj.product = product
+        room_id = int(self.kwargs['room_id'])
+        room = get_object_or_404(Room, id=room_id)
+        obj.rooms = room
 
         return super().form_valid(form)

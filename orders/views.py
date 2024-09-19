@@ -12,6 +12,8 @@ def order_create_view(request):
     order_form = OrderForm()
     cart = Cart(request)
 
+    total_sum = sum(item['totally_price'] for item in cart.cart.values())
+
     if len(cart) == 0:
         messages.warning(request, 'There are no orders in your cart.')
         return redirect('rooms_list')
@@ -43,4 +45,5 @@ def order_create_view(request):
 
     return render(request, 'orders/order_create.html', {
         'form': order_form,
+        'total_sum': total_sum,
     })

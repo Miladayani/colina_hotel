@@ -1,5 +1,6 @@
 {% extends '_base.html' %}
 {% load static %}
+{% load humanize %}
 
 {% block page_title %}
     List Of Rooms
@@ -120,7 +121,7 @@
                                             <a href="{{ room.get_absolute_url }}" class="btn btn-main">Book now</a>
                                         </div>
                                         <div>
-                                            <span class="price h4">{{ room.price_per_night }}</span>
+                                            <span class="price h4">{{ room.price_per_night|intcomma:False }}</span>
                                             <span>per night</span>
                                         </div>
                                     </div>

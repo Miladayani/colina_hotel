@@ -9,7 +9,7 @@ from django.contrib import messages
 
 from rooms.models import Room
 from .cart import Cart
-from .forms import AddToCartRoomForm, BookingForm
+from .forms import AddToCartRoomForm
 
 
 def cart_detail_view(request):
@@ -21,7 +21,9 @@ def cart_detail_view(request):
             'inplace': True,
         })
 
-    return render(request, 'cart/cart_detail.html', context={'cart': cart})
+    total_sum = sum(item['totally_price'] for item in cart.cart.values())
+
+    return render(request, 'cart/cart_detail.html', context={'cart': cart, 'total_sum': total_sum})
 
 
 @require_POST
@@ -60,6 +62,12 @@ def add_to_cart_view(request, room_id):
     arrival_date_str = arrival_date.strftime("%Y-%m-%d")
     departure_date_str = departure_date.strftime("%Y-%m-%d")
 
+    # محاسبه تعداد شب‌ها
+    nights = (departure_date - arrival_date).days
+
+    # محاسبه قیمت کل
+    totally_price = room.price_per_night * nights
+
     # افزودن به سبد خرید
     cart.add(
         room=room,
@@ -68,37 +76,10 @@ def add_to_cart_view(request, room_id):
         adults=adults,
         children=children,
         infants=infants,
+        totally_price=totally_price,
+        nights=nights
     )
     return redirect('cart:cart_detail')
-
-# @require_POST
-# def add_to_cart_view(request, room_id):
-#     cart = Cart(request)
-#     room = get_object_or_404(Room, id=room_id)
-#
-#     arrival_date = request.POST.get('arrival_date')
-#     departure_date = request.POST.get('departure_date')
-#     adults = request.POST.get('adults', 0)
-#     children = request.POST.get('children', 0)
-#     infants = request.POST.get('infants', 0)
-#
-#     # تبدیل تاریخ به رشته
-#     if arrival_date:
-#         arrival_date = str(arrival_date)
-#     if departure_date:
-#         departure_date = str(departure_date)
-#
-#     # افزودن به سبد خرید
-#     cart.add(
-#         room=room,
-#         arrival_date=arrival_date,
-#         departure_date=departure_date,
-#         adults=adults,
-#         children=children,
-#         infants=infants
-#     )
-#
-#     return redirect('cart:cart_detail')
 
 
 def remove_from_cart(request, room_id):

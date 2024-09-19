@@ -371,7 +371,7 @@
         }
     });
 
-    // Toggle contacts form
+    // Toggle contact form
     // ----------------------------------------------------------------
 
     $('.open-form').on('click', function () {
@@ -380,11 +380,11 @@
         parent.toggleClass('active');
         if (parent.hasClass('active')) {
             $this.text($this.data('text-close'));
-            $('.contacts-form').slideDown();
+            $('.contact-form').slideDown();
         }
         else {
             $this.text($this.data('text-open'));
-            $('.contacts-form').slideUp();
+            $('.contact-form').slideUp();
         }
 
     });
@@ -527,16 +527,6 @@ $(window).on('load', function () {
     setTimeout(function () {
         $('.page-loader').addClass('loaded');
     }, 1000);
-});
-
-$(document).ready(function(){
-    $('.owl-slider').owlCarousel({
-        items: 3,  // تعداد آیتم‌هایی که در هر اسلاید نمایش داده می‌شوند
-        loop: true,
-        nav: true,
-        dots: false,
-        margin: 10
-    });
 });
 
 

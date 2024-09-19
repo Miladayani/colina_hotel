@@ -7,7 +7,6 @@ from django.http import HttpResponse
 
 from orders.models import Order
 
-
 def payment_process(request):
     # Get order id from session
     order_id = request.session.get('order_id')
@@ -21,17 +20,17 @@ def payment_process(request):
 
     request_header = {
         "accept": "application/json",
-        "content-type": "application/json",
+        "content-type": "application/json"
     }
 
     request_data = {
         'merchant_id': settings.ZARINPAL_MERCHANT_ID,
         'amount': rial_total_price,
         'description': f'#{order.id}: {order.user.first_name} {order.user.last_name}',
-        'callback_url': request.build_absolute_uri(reverse('payment_callback')),
+        'callback_url': 'http://127.0.0.1:8000',
     }
 
-    res = requests.post(zarinpal_request_url, data=json.dumps(request_data), headers=request_header)
+    res = requests.post(url=zarinpal_request_url, data=json.dumps(request_data), headers=request_header)
 
     data = res.json()['data']
     authority = data['authority']
@@ -80,15 +79,14 @@ def payment_callback(request):
             order.zarinpal_data = data
             order.save()
 
-            return HttpResponse('Your payment has been made successfully!')
+            return HttpResponse('Success')
 
         elif payment_code == 101:
-            return HttpResponse('Your payment has been made successfully,'
-                                ' although this transaction has already been completed!')
+            return HttpResponse('success , but before')
         else:
             error_code = res.json()['errors']['code']
             error_message = res.json()['errors']['message']
-            return HttpResponse('The payment was unsuccessful')
+            return HttpResponse('error')
 
     else:
         return HttpResponse('error')
@@ -118,6 +116,7 @@ def payment_process_sandbox(request):
     }
 
     res = requests.post(zarinpal_request_url, data=json.dumps(request_data), headers=request_header)
+    print(res)
 
     data = res.json()
     authority = data['Authority']
@@ -166,15 +165,14 @@ def payment_callback_sandbox(request):
                 order.zarinpal_data = data
                 order.save()
 
-                return HttpResponse('Your payment has been made successfully!.')
+                return HttpResponse('پرداخت شما با موفقیت انجام شد.')
 
             elif payment_code == 101:
-                return HttpResponse('Your payment has been made successfully!'
-                                    'although this transaction has already been completed!')
+                return HttpResponse('پرداخت شما با موفقیت انجام شد. البته این تراکنش قبلا ثبت شده است!')
             else:
                 error_code = res.json()['errors']['code']
                 error_message = res.json()['errors']['message']
-                return HttpResponse('The payment was unsuccessful')
+                return HttpResponse('تراکنش ناموفق بود')
 
     else:
         return HttpResponse('تراکنش ناموفق بود')

@@ -1,5 +1,7 @@
 {% extends '_base.html' %}
 {% load static %}
+{% load comment_tags %}
+{% load humanize %}
 
 {% block page_title %}
     Room OverView - Colina Hotel
@@ -17,7 +19,7 @@
         <div class="page-header" style="background-image:url({% static 'assets/images/header.jpg' %})">
             <div class="container">
                 <h2 class="title">{{ room.name }}</h2>
-                <p>{{ room.price_per_night }}</p>
+                <p>{{ room.price_per_night|intcomma:False }}</p>
             </div>
         </div>
 
@@ -413,113 +415,76 @@
                             <!-- === room comments === -->
 
                             <div class="comments">
+
+                                <!-- === comment header === -->
+
+                                <div class="comment-header">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>
+
                                 <div class="comment-wrapper">
 
                                     <!-- === comment === -->
-
-                                    <div class="comment-block">
-                                        <div class="comment-user">
-                                            <div><img src="assets/images/user-2.jpg"  width="70"/>
-                                            </div>
-                                            <div>
-                                                <h5>
-                                                    John Doe
-                                                    <a href="#" class="btn btn-sm btn-main pull-right"><i
-                                                            class="fa fa-reply"></i>
-                                                        Reply</a>
-                                                    <small>03.05.2017</small>
-                                                </h5>
-                                            </div>
-                                        </div>
-
-                                        <!-- comment description -->
-
-                                        <div class="comment-desc">
-                                            <p>
-                                                In vestibulum tellus ut nunc accumsan eleifend. Donec mattis cursus
-                                                ligula, id
-                                                iaculis dui feugiat nec. Etiam ut ante sed neque lacinia volutpat.
-                                                Maecenas
-                                                ultricies tempus nibh, sit amet facilisis mauris vulputate in. Phasellus
-                                                tempor justo et mollis facilisis. Donec placerat at nulla sed suscipit.
-                                                Praesent
-                                                accumsan, sem sit amet euismod ullamcorper, justo sapien cursus nisl,
-                                                nec
-                                                gravida
-                                            </p>
-                                        </div>
-
-                                        <!-- comment reply -->
-
+                                    {% for comment in room.comments.all|only_active_comments %}
                                         <div class="comment-block">
                                             <div class="comment-user">
-                                                <div><img src="assets/images/user-2.jpg" alt="Alternate Text"
+                                                <div><img src="assets/images/user-2.jpg"
                                                           width="70"/></div>
                                                 <div>
                                                     <h5>
-                                                        John Doe
+                                                        {{ comment.author.username }}
                                                         <a href="#" class="btn btn-sm btn-main pull-right"><i
                                                                 class="fa fa-reply"></i> Reply</a>
-                                                        <small>08.05.2017</small>
+                                                        <small>{{ comment.date_created }}</small>
                                                     </h5>
                                                 </div>
                                             </div>
+
+                                            <!-- comment description -->
+
                                             <div class="comment-desc">
                                                 <p>
-                                                    Curabitur sit amet elit quis tellus tincidunt efficitur. Cras
-                                                    lobortis id
-                                                    elit eu vehicula. Sed porttitor nulla vitae nisl varius luctus.
-                                                    Quisque
-                                                    a enim nisl. Maecenas facilisis, felis sed blandit scelerisque,
-                                                    sapien
-                                                    nisl egestas diam, nec blandit diam ipsum eget dolor. Maecenas
-                                                    ultricies
-                                                    tempus nibh, sit amet facilisis mauris vulputate in.
+                                                    {{ comment.body }}
                                                 </p>
                                             </div>
-                                        </div>
-                                        <!--/reply-->
-                                    </div>
 
-                                    <!-- === comment === -->
+                                            <!-- comment reply -->
 
-                                    <div class="comment-block">
-                                        <div class="comment-user">
-                                            <div><img src="assets/images/user-2.jpg" alt="Alternate Text" width="70"/>
-                                            </div>
-                                            <div>
-                                                <h5>
-                                                    John Doe
-                                                    <a href="#" class="btn btn-sm btn-main pull-right"><i
-                                                            class="fa fa-reply"></i>
-                                                        Reply</a>
-                                                    <small>21.03.2017</small>
-                                                </h5>
-                                            </div>
+                                            {% for reply in comment.replies.all %}
+                                                <div class="comment-block">
+                                                    <div class="comment-user">
+                                                        <div><img src="assets/images/user-2.jpg"
+                                                                  width="70"/></div>
+                                                        <div>
+                                                            <h5>
+                                                                {{ reply.user.username }}
+                                                                <a href="#" class="btn btn-sm btn-main pull-right"><i
+                                                                        class="fa fa-reply"></i> Reply</a>
+                                                                <small>{{ reply.date_created }}</small>
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="comment-desc">
+                                                        <p>
+                                                            {{ comment.body }}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+                                            <!--/reply-->
                                         </div>
-                                        <div class="comment-desc">
-                                            <p>
-                                                Cras lobortis id elit eu vehicula. Sed porttitor nulla vitae nisl varius
-                                                luctus.
-                                                Quisque a enim nisl. Maecenas facilisis, felis sed blandit scelerisque,
-                                                sapien
-                                                nisl egestas diam, nec blandit diam ipsum eget dolor. In vestibulum
-                                                tellus
-                                                ut nunc accumsan eleifend. Donec mattis cursus ligula, id iaculis dui
-                                                feugiat
-                                                nec. Etiam ut ante sed neque lacinia volutpat. Maecenas ultricies tempus
-                                                nibh, sit amet facilisis mauris vulputate in. Phasellus tempor justo et
-                                                mollis
-                                                facilisis. Donec placerat at nulla sed suscipit. Praesent accumsan, sem
-                                                sit
-                                                amet euismod ullamcorper, justo sapien cursus nisl, nec gravida
-                                            </p>
-                                        </div>
-                                    </div>
+
+                                    {% endfor %}
+
+
                                 </div><!--/comment-wrapper-->
 
                                 <div class="comment-header">
-                                    <a href="#" class="btn btn-clean-dark">12 comments</a>
+                                    <div class="btn btn-clean-dark">{{ room.comments.all|only_active_comments|length }}</div>
                                 </div> <!--/comment-header-->
                                 <!-- === add comment === -->
 
@@ -530,25 +495,24 @@
                                         <p>Your email address will not be published.</p>
                                     </div>
 
-                                    <form action="#" method="post">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="name" value=""
-                                                   placeholder="Your Name"
-                                                   required="required"/>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="name" value=""
-                                                   placeholder="Your Email"
-                                                   required="required"/>
-                                        </div>
-                                        <div class="form-group">
-                                        <textarea rows="10" class="form-control" placeholder="Your comment"
-                                                  required="required"></textarea>
-                                        </div>
-                                        <div class="clearfix text-center">
-                                            <input type="submit" class="btn btn-main" value="Add comment"/>
-                                        </div>
-                                    </form>
+                                    {% if user.is_authenticated %}
+
+                                        <form action="{% url 'comment_create' room.id %}" method="POST">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                                        <textarea rows="10" class="form-control"
+                                                                                  name="body"
+                                                                                  placeholder="Your comment"
+                                                                                  required="required"></textarea>
+                                            </div>
+                                            <div class="clearfix text-center">
+                                                <input type="submit" class="btn btn-main" value="Add comment"/>
+                                            </div>
+                                        </form>
+                                    {% else %}
+                                        <p>if you want leave comment, you have to be <a
+                                                href="{% url 'account_login' %}">Login</a></p>
+                                    {% endif %}
 
                                 </div><!--/comment-add-->
                             </div> <!--/comments-->
@@ -559,6 +523,7 @@
         </div>
 
     </section>
+
     </body>
 
 {% endblock %}
