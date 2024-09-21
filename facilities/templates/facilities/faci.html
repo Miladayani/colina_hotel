@@ -1,9 +1,10 @@
 {% extends '_base.html' %}
 
 {% load static %}
+{% load i18n %}
 
 {% block page_title %} 
-    Facilities - Colina Hotel
+    {% trans 'Facilities - Colina Hotel' %}
 {% endblock %}
 
 {% block content %}
@@ -21,8 +22,8 @@
 
             <div class="page-header" style="background-image:url({% static 'assets/images/head.jpg' %})">
                 <div class="container text-center">
-                    <h2 class="title">Restaurant</h2>
-                    <p>Restaurants & In-Room Dining</p>
+                    <h2 class="title">{% trans 'Restaurant' %}</h2>
+                    <p>{% trans 'Restaurants & In-Room Dining' %}</p>
                 </div>
             </div>
 
@@ -56,10 +57,9 @@
                             <div class="facility-info">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <h2>Restaurants</h2>
+                                        <h2>{% trans 'Restaurants' %}</h2>
                                         <p>
-                                            The Resturant is the Colina Resort's iconic dining venue, serving breakfast, afternoon tea and an evening service complimented by
-                                            the recent addition of a bar and craft cocktail program.
+                                            {% trans "The Resturant is the Colina Resort's iconic dining venue, serving breakfast, afternoon tea and an evening service complimented by the recent addition of a bar and craft cocktail program." %}
                                         </p>
                                         <!--<p>
                                     Enjoy the world’s finest wines, champagnes, caviar and other indulgences while
@@ -67,9 +67,9 @@
                                 </p>-->
                                     </div>
                                     <div class="col-md-6">
-                                        <h2>In-room dining</h2>
+                                        <h2>{% trans 'In-room dining' %}</h2>
                                         <p>
-                                            A private meal in the comfort of your room or suite is one of the great pleasures of staying at The Plaza.  Enjoy our celebrated cuisine in the comfort of your own room 24-hours a day.
+                                            {% trans 'A private meal in the comfort of your room or suite is one of the great pleasures of staying at The Plaza.  Enjoy our celebrated cuisine in the comfort of your own room 24-hours a day.' %}
                                         </p>
                                     </div>
                                 </div>
@@ -85,19 +85,19 @@
                                     <li role="presentation" class="active">
                                         <a href="#menus" aria-controls="menus" role="tab" data-toggle="tab">
                                             <i class="hotelicon hotelicon-kitchen"></i>
-                                            <span class="visible-md visible-lg">Menus</span>
+                                            <span class="visible-md visible-lg">{% trans 'Menus' %}</span>
                                         </a>
                                     </li>
                                     <li role="presentation">
                                         <a href="#chefs" aria-controls="chefs" role="tab" data-toggle="tab">
                                             <i class="hotelicon hotelicon-guestbook"></i>
-                                            <span class="visible-md visible-lg">Chefs</span>
+                                            <span class="visible-md visible-lg">{% trans 'Chefs' %}</span>
                                         </a>
                                     </li>
                                     <li role="presentation">
                                         <a href="#events" aria-controls="events" role="tab" data-toggle="tab">
                                             <i class="hotelicon hotelicon-clock"></i>
-                                            <span class="visible-md visible-lg">Events</span>
+                                            <span class="visible-md visible-lg">{% trans 'Events' %}</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -122,7 +122,7 @@
                                                             <figcaption style="background-image:url({% static 'assets/images/breakfast.jpg' %})">
                                                                 <img src="assets/images/food-1.jpg" alt="" />
                                                             </figcaption>
-                                                            <a href="{% url '404' %}" class="btn btn-clean" onclick="">Breakfast</a>
+                                                            <a href="{% url '404' %}" class="btn btn-clean" onclick="">{% trans 'Breakfast' %}</a>
                                                         </figure>
                                                     </div>
 
@@ -133,7 +133,7 @@
                                                             <figcaption style="background-image:url({% static 'assets/images/lunch.jpg' %})">
                                                                 <img src="assets/images/food-2.jpg" alt="" />
                                                             </figcaption>
-                                                            <a href="{% url '404' %}" class="btn btn-clean">Lunch</a>
+                                                            <a href="{% url '404' %}" class="btn btn-clean">{% trans 'Lunch' %}</a>
                                                         </figure>
                                                     </div>
 
@@ -144,7 +144,7 @@
                                                             <figcaption style="background-image:url({% static 'assets/images/dinner.jpg' %})">
                                                                 <img src="assets/images/food-3.jpg" alt="" />
                                                             </figcaption>
-                                                            <a href="{% url '404' %}" class="btn btn-clean">Dinner</a>
+                                                            <a href="{% url '404' %}" class="btn btn-clean">{% trans 'Dinner' %}</a>
                                                         </figure>
                                                     </div>
 
@@ -155,7 +155,7 @@
                                                             <figcaption style="background-image:url({% static 'assets/images/in-room.jpg' %})">
                                                                 <img src="assets/images/food-4.jpg" alt="" />
                                                             </figcaption>
-                                                            <a href="{% url '404' %}" class="btn btn-clean">In-room</a>
+                                                            <a href="{% url '404' %}" class="btn btn-clean">{% trans 'In-room' %}</a>
                                                         </figure>
                                                     </div>
 
@@ -178,10 +178,10 @@
                                                 <div class="blocks blocks-left">
                                                     <div class="item">
                                                         <div class="text">
-                                                            <h2 class="title">John Mike Doe <small>Executive pastry chef</small></h2>
-                                                            <p>Gubergren eros stet est sit et et magna no praesent nam duo duo dolore dolore hendrerit takimata dolore duo gubergren stet sit commodo eleifend duo</p>
-                                                            <p>Vero sed quis euismod et erat dolore elitr elitr invidunt facilisis amet labore nonumy sea at labore erat et iriure et stet sit dolore justo consetetur id dolor sed diam</p>
-                                                            <p>Et no odio ipsum est eirmod lorem at accusam sit sea eros at sit justo sed suscipit doming sadipscing dolore aliquyam et no accusam dolores</p>
+                                                            <h2 class="title">{% trans 'John Mike Doe' %} <small>{% trans 'Executive pastry chef' %}</small></h2>
+                                                            <p>{% trans 'Gubergren eros stet est sit et et magna no praesent nam duo duo dolore dolore hendrerit takimata dolore duo gubergren stet sit commodo eleifend duo' %}</p>
+                                                            <p>{% trans 'Vero sed quis euismod et erat dolore elitr elitr invidunt facilisis amet labore nonumy sea at labore erat et iriure et stet sit dolore justo consetetur id dolor sed diam' %}</p>
+                                                            <p>{% trans 'Et no odio ipsum est eirmod lorem at accusam sit sea eros at sit justo sed suscipit doming sadipscing dolore aliquyam et no accusam dolores' %}</p>
                                                         </div>
                                                     </div>
                                                     <div class="image" style="background-image:url({% static 'assets/images/chef-1.jpg' %})">
@@ -194,10 +194,10 @@
                                                 <div class="blocks blocks-right">
                                                     <div class="item">
                                                         <div class="text">
-                                                            <h2 class="title">John Mike Doe <small>Lead chef</small></h2>
-                                                            <p>Gubergren eros stet est sit et et magna no praesent nam duo duo dolore dolore hendrerit takimata dolore duo gubergren stet sit commodo eleifend duo</p>
-                                                            <p>Vero sed quis euismod et erat dolore elitr elitr invidunt facilisis amet labore nonumy sea at labore erat et iriure et stet sit dolore justo consetetur id dolor sed diam</p>
-                                                            <p>Et no odio ipsum est eirmod lorem at accusam sit sea eros at sit justo sed suscipit doming sadipscing dolore aliquyam et no accusam dolores</p>
+                                                            <h2 class="title">{% trans 'John Mike Doe' %} <small>{% trans 'Lead chef' %}</small></h2>
+                                                            <p>{% trans 'Gubergren eros stet est sit et et magna no praesent nam duo duo dolore dolore hendrerit takimata dolore duo gubergren stet sit commodo eleifend duo' %}</p>
+                                                            <p>{% trans 'Vero sed quis euismod et erat dolore elitr elitr invidunt facilisis amet labore nonumy sea at labore erat et iriure et stet sit dolore justo consetetur id dolor sed diam' %}</p>
+                                                            <p>{% trans 'Et no odio ipsum est eirmod lorem at accusam sit sea eros at sit justo sed suscipit doming sadipscing dolore aliquyam et no accusam dolores' %}</p>
                                                         </div>
                                                     </div>
                                                     <div class="image" style="background-image:url({% static 'assets/images/chef-2.jpg' %})">
@@ -237,7 +237,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="caption">
-                                                                            Newly renovated by Master Architect Thierry Despont
+                                                                            {% trans 'Newly renovated by Master Architect Thierry Despont' %}
                                                                         </div>
                                                                     </div>
                                                                 </a>
@@ -253,7 +253,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="caption">
-                                                                            Ideal venue for cocktail style rehearsal dinners
+                                                                            {% trans 'Ideal venue for cocktail style rehearsal dinners' %}
                                                                         </div>
                                                                     </div>
                                                                 </a>
@@ -284,7 +284,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="caption">
-                                                                            Newly renovated by Master Architect Thierry Despont
+                                                                            {% trans 'Newly renovated by Master Architect Thierry Despont' %}
                                                                         </div>
                                                                     </div>
                                                                 </a>
@@ -300,7 +300,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="caption">
-                                                                            Ideal venue for cocktail style rehearsal dinners
+                                                                            {% trans 'Ideal venue for cocktail style rehearsal dinners' %}
                                                                         </div>
                                                                     </div>
                                                                 </a>
@@ -334,15 +334,16 @@
 
         <!-- ========================  Stretcher widget ======================== -->
 
-        <section class="stretcher-wrapper stretcher-wrapper-noheader">
+        <section class="stretcher-wrapper">
 
             <!-- === stretcher header === -->
 
-            <div class="section-header hidden">
+            <div class="section-header">
                 <div class="container">
-                    <h2 class="title">Wellness & spa <a href="{% url '404' %}" class="btn btn-sm btn-clean-dark">Explore more</a></h2>
+                    <h2 class="title">{% trans 'Resort facilities' %} <a href="{% url 'facilities' %}"
+                                                           class="btn btn-sm btn-clean-dark">{% trans 'Explore more' %}</a></h2>
                     <p>
-                        With the best luxury spa, salon and fitness experiences
+                        {% trans 'With the best luxury spa, salon and fitness experiences' %}
                     </p>
                 </div>
             </div>
@@ -353,20 +354,20 @@
 
                 <!-- === stretcher item === -->
 
-                <li class="stretcher-item" style="background-image:url({% static 'assets/images/spacenter.jpg' %});">
+                <li class="stretcher-item" style="background-image:url({% static 'assets/images/spacenter.jpg' %}">
                     <!--logo-item-->
                     <div class="stretcher-logo">
                         <div class="text">
-                            <span class="text-intro h2">Spa center</span>
+                            <span class="text-intro h4">{% trans 'Spa center' %}</span>
                         </div>
                     </div>
                     <!--main text-->
                     <figure>
-                        <h4>Spa center</h4>
-                        <figcaption>Unparalleled devotion to luxury</figcaption>
+                        <h4>{% trans 'Spa center' %}</h4>
+                        <figcaption>{% trans 'Unparalleled devotion to luxury' %}</figcaption>
                     </figure>
                     <!--anchor-->
-                    <a href="{% url '404' %}">Anchor link</a>
+                    <a href="{% url 'facilities' %}">{% trans 'Anchor link' %}</a>
                 </li>
 
                 <!-- === stretcher item === -->
@@ -375,16 +376,16 @@
                     <!--logo-item-->
                     <div class="stretcher-logo">
                         <div class="text">
-                            <span class="text-intro h2">Gym</span>
+                            <span class="text-intro h4">{% trans 'Gym' %}</span>
                         </div>
                     </div>
                     <!--main text-->
                     <figure>
-                        <h4>Gym</h4>
-                        <figcaption>Care about results</figcaption>
+                        <h4>{% trans 'Gym' %}</h4>
+                        <figcaption>{% trans 'Care about results' %}</figcaption>
                     </figure>
                     <!--anchor-->
-                    <a href="{% url '404' %}">Anchor link</a>
+                    <a href="{% url 'facilities' %}">{% trans 'Anchor link' %}</a>
                 </li>
 
                 <!-- === stretcher item === -->
@@ -393,15 +394,15 @@
                     <!--logo-item-->
                     <div class="stretcher-logo">
                         <div class="text">
-                            <span class="text-intro h2">Fitness</span>
+                            <span class="text-intro h4">{% trans 'Fitness' %}</span>
                         </div>
                     </div>
                     <figure>
                         <h4>Fitness</h4>
-                        <figcaption>Your daily activities</figcaption>
+                        <figcaption>{% trans 'Your daily activities' %}</figcaption>
                     </figure>
                     <!--anchor-->
-                    <a href="{% url '404' %}">Anchor link</a>
+                    <a href="{% url 'facilities' %}">{% trans 'Anchor link' %}</a>
                 </li>
 
                 <!-- === stretcher item === -->
@@ -412,24 +413,25 @@
                     <!--logo-item-->
                     <div class="stretcher-logo">
                         <div class="text">
-                            <span class="text-intro h2">Beauty salon</span>
+                            <span class="text-intro h4">{% trans 'Beauty salon' %}</span>
                         </div>
                     </div>
                     <!--main text-->
                     <figure>
-                        <h4>Beauty salon</h4>
-                        <figcaption>Hair salons and spas</figcaption>
+                        <h4>{% trans 'Beauty salon' %}</h4>
+                        <figcaption>{% trans 'Hair salons and spas' %}</figcaption>
                     </figure>
                     <!--anchor-->
-                    <a href="{% url '404' %}">Anchor link</a>
+                    <a href="{% url 'facilities' %}">{% trans 'Anchor link' %}</a>
                 </li>
 
                 <!-- === stretcher item more === -->
 
                 <li class="stretcher-item more">
                     <div class="more-icon">
-                        <span data-title-show="Show more" data-title-hide="+"></span>
+                        <span data-title-show="{% trans 'Show more' %}" data-title-hide="+"></span>
                     </div>
+                    <a href="{% url 'facilities' %}">{% trans 'Anchor link' %}</a>
                 </li>
 
             </ul>
@@ -443,8 +445,8 @@
 
             <div class="section-header">
                 <div class="container">
-                    <h2 class="title">Near by <a href="{% url '404' %}" class="btn btn-sm btn-clean-dark">View all</a></h2>
-                    <p>Here's a selection of ionic sites related to art, fashion and design.</p>
+                    <h2 class="title">{% trans 'Near by' %} <a href="{% url '404' %}" class="btn btn-sm btn-clean-dark">{% trans 'View all' %}</a></h2>
+                    <p>{% trans "Here's a selection of ionic sites related to art, fashion and design." %}</p>
                 </div>
             </div>
 
@@ -458,7 +460,7 @@
                             <figcaption style="background-image:url({% static 'assets/images/museum.jpg' %})">
                                 <img src="{% static 'assets/images/activity-1.jpg' %}" alt=""/>
                             </figcaption>
-                            <a href="{% url '404' %}" class="btn btn-clean" onclick="">Museums</a>
+                            <a href="{% url '404' %}" class="btn btn-clean" onclick="">{% trans 'Museums' %}</a>
                         </figure>
                     </div>
 
@@ -467,9 +469,9 @@
                     <div class="col-xs-6 col-md-4">
                         <figure>
                             <figcaption style="background-image:url({% static 'assets/images/night.jpg' %})">
-                                <img src="{% static 'assets/images/activity-2.jpg"' %} alt="" />
+                                <img src="{% static 'assets/images/activity-2.jpg' %}" alt=""/>
                             </figcaption>
-                            <a href="{% url '404' %}" class="btn btn-clean">Nightlife</a>
+                            <a href="{% url '404' %}" class="btn btn-clean">{% trans 'Nightlife' %}</a>
                         </figure>
                     </div>
 
@@ -480,7 +482,7 @@
                             <figcaption style="background-image:url({% static 'assets/images/food-drink.jpg' %})">
                                 <img src="{% static 'assets/images/activity-2.jpg' %}" alt=""/>
                             </figcaption>
-                            <a href="{% url '404' %}" class="btn btn-clean">Food & drink</a>
+                            <a href="{% url '404' %}" class="btn btn-clean">{% trans 'Food & drink' %}</a>
                         </figure>
                     </div>
 
@@ -491,7 +493,7 @@
                             <figcaption style="background-image:url({% static 'assets/images/shopping.jpg' %})">
                                 <img src="{% static 'assets/images/activity-4.jpg' %}" alt=""/>
                             </figcaption>
-                            <a href="{% url '404' %}" class="btn btn-clean">Shopping</a>
+                            <a href="{% url '404' %}" class="btn btn-clean">{% trans 'Shopping' %}</a>
                         </figure>
                     </div>
 
@@ -502,7 +504,7 @@
                             <figcaption style="background-image:url({% static 'assets/images/city-life.jpg' %})">
                                 <img src="{% static 'assets/images/activity-5.jpg' %}" alt=""/>
                             </figcaption>
-                            <a href="{% url '404' %}" class="btn btn-clean">The City</a>
+                            <a href="{% url '404' %}" class="btn btn-clean">{% trans 'The City' %}</a>
                         </figure>
                     </div>
 

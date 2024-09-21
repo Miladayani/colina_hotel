@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-20 11:29+0330\n"
+"PO-Revision-Date: 2024-09-20 11:30+0330\n"
+"Last-Translator: aa aa <miladayani526@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\templates\contacts\contact.html:7
+msgid "ContactUs - Colina Hotel"
+msgstr "تماس با ما - کولینا هتل"
+
+#: .\templates\contacts\contact.html:25
+msgid "Contact"
+msgstr "تماس بگیرید"
+
+#: .\templates\contacts\contact.html:26
+msgid "The place, our services & our team"
+msgstr "مکان، خدمات و تیم ما"
+
+#: .\templates\contacts\contact.html:53
+msgid "Send an email"
+msgstr "ایمیل بفرستید"
+
+#: .\templates\contacts\contact.html:55
+msgid "Please use this form if you have any questions about our products"
+msgstr "اگر در مورد محصولات ما سوالی دارید لطفا از این فرم استفاده کنید"
+
+#: .\templates\contacts\contact.html:55
+msgid "and we'll get back with you very soon."
+msgstr "و ما به زودی با شما باز خواهیم گشت"
+
+#: .\templates\contacts\contact.html:60
+msgid "Close form"
+msgstr "بستن فرم"
+
+#: .\templates\contacts\contact.html:60
+msgid "Contact us via form"
+msgstr "از طریق فرم با ما تماس بگیرید"
+
+#: .\templates\contacts\contact.html:68
+msgid "Your name"
+msgstr "اسم شما"
+
+#: .\templates\contacts\contact.html:74
+msgid "Your email"
+msgstr "ایمیل"
+
+#: .\templates\contacts\contact.html:81
+msgid "Subject"
+msgstr "موضوع"
+
+#: .\templates\contacts\contact.html:87
+msgid "Your message"
+msgstr "پیام شما"
+
+#: .\templates\contacts\contact.html:92
+msgid "Send message"
+msgstr "ارسال پیام"
+
+#: .\templates\contacts\contact.html:111
+msgid "Where are we?"
+msgstr "ما کجا هستیم؟"
+
+#: .\templates\contacts\contact.html:112
+msgid "Iran, Kashan"
+msgstr "ایران, کاشان"
+
+#: .\templates\contacts\contact.html:112
+msgid "Iran"
+msgstr "ایران"
+
+#: .\templates\contacts\contact.html:120
+msgid "Call us"
+msgstr "تماس بگیرید"
+
+#: .\templates\contacts\contact.html:132
+msgid "Working hours"
+msgstr "ساعاته کار"
+
+#: .\templates\contacts\contact.html:134
+msgid "Mon"
+msgstr "شنبه"
+
+#: .\templates\contacts\contact.html:135
+msgid "Sun"
+msgstr "پنجشنبه"

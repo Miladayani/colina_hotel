@@ -1,0 +1,266 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-20 11:52+0330\n"
+"PO-Revision-Date: 2024-09-20 12:03+0330\n"
+"Last-Translator: aa aa <miladayani526@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\templates\blogs\blog_item.html:7
+msgid "Blog - Colina Hotel"
+msgstr "وبلاگ - هتل کولینا"
+
+#: .\templates\blogs\blog_item.html:25
+msgid "Blog"
+msgstr "وبلاگ"
+
+#: .\templates\blogs\blog_item.html:26
+msgid "Events & culture"
+msgstr "رویداد ها و فرهنگ"
+
+#: .\templates\blogs\blog_item.html:56
+msgid "The only guide to travel insurance you'll ever need"
+msgstr "تنها راهنمای بیمه مسافرتی که همیشه به آن نیاز دارید"
+
+#: .\templates\blogs\blog_item.html:62
+msgid "Administrator"
+msgstr "مدیر"
+
+#: .\templates\blogs\blog_item.html:70
+msgid ""
+"When holidaymaker Michael Doyle contracted blood poisoning in Bulgaria in "
+"July, his family attempted to arrange a medical flight to bring him back to "
+"the UK. But his travel insurers refused to pay for the flight or medical "
+"bills, saying that his policy didn't cover him – and three weeks later, "
+"Doyle died from kidney failure."
+msgstr ""
+"هنگامی که مایکل دویل در ماه ژوئیه در بلغارستان دچار مسمومیت خونی شد، خانواده"
+" او سعی کردند یک پرواز پزشکی ترتیب دهند تا او را به بریتانیا برگردانند. اما "
+"بیمه‌گران مسافرتی او از پرداخت هزینه پرواز یا هزینه‌های پزشکی خودداری کردند "
+"و گفتند که بیمه نامه او را پوشش نمی‌دهد - و سه هفته بعد، دویل بر اثر نارسایی"
+" کلیه درگذشت."
+
+#: .\templates\blogs\blog_item.html:73
+msgid ""
+"Another significant change has been the introduction of new, lower age "
+"limits, so that whereas most premiums used to be available to under-65s, now"
+" you often find that they rise when you reach 45 or 50. Limitations on "
+"family policies have also tightened: it used to be easy to find a policy "
+"that would cover dependent children at college or university up to the age "
+"of 23; they are often restricted to children under"
+msgstr ""
+"تغییر مهم دیگر، معرفی محدودیت‌های سنی جدید و پایین‌تر بوده است، به طوری که "
+"در حالی که قبلاً بیشتر حق بیمه‌ها برای افراد زیر 65 سال در دسترس بود، اکنون "
+"اغلب متوجه می‌شوید که وقتی به 45 یا 50 سالگی می‌رسید این حق بیمه افزایش "
+"می‌یابد. محدودیت‌های مربوط به سیاست‌های خانواده نیز تشدید شده‌اند: پیدا کردن"
+" سیاستی که کودکان تحت تکفل در کالج یا دانشگاه را تا سن 23 سالگی تحت پوشش "
+"قرار دهد، آسان بود. آنها اغلب به کودکان زیر محدود می شوند"
+
+#: .\templates\blogs\blog_item.html:76
+msgid ""
+"Here is our comprehensive guide to buying travel insurance – and ensuring it"
+" covers all of your travel plans."
+msgstr ""
+"در اینجا راهنمای جامع ما برای خرید بیمه مسافرتی است - و اطمینان حاصل می کنیم"
+" که تمام برنامه های سفر شما را پوشش می دهد."
+
+#: .\templates\blogs\blog_item.html:78
+msgid "A step-by-step guide to buying travel insurance"
+msgstr "راهنمای گام به گام خرید بیمه مسافرتی"
+
+#: .\templates\blogs\blog_item.html:81
+msgid ""
+"How do you find the best-value travel insurance policy? Easy, you might "
+"think. Just go to a price-comparison website and buy the cheapest. But there"
+" is a catch. Price-comparison sites seem to be having an interesting effect."
+" Because they are so powerful and used by so many people, there is intense "
+"competition among companies to keep the price of their products and services"
+" as low as possible to try to ensure that they appear near the top of the "
+"results."
+msgstr ""
+"چگونه بهترین بیمه نامه مسافرتی را پیدا می کنید؟ آسان است، شما ممکن است فکر "
+"کنید. فقط کافی است به یک وب سایت مقایسه قیمت بروید و ارزان ترین را خریداری "
+"کنید. اما یک گرفتاری وجود دارد. به نظر می رسد سایت های مقایسه قیمت تاثیر "
+"جالبی دارند. از آنجایی که آنها بسیار قدرتمند هستند و توسط افراد زیادی مورد "
+"استفاده قرار می‌گیرند، رقابت شدیدی بین شرکت‌ها وجود دارد تا قیمت محصولات و "
+"خدمات خود را تا حد ممکن پایین نگه دارند تا اطمینان حاصل شود که آنها در "
+"بالاترین سطح نتایج ظاهر می‌شوند."
+
+#: .\templates\blogs\blog_item.html:83
+msgid "Book independently"
+msgstr "به طور مستقل رزرو کنید"
+
+#: .\templates\blogs\blog_item.html:85
+msgid ""
+"Another point to bear in mind about insurance is that travellers have "
+"different needs, depending not only on their age, but also on the value of "
+"their luggage, the type of travelling they do (there are endless exclusions "
+"and limitations relating to outdoor activities), how often they like to "
+"travel, how risk-averse they are and so on. In the case of skiers and "
+"snowboarders, there are other things to think about."
+msgstr ""
+"نکته دیگری که در مورد بیمه باید در نظر داشت این است که مسافران نه تنها به "
+"سن، بلکه به ارزش چمدان، نوع سفرشان نیز نیازهای متفاوتی دارند (محدودیت ها و "
+"محدودیت های بی پایانی در رابطه با فعالیت های خارج از منزل وجود دارد). چقدر "
+"دوست دارند سفر کنند، چقدر ریسک گریز هستند و غیره. در مورد اسکی بازان و "
+"اسنوبورد سواران، چیزهای دیگری وجود دارد که باید به آنها فکر کرد."
+
+#: .\templates\blogs\blog_item.html:87
+msgid "Time your stay"
+msgstr "زمان اقامت شما"
+
+#: .\templates\blogs\blog_item.html:89
+msgid ""
+"Multi-trip policies cover all the travelling you do in a calendar year, with"
+" limits on the length of each trip. Whether it is cheaper to buy one of "
+"these than separate policies for each trip depends how much travelling you "
+"do in a year – three or four trips will usually mean you save with multi-"
+"trip cover. The other huge advantage of a multi-trip policy is that you are "
+"covered continuously and don’t have to shop for a new policy each time you "
+"book. I chose worldwide cover including the United States and Canada. Europe"
+" only, or worldwide without North America would have been cheaper."
+msgstr ""
+"خط‌مشی‌های چند سفر همه سفرهایی را که در یک سال تقویمی انجام می‌دهید، با "
+"محدودیت‌هایی در طول هر سفر پوشش می‌دهد. ارزان‌تر بودن خرید یکی از اینها نسبت"
+" به سیاست‌های جداگانه برای هر سفر بستگی به میزان سفر شما در سال دارد – سه یا"
+" چهار سفر معمولاً به این معنی است که با پوشش چند سفر پس‌انداز می‌کنید. مزیت "
+"بزرگ دیگر یک خط مشی چند سفر این است که شما به طور مداوم تحت پوشش هستید و "
+"مجبور نیستید هر بار که رزرو می کنید برای یک خط مشی جدید خرید کنید. من پوشش "
+"جهانی از جمله ایالات متحده و کانادا را انتخاب کردم. فقط اروپا یا در سراسر "
+"جهان بدون آمریکای شمالی ارزان تر بود"
+
+#: .\templates\blogs\blog_item.html:92
+msgid ""
+"It is cheaper to buy cover for a couple, or a family, under one policy. I "
+"was covering two adults, one child aged 17 and one aged 18 and away at "
+"university, and I wanted a policy that enabled each of us to travel "
+"independently. These are much harder to find than they used to be, but I "
+"managed to find one."
+msgstr ""
+"خرید پوشش برای یک زوج یا یک خانواده، تحت یک سیاست، ارزان تر است. من دو "
+"بزرگسال، یکی از کودکان 17 ساله و دیگری 18 ساله و خارج از دانشگاه را پوشش می "
+"دادم، و می خواستم خط مشی ای داشته باشیم که به هر یک از ما امکان سفر مستقل را"
+" بدهد. پیدا کردن اینها بسیار سخت تر از گذشته است، اما من موفق شدم یکی را "
+"پیدا کنم."
+
+#: .\templates\blogs\blog_item.html:94
+msgid "Look for last-minute deals"
+msgstr "به دنبال معاملات لحظه آخری باشید"
+
+#: .\templates\blogs\blog_item.html:96
+msgid ""
+"For the policy I bought, I have listed below the limits for the key parts of"
+" the cover, all per person and with an excess ranging from nil to £75. I "
+"would have been happy with medical cover of less than half this – the "
+"highest claim ever recorded was only $2 million – but many policies attach "
+"much higher limits, apparently for show rather than out of necessity."
+msgstr ""
+"برای سیاستی که خریدم، محدودیت‌های قسمت‌های کلیدی جلد را در زیر فهرست "
+"کرده‌ام، همه به ازای هر نفر و با مازاد از صفر تا 75 پوند. من از پوشش پزشکی "
+"کمتر از نیمی از این خرسند بودم - بالاترین ادعای ثبت شده تاکنون تنها 2 میلیون"
+" دلار بوده است - اما بسیاری از سیاست‌ها محدودیت‌های بسیار بالاتری را اعمال "
+"می‌کنند، ظاهراً برای نمایش و نه از سر ضرورت."
+
+#: .\templates\blogs\blog_item.html:116
+msgid "Check availability"
+msgstr "بررسی در دسترس بودن"
+
+#: .\templates\blogs\blog_item.html:123
+msgid "Arrival"
+msgstr ""
+
+#: .\templates\blogs\blog_item.html:132
+msgid "Departure"
+msgstr ""
+
+#: .\templates\blogs\blog_item.html:142
+msgid "Book now"
+msgstr ""
+
+#: .\templates\blogs\blog_item.html:143
+msgid "Best Prices Guaranteed"
+msgstr ""
+
+#: .\templates\blogs\blog_item.html:153
+msgid "Blog categories"
+msgstr "دسته بندی وبلاگ"
+
+#: .\templates\blogs\blog_item.html:155
+msgid "City guide"
+msgstr "راهنمایی شهر"
+
+#: .\templates\blogs\blog_item.html:156
+msgid "Shopping"
+msgstr ""
+
+#: .\templates\blogs\blog_item.html:157
+msgid "Adventures"
+msgstr "ماجراجویی"
+
+#: .\templates\blogs\blog_item.html:158
+msgid "Ultimate Itineraries"
+msgstr "برنامه های سفر نهایی"
+
+#: .\templates\blogs\blog_item.html:159
+msgid "Last minute deals"
+msgstr "معاملات لحظه آخری"
+
+#: .\templates\blogs\blog_item.html:164
+msgid "Popular posts"
+msgstr "پست های محبوب"
+
+#: .\templates\blogs\blog_item.html:172
+msgid "What to do when holidays go wrong"
+msgstr "وقتی تعطیلات اشتباه می شود چه باید کرد"
+
+#: .\templates\blogs\blog_item.html:181
+msgid "How to claim compensation for lost or damaged luggage"
+msgstr "نحوه مطالبه غرامت برای چمدان گم شده یا آسیب دیده"
+
+#: .\templates\blogs\blog_item.html:190
+msgid "The best boutique hotels in Europe's coolest city"
+msgstr "بهترین هتل های بوتیک در جالب ترین شهر اروپا"
+
+#: .\templates\blogs\blog_item.html:199
+msgid "The five best destinations for a family holiday in October"
+msgstr "پنج بهترین مقصد برای تعطیلات خانوادگی در ماه اکتبر"
+
+#: .\templates\blogs\blog_item.html:208
+msgid "Everything you need to know about vaccinations"
+msgstr "هر آنچه باید در مورد واکسیناسیون بدانید"
+
+#: .\templates\blogs\blog_item.html:215
+msgid "Popular tags"
+msgstr "برچسب های محبوب"
+
+#: .\templates\blogs\blog_item.html:217
+msgid "rooms"
+msgstr "اتاق ها"
+
+#: .\templates\blogs\blog_item.html:218
+msgid "suits"
+msgstr "سوییت ها"
+
+#: .\templates\blogs\blog_item.html:219
+msgid "hotel"
+msgstr "هتل"
+
+#: .\templates\blogs\blog_item.html:220
+msgid "booking"
+msgstr "رزرو"
+
+#: .\templates\blogs\blog_item.html:221
+msgid "payment"
+msgstr "پرداخت"

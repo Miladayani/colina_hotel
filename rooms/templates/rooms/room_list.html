@@ -1,9 +1,10 @@
 {% extends '_base.html' %}
 {% load static %}
 {% load humanize %}
+{% load i18n %}
 
 {% block page_title %}
-    List Of Rooms
+    {% trans 'List Of Rooms' %}
 {% endblock %}
 
 
@@ -32,13 +33,13 @@
                                 <i class="fa fa-star"></i>
                             </div>
                             <h2 class="title animated h1" data-animation="fadeInDown">
-                                A moment of <br/> <span>pure prestige</span>
+                                {% trans 'A moment of' %} <br/> <span>{% trans 'pure prestige' %}</span>
                             </h2>
                             <div class="desc animated" data-animation="fadeInUp">
-                                Lavish social and business events
+                                {% trans 'Lavish social and business events' %}
                             </div>
                             <div class="desc animated" data-animation="fadeInUp">
-                                and unforgettable weddings.
+                                {% trans 'and unforgettable weddings.' %}
                             </div>
                             <div class="animated" data-animation="fadeInUp">
                             </div>
@@ -48,45 +49,45 @@
 
                 <!-- === slide item === -->
 
-                <div class="item" style="background-image:url({% static 'assets/images/room-1.jpg' %})">
-                    <div class="box text-center">
-                        <div class="container">
-                            <h2 class="title animated h1" data-animation="fadeInDown">
-                                The privacy and <br/>
-                                individuality of a custom
-                            </h2>
-                            <div class="desc animated" data-animation="fadeInUp">
-                                The Residences have their own dedicated private entrance as well <br/>
-                                as an anonymous "celebrity" entrance, for ultimate privacy.
-                            </div>
-                            <div class="animated" data-animation="fadeInUp">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+{#                <div class="item" style="background-image:url({% static 'assets/images/room-1.jpg' %})">#}
+{#                    <div class="box text-center">#}
+{#                        <div class="container">#}
+{#                            <h2 class="title animated h1" data-animation="fadeInDown">#}
+{#                                The privacy and <br/>#}
+{#                                individuality of a custom#}
+{#                            </h2>#}
+{#                            <div class="desc animated" data-animation="fadeInUp">#}
+{#                                The Residences have their own dedicated private entrance as well <br/>#}
+{#                                as an anonymous "celebrity" entrance, for ultimate privacy.#}
+{#                            </div>#}
+{#                            <div class="animated" data-animation="fadeInUp">#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
 
                 <!-- === slide item === -->
 
-                <div class="item" style="background-image:url({% static 'assets/images/room-2.jpg' %})">
-                    <div class="box text-center">
-                        <div class="container">
-                            <div class="rating animated" data-animation="fadeInDown">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <h2 class="title animated h1" data-animation="fadeInDown">Fairmont managed!</h2>
-                            <div class="desc animated" data-animation="fadeInUp">The elegant Champagne Bar, the stylish
-                                Colina Club.
-                            </div>
-                            <div class="desc animated" data-animation="fadeInUp">Guestrooms and luxurious suites</div>
-                            <div class="animated" data-animation="fadeInUp">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+{#                <div class="item" style="background-image:url({% static 'assets/images/room-2.jpg' %})">#}
+{#                    <div class="box text-center">#}
+{#                        <div class="container">#}
+{#                            <div class="rating animated" data-animation="fadeInDown">#}
+{#                                <i class="fa fa-star"></i>#}
+{#                                <i class="fa fa-star"></i>#}
+{#                                <i class="fa fa-star"></i>#}
+{#                                <i class="fa fa-star"></i>#}
+{#                                <i class="fa fa-star"></i>#}
+{#                            </div>#}
+{#                            <h2 class="title animated h1" data-animation="fadeInDown">Fairmont managed!</h2>#}
+{#                            <div class="desc animated" data-animation="fadeInUp">The elegant Champagne Bar, the stylish#}
+{#                                Colina Club.#}
+{#                            </div>#}
+{#                            <div class="desc animated" data-animation="fadeInUp">Guestrooms and luxurious suites</div>#}
+{#                            <div class="animated" data-animation="fadeInUp">#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
 
             </div> <!--/owl-slider-->
         </section>
@@ -118,11 +119,11 @@
                                     </div>
                                     <div class="book">
                                         <div>
-                                            <a href="{{ room.get_absolute_url }}" class="btn btn-main">Book now</a>
+                                            <a href="{{ room.get_absolute_url }}" class="btn btn-main">{% trans 'Book now' %}</a>
                                         </div>
                                         <div>
                                             <span class="price h4">{{ room.price_per_night|intcomma:False }}</span>
-                                            <span>per night</span>
+                                            <span>{% trans 'per night' %}</span>
                                         </div>
                                     </div>
                                 </div>

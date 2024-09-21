@@ -2,9 +2,10 @@
 
 {% load static %}
 {% load humanize %}
+{% load i18n %}
 
 {% block page_title %}
-    Colina - Orders
+    {% trans 'Colina - Orders' %}
 {% endblock %}
 
 {% block content %}
@@ -23,8 +24,8 @@
 
             <div class="page-header" style="background-image:url({% static 'assets/images/header.jpg' %})">
                 <div class="container">
-                    <h2 class="title">Confirm your reservation</h2>
-                    <p>Guest information</p>
+                    <h2 class="title">{% trans 'Confirm your reservation' %}</h2>
+                    <p>{% trans 'Guest information' %}</p>
                 </div>
             </div>
 
@@ -35,13 +36,13 @@
                     <div class="stepper">
                         <ul class="row">
                             <li class="col-md-4 active">
-                                <span data-text="Room & rates"></span>
+                                <span data-text="{% trans 'Room & rates' %}"></span>
                             </li>
                             <li class="col-md-4 active">
-                                <span data-text="Reservation"></span>
+                                <span data-text="{% trans 'Reservation' %}"></span>
                             </li>
                             <li class="col-md-4">
-                                <span data-text="Checkout"></span>
+                                <span data-text="{% trans 'Checkout' %}"></span>
                             </li>
                         </ul>
                     </div>
@@ -93,7 +94,7 @@
                                                                 <div class="form-group">
                                                                     <input type="text" name="first_name" value=""
                                                                            class="form-control"
-                                                                           placeholder="First name: *">
+                                                                           placeholder="{% trans 'First name' %}: *">
                                                                 </div>
                                                             </div>
 
@@ -101,7 +102,7 @@
                                                                 <div class="form-group">
                                                                     <input type="text" name="last_name" value=""
                                                                            class="form-control"
-                                                                           placeholder="Last name: *">
+                                                                           placeholder="{% trans 'Last name' %}: *">
                                                                 </div>
                                                             </div>
 
@@ -109,7 +110,7 @@
                                                                 <div class="form-group">
                                                                     <input type="text" name="address" value=""
                                                                            class="form-control"
-                                                                           placeholder="address: *">
+                                                                           placeholder="{% trans 'address' %}: *">
                                                                 </div>
                                                             </div>
 
@@ -117,7 +118,7 @@
                                                                 <div class="form-group">
                                                                     <input type="text" name="phone_number" value=""
                                                                            class="form-control"
-                                                                           placeholder="Phone: *">
+                                                                           placeholder="{% trans 'Phone' %}: *">
                                                                 </div>
                                                             </div>
 
@@ -125,7 +126,7 @@
                                                                 <div class="form-group">
                                                                     <input type="text" name="order_note" value=""
                                                                            class="form-control"
-                                                                           placeholder="Order Note: *">
+                                                                           placeholder="{% trans 'Order Note' %}: ">
                                                                 </div>
                                                             </div>
 
@@ -133,16 +134,14 @@
                                                                 <hr/>
                                                                 <span class="checkbox">
                                                                 <input type="checkbox" id="checkBoxId1">
-                                                                <label for="checkBoxId1">I have read and accepted the
-                                                                        terms, as well as read and understood our terms of
-                                                                        business conditions</label>
+                                                                <label for="checkBoxId1">{% trans 'I have read and accepted theterms, as well as read and understood our terms ofbusiness conditions' %}</label>
                                                             </span>
                                                                 <hr/>
                                                             </div>
 
                                                             <div class="col-md-12">
                                                                 <button type="submit" class="btn btn-main btn-block">
-                                                                    Checkout
+                                                                    {% trans 'Checkout' %}
                                                                 </button>
                                                             </div>
 
@@ -158,14 +157,14 @@
 
                                         <div class="white-block">
 
-                                            <div class="h4">Choose payment</div>
+                                            <div class="h4">{% trans 'Choose payment' %}</div>
 
                                             <hr/>
 
                                             <span class="checkbox">
                                                 <input type="radio" id="paymentCart" name="paymentOption">
                                                 <label for="paymentCart">
-                                                    <strong>Zarin pall</strong> <br/>
+                                                    <strong>{% trans 'Zarin pall' %}</strong> <br/>
                                                 </label>
                                             </span>
                                         </div>
@@ -184,10 +183,10 @@
 
                             <div class="cart-block cart-block-header clearfix">
                                 <div>
-                                    <span>Room type</span>
+                                    <span>{% trans 'Room type' %}</span>
                                 </div>
                                 <div class="text-right">
-                                    <span>Price</span>
+                                    <span>{% trans 'Price' %}</span>
                                 </div>
                             </div>
 
@@ -211,27 +210,27 @@
                                             </div>
 
                                             <p>
-                                                <strong>Arrival date</strong> <br/> {{ item.arrival_date }}
+                                                <strong>{% trans 'Arrival date' %}</strong> <br/> {{ item.arrival_date }}
                                             </p>
                                             <p>
-                                                <strong>Guests</strong> <br/> {{ item.adults }} adults
-                                                <br/>{{ item.children }} children
-                                                <br/>{{ item.infants }} infants
+                                                <strong>{% trans 'Guests' %}</strong> <br/> {{ item.adults }} {% trans 'adults' %}
+                                            <br/>{{ item.children }} {% trans 'children' %}
+                                            <br/>{{ item.infants }} {% trans 'infants' %}
                                             </p>
-                                            <p>
-                                                <strong>Departure date</strong> <br/> {{ item.departure_date }}
-                                            </p>
-                                            <p>
-                                                <strong>Nights</strong> <br/> {{ item.nights }}
-                                            </p>
+                                         <p>
+                                            <strong>{% trans 'Departure date' %}</strong> <br/> {{ item.departure_date }}
+                                        </p>
+                                        <p>
+                                            <strong>{% trans 'Nights' %}</strong> <br/> {{ item.nights }}
+                                        </p>
 
                                         </div>
                                         <div class="price">
                                             <span class="final h3">{{ item.room_obj.price_per_night|intcomma:False }}</span>
-                                            <span>price per night</span>
+                                            <span>{% trans 'price per night' %}</span>
                                             <br>
                                             <span class="final h3">{{ item.totally_price|intcomma:False }}</span>
-                                            <span>total price</span>
+                                            <span>{% trans 'total price' %}</span>
                                         </div>
                                         <!--delete-this-item-->
 
@@ -250,7 +249,7 @@
                             <div class="clearfix">
                                 <div class="cart-block cart-block-footer cart-block-footer-price clearfix">
                                     <span><div class="h2 title">{{ total_sum|intcomma:False }}</div></span>
-                                    <div><a href="{% url 'cart:cart_detail' %}" class="btn btn-clean-dark">Back</a>
+                                    <div><a href="{% url 'cart:cart_detail' %}" class="btn btn-clean-dark">{% trans 'Back' %}</a>
                                     </div>
                                 </div>
                             </div>

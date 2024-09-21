@@ -1,7 +1,8 @@
 {% extends '_base.html' %}
+{% load i18n %}
 
 {% block page_title %}
-    404 Not Found
+    {% trans '404 Not Found' %}
 {% endblock %}
 
 {% block content %}
@@ -15,9 +16,8 @@
         <section class="not-found">
             <div class="container">
                 <h1 class="title" data-title="404">404</h1>
-                <div class="h4 subtitle">Sorry! Page not found.</div>
-                <p>The requested URL was not found on this server. That’s all we know.</p>
-                <p>Click <a href="#">here</a> to get to the front page? </p>
+                <div class="h4 subtitle">{% trans 'Sorry! Page not found.' %}</div>
+                <p>{% trans 'The requested URL was not found on this server.' %}</p>
             </div>
         </section>
     </div> <!--/wrapper-->

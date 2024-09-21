@@ -1,0 +1,211 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-20 11:06+0330\n"
+"PO-Revision-Date: 2024-09-20 11:14+0330\n"
+"Last-Translator: aa aa <miladayani526@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\templates\facilities\faci.html:7
+msgid "Facilities - Colina Hotel"
+msgstr "امکانات - کولینا هتل"
+
+#: .\templates\facilities\faci.html:25
+msgid "Restaurant"
+msgstr "رستوران"
+
+#: .\templates\facilities\faci.html:26
+msgid "Restaurants & In-Room Dining"
+msgstr "رستوران ها و غذاخوری در اتاق"
+
+#: .\templates\facilities\faci.html:60
+msgid "Restaurants"
+msgstr "رستوران ها"
+
+#: .\templates\facilities\faci.html:62
+msgid ""
+"The Resturant is the Colina Resort's iconic dining venue, serving breakfast,"
+" afternoon tea and an evening service complimented by the recent addition of"
+" a bar and craft cocktail program."
+msgstr ""
+"رستوران محل غذاخوری نمادین کولینا ریزورت است که صبحانه، چای بعد از ظهر و "
+"سرویس عصرانه را سرو می‌کند که با اضافه شدن اخیر بار و برنامه کوکتل صنایع "
+"دستی همراه شده است."
+
+#: .\templates\facilities\faci.html:70
+msgid "In-room dining"
+msgstr "غذاخوری در اتاق"
+
+#: .\templates\facilities\faci.html:72
+msgid ""
+"A private meal in the comfort of your room or suite is one of the great "
+"pleasures of staying at The Plaza.  Enjoy our celebrated cuisine in the "
+"comfort of your own room 24-hours a day."
+msgstr ""
+"یک وعده غذایی خصوصی در راحتی اتاق یا سوئیت شما یکی از لذت های بزرگ اقامت در "
+"پلازا است. 24 ساعت شبانه روز از غذاهای معروف ما در راحتی اتاق خود لذت ببرید"
+
+#: .\templates\facilities\faci.html:88
+msgid "Menus"
+msgstr "منو"
+
+#: .\templates\facilities\faci.html:94
+msgid "Chefs"
+msgstr "سرآشپز ها"
+
+#: .\templates\facilities\faci.html:100
+msgid "Events"
+msgstr "رویداد ها"
+
+#: .\templates\facilities\faci.html:125
+msgid "Breakfast"
+msgstr "صبحانه"
+
+#: .\templates\facilities\faci.html:136
+msgid "Lunch"
+msgstr "نهار"
+
+#: .\templates\facilities\faci.html:147
+msgid "Dinner"
+msgstr "شام"
+
+#: .\templates\facilities\faci.html:158
+msgid "In-room"
+msgstr "در اتاق"
+
+#: .\templates\facilities\faci.html:181 .\templates\facilities\faci.html:197
+msgid "John Mike Doe"
+msgstr ""
+
+#: .\templates\facilities\faci.html:181
+msgid "Executive pastry chef"
+msgstr "قنادی اجرایی"
+
+#: .\templates\facilities\faci.html:182 .\templates\facilities\faci.html:198
+msgid ""
+"Gubergren eros stet est sit et et magna no praesent nam duo duo dolore "
+"dolore hendrerit takimata dolore duo gubergren stet sit commodo eleifend duo"
+msgstr ""
+
+#: .\templates\facilities\faci.html:183 .\templates\facilities\faci.html:199
+msgid ""
+"Vero sed quis euismod et erat dolore elitr elitr invidunt facilisis amet "
+"labore nonumy sea at labore erat et iriure et stet sit dolore justo "
+"consetetur id dolor sed diam"
+msgstr ""
+
+#: .\templates\facilities\faci.html:184 .\templates\facilities\faci.html:200
+msgid ""
+"Et no odio ipsum est eirmod lorem at accusam sit sea eros at sit justo sed "
+"suscipit doming sadipscing dolore aliquyam et no accusam dolores"
+msgstr ""
+
+#: .\templates\facilities\faci.html:197
+msgid "Lead chef"
+msgstr "سرآشپز"
+
+#: .\templates\facilities\faci.html:240 .\templates\facilities\faci.html:287
+msgid "Newly renovated by Master Architect Thierry Despont"
+msgstr "به تازگی توسط استاد معمار تیری دسپونت بازسازی شده است"
+
+#: .\templates\facilities\faci.html:256 .\templates\facilities\faci.html:303
+msgid "Ideal venue for cocktail style rehearsal dinners"
+msgstr "مکانی ایده آل برای شام های تمرینی سبک کوکتل"
+
+#: .\templates\facilities\faci.html:343
+msgid "Resort facilities"
+msgstr ""
+
+#: .\templates\facilities\faci.html:344
+msgid "Explore more"
+msgstr ""
+
+#: .\templates\facilities\faci.html:346
+msgid "With the best luxury spa, salon and fitness experiences"
+msgstr ""
+
+#: .\templates\facilities\faci.html:361 .\templates\facilities\faci.html:366
+msgid "Spa center"
+msgstr ""
+
+#: .\templates\facilities\faci.html:367
+msgid "Unparalleled devotion to luxury"
+msgstr ""
+
+#: .\templates\facilities\faci.html:370 .\templates\facilities\faci.html:388
+#: .\templates\facilities\faci.html:405 .\templates\facilities\faci.html:425
+#: .\templates\facilities\faci.html:434
+msgid "Anchor link"
+msgstr ""
+
+#: .\templates\facilities\faci.html:379 .\templates\facilities\faci.html:384
+msgid "Gym"
+msgstr ""
+
+#: .\templates\facilities\faci.html:385
+msgid "Care about results"
+msgstr ""
+
+#: .\templates\facilities\faci.html:397
+msgid "Fitness"
+msgstr ""
+
+#: .\templates\facilities\faci.html:402
+msgid "Your daily activities"
+msgstr ""
+
+#: .\templates\facilities\faci.html:416 .\templates\facilities\faci.html:421
+msgid "Beauty salon"
+msgstr ""
+
+#: .\templates\facilities\faci.html:422
+msgid "Hair salons and spas"
+msgstr ""
+
+#: .\templates\facilities\faci.html:432
+msgid "Show more"
+msgstr ""
+
+#: .\templates\facilities\faci.html:448
+msgid "Near by"
+msgstr ""
+
+#: .\templates\facilities\faci.html:448
+msgid "View all"
+msgstr ""
+
+#: .\templates\facilities\faci.html:449
+msgid "Here's a selection of ionic sites related to art, fashion and design."
+msgstr ""
+
+#: .\templates\facilities\faci.html:463
+msgid "Museums"
+msgstr ""
+
+#: .\templates\facilities\faci.html:474
+msgid "Nightlife"
+msgstr ""
+
+#: .\templates\facilities\faci.html:485
+msgid "Food & drink"
+msgstr ""
+
+#: .\templates\facilities\faci.html:496
+msgid "Shopping"
+msgstr ""
+
+#: .\templates\facilities\faci.html:507
+msgid "The City"
+msgstr ""

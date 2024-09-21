@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-19 13:00+0330\n"
-"PO-Revision-Date: 2024-09-19 13:02+0330\n"
+"POT-Creation-Date: 2024-09-19 19:47+0330\n"
+"PO-Revision-Date: 2024-09-19 19:58+0330\n"
 "Last-Translator: aa aa <miladayani526@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
+#: .\templates\cart\cart_detail.html:28
+msgid "Make a reservation"
+msgstr "رزرو کنید"
+
+#: .\templates\cart\cart_detail.html:29
+msgid "Proceed to booking step 2"
+msgstr "به مرحله 2 رزرو بروید"
+
+#: .\templates\cart\cart_detail.html:40
+#| msgid "Room type"
+msgid "Room & rates"
+msgstr "نوع اتاق"
+
+#: .\templates\cart\cart_detail.html:43 .\templates\cart\cart_detail.html:143
+msgid "Reservation"
+msgstr "رزرو"
+
+#: .\templates\cart\cart_detail.html:46
+msgid "Checkout"
+msgstr "پرداخت"
+
 #: .\templates\cart\cart_detail.html:70
 msgid "Room type"
 msgstr "نوع اتاق"
@@ -25,3 +46,51 @@ msgstr "نوع اتاق"
 #: .\templates\cart\cart_detail.html:73
 msgid "Price"
 msgstr "قیمت"
+
+#: .\templates\cart\cart_detail.html:96
+msgid "Arrival date"
+msgstr "تاریخ ورود"
+
+#: .\templates\cart\cart_detail.html:99
+msgid "Guests"
+msgstr "مهمانان"
+
+#: .\templates\cart\cart_detail.html:99
+msgid "adults"
+msgstr "بزرگسالان"
+
+#: .\templates\cart\cart_detail.html:100
+msgid "children"
+msgstr "کودکان"
+
+#: .\templates\cart\cart_detail.html:101
+msgid "infants"
+msgstr "نوزادان"
+
+#: .\templates\cart\cart_detail.html:104
+msgid "Departure date"
+msgstr "تاریخ خروج"
+
+#: .\templates\cart\cart_detail.html:107
+msgid "Nights"
+msgstr "تعداد شب ها"
+
+#: .\templates\cart\cart_detail.html:114
+msgid "price per night"
+msgstr "قیمت هر شب"
+
+#: .\templates\cart\cart_detail.html:117
+msgid "total price"
+msgstr "جمع کل"
+
+#: .\templates\cart\cart_detail.html:130
+msgid "Change"
+msgstr "تغییر"
+
+#: .\templates\cart\cart_detail.html:150
+msgid "Cart is Empty! please add rooms to the cart"
+msgstr "سبد خرید خالی است! لطفا اتاق ها را به سبد خرید اضافه کنید"
+
+#: .\templates\cart\cart_detail.html:151
+msgid "List Of Rooms"
+msgstr "لیست اتاق ها"

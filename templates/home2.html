@@ -1,8 +1,9 @@
 {% extends '_base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block page_title %}
-    Hotel - Booking Box
+    {% trans 'Hotel - Booking Box' %}
 {% endblock %}
 
 {% block content %}
@@ -21,12 +22,12 @@
                     <div class="box box-bottom text-right">
                         <div class="container">
                             <h2 class="title animated h1" data-animation="fadeInDown">
-                                The privacy and <br/>
-                                <span>individuality of a custom</span>
+                                {% trans 'The privacy and' %} <br/>
+                                <span>{% trans 'individuality of a custom' %}</span>
                             </h2>
                             <div class="desc animated" data-animation="fadeInUp">
-                                The Residences have their own dedicated private entrance as well <br/>
-                                as an anonymous "celebrity" entrance, for ultimate privacy.
+                                {% trans 'The Residences have their own dedicated private entrance as well' %} <br/>
+                                {% trans 'as an anonymous "celebrity" entrance, for ultimate privacy.' %}
                             </div>
                             <div class="animated" data-animation="fadeInUp">
                             </div>
@@ -40,17 +41,13 @@
                     <div class="box box-bottom text-center">
                         <div class="container">
                             <h2 class="title animated h1" data-animation="fadeInDown">
-                                A moment of <br/> <span>pure prestige</span>
+                                {% trans 'A moment of' %} <br/> <span>{% trans 'pure prestige' %}</span>
                             </h2>
                             <div class="desc animated" data-animation="fadeInUp">
-                                Lavish social and business events
+                                {% trans 'Lavish social and business events' %}
                             </div>
                             <div class="desc animated" data-animation="fadeInUp">
-                                and unforgettable weddings.
-                            </div>
-                            <div class="animated" data-animation="fadeInUp">
-                                <a href="https://themeforest.net/item/colina-hotel-website-template/20977257"
-                                   class="btn btn-clean">Buy this template</a>
+                                {% trans 'and unforgettable weddings.' %}
                             </div>
                         </div>
                     </div>
@@ -61,14 +58,10 @@
                 <div class="item" style="background-image:url({% static 'assets/images/hote.jpg' %})">
                     <div class="box box-bottom text-center">
                         <div class="container">
-                            <h2 class="title animated h1" data-animation="fadeInDown">Fairmont managed!</h2>
-                            <div class="desc animated" data-animation="fadeInUp">The elegant Champagne Bar, the stylish
-                                Colina Club.
+                            <h2 class="title animated h1" data-animation="fadeInDown">{% trans 'Fairmont managed!' %}</h2>
+                            <div class="desc animated" data-animation="fadeInUp">{% trans 'The elegant Champagne Bar, the stylish Colina Club.' %}
                             </div>
-                            <div class="desc animated" data-animation="fadeInUp">Guestrooms and luxurious suites</div>
-                            <div class="animated" data-animation="fadeInUp">
-                                <a href="#" class="btn btn-clean">Get insipred</a>
-                            </div>
+                            <div class="desc animated" data-animation="fadeInUp">{% trans 'Guestrooms and luxurious suites' %}</div>
                         </div>
                     </div>
                 </div>
@@ -84,10 +77,10 @@
 
             <div class="section-header">
                 <div class="container">
-                    <h2 class="title">Resort facilities <a href="{% url 'facilities' %}"
-                                                           class="btn btn-sm btn-clean-dark">Explore more</a></h2>
+                    <h2 class="title">{% trans 'Resort facilities' %} <a href="{% url 'facilities' %}"
+                                                           class="btn btn-sm btn-clean-dark">{% trans 'Explore more' %}</a></h2>
                     <p>
-                        With the best luxury spa, salon and fitness experiences
+                        {% trans 'With the best luxury spa, salon and fitness experiences' %}
                     </p>
                 </div>
             </div>
@@ -102,16 +95,16 @@
                     <!--logo-item-->
                     <div class="stretcher-logo">
                         <div class="text">
-                            <span class="text-intro h4">Spa center</span>
+                            <span class="text-intro h4">{% trans 'Spa center' %}</span>
                         </div>
                     </div>
                     <!--main text-->
                     <figure>
-                        <h4>Spa center</h4>
-                        <figcaption>Unparalleled devotion to luxury</figcaption>
+                        <h4>{% trans 'Spa center' %}</h4>
+                        <figcaption>{% trans 'Unparalleled devotion to luxury' %}</figcaption>
                     </figure>
                     <!--anchor-->
-                    <a href="{% url 'facilities' %}">Anchor link</a>
+                    <a href="{% url 'facilities' %}">{% trans 'Anchor link' %}</a>
                 </li>
 
                 <!-- === stretcher item === -->
@@ -120,16 +113,16 @@
                     <!--logo-item-->
                     <div class="stretcher-logo">
                         <div class="text">
-                            <span class="text-intro h4">Gym</span>
+                            <span class="text-intro h4">{% trans 'Gym' %}</span>
                         </div>
                     </div>
                     <!--main text-->
                     <figure>
-                        <h4>Gym</h4>
-                        <figcaption>Care about results</figcaption>
+                        <h4>{% trans 'Gym' %}</h4>
+                        <figcaption>{% trans 'Care about results' %}</figcaption>
                     </figure>
                     <!--anchor-->
-                    <a href="{% url 'facilities' %}">Anchor link</a>
+                    <a href="{% url 'facilities' %}">{% trans 'Anchor link' %}</a>
                 </li>
 
                 <!-- === stretcher item === -->
@@ -138,15 +131,15 @@
                     <!--logo-item-->
                     <div class="stretcher-logo">
                         <div class="text">
-                            <span class="text-intro h4">Fitness</span>
+                            <span class="text-intro h4">{% trans 'Fitness' %}</span>
                         </div>
                     </div>
                     <figure>
                         <h4>Fitness</h4>
-                        <figcaption>Your daily activities</figcaption>
+                        <figcaption>{% trans 'Your daily activities' %}</figcaption>
                     </figure>
                     <!--anchor-->
-                    <a href="{% url 'facilities' %}">Anchor link</a>
+                    <a href="{% url 'facilities' %}">{% trans 'Anchor link' %}</a>
                 </li>
 
                 <!-- === stretcher item === -->
@@ -157,25 +150,25 @@
                     <!--logo-item-->
                     <div class="stretcher-logo">
                         <div class="text">
-                            <span class="text-intro h4">Beauty salon</span>
+                            <span class="text-intro h4">{% trans 'Beauty salon' %}</span>
                         </div>
                     </div>
                     <!--main text-->
                     <figure>
-                        <h4>Beauty salon</h4>
-                        <figcaption>Hair salons and spas</figcaption>
+                        <h4>{% trans 'Beauty salon' %}</h4>
+                        <figcaption>{% trans 'Hair salons and spas' %}</figcaption>
                     </figure>
                     <!--anchor-->
-                    <a href="{% url 'facilities' %}">Anchor link</a>
+                    <a href="{% url 'facilities' %}">{% trans 'Anchor link' %}</a>
                 </li>
 
                 <!-- === stretcher item more === -->
 
                 <li class="stretcher-item more">
                     <div class="more-icon">
-                        <span data-title-show="Show more" data-title-hide="+"></span>
+                        <span data-title-show="{% trans 'Show more' %}" data-title-hide="+"></span>
                     </div>
-                    <a href="{% url 'facilities' %}">Anchor link</a>
+                    <a href="{% url 'facilities' %}">{% trans 'Anchor link' %}</a>
                 </li>
 
             </ul>
@@ -189,8 +182,8 @@
 
             <div class="section-header">
                 <div class="container">
-                    <h2 class="title">Near by <a href="{% url '404' %}" class="btn btn-sm btn-clean-dark">View all</a></h2>
-                    <p>Here's a selection of ionic sites related to art, fashion and design.</p>
+                    <h2 class="title">{% trans 'Near by' %} <a href="{% url '404' %}" class="btn btn-sm btn-clean-dark">{% trans 'View all' %}</a></h2>
+                    <p>{% trans "Here's a selection of ionic sites related to art, fashion and design." %}</p>
                 </div>
             </div>
 
@@ -204,7 +197,7 @@
                             <figcaption style="background-image:url({% static 'assets/images/museum.jpg' %})">
                                 <img src="{% static 'assets/images/activity-1.jpg' %}" alt=""/>
                             </figcaption>
-                            <a href="{% url '404' %}" class="btn btn-clean" onclick="">Museums</a>
+                            <a href="{% url '404' %}" class="btn btn-clean" onclick="">{% trans 'Museums' %}</a>
                         </figure>
                     </div>
 
@@ -213,9 +206,9 @@
                     <div class="col-xs-6 col-md-4">
                         <figure>
                             <figcaption style="background-image:url({% static 'assets/images/night.jpg' %})">
-                                <img src="{% static 'assets/images/activity-2.jpg"' %} alt="" />
+                                <img src="{% static 'assets/images/activity-2.jpg' %}" alt=""/>
                             </figcaption>
-                            <a href="{% url '404' %}" class="btn btn-clean">Nightlife</a>
+                            <a href="{% url '404' %}" class="btn btn-clean">{% trans 'Nightlife' %}</a>
                         </figure>
                     </div>
 
@@ -226,7 +219,7 @@
                             <figcaption style="background-image:url({% static 'assets/images/food-drink.jpg' %})">
                                 <img src="{% static 'assets/images/activity-2.jpg' %}" alt=""/>
                             </figcaption>
-                            <a href="{% url '404' %}" class="btn btn-clean">Food & drink</a>
+                            <a href="{% url '404' %}" class="btn btn-clean">{% trans 'Food & drink' %}</a>
                         </figure>
                     </div>
 
@@ -237,7 +230,7 @@
                             <figcaption style="background-image:url({% static 'assets/images/shopping.jpg' %})">
                                 <img src="{% static 'assets/images/activity-4.jpg' %}" alt=""/>
                             </figcaption>
-                            <a href="{% url '404' %}" class="btn btn-clean">Shopping</a>
+                            <a href="{% url '404' %}" class="btn btn-clean">{% trans 'Shopping' %}</a>
                         </figure>
                     </div>
 
@@ -248,7 +241,7 @@
                             <figcaption style="background-image:url({% static 'assets/images/city-life.jpg' %})">
                                 <img src="{% static 'assets/images/activity-5.jpg' %}" alt=""/>
                             </figcaption>
-                            <a href="{% url '404' %}" class="btn btn-clean">The City</a>
+                            <a href="{% url '404' %}" class="btn btn-clean">{% trans 'The City' %}</a>
                         </figure>
                     </div>
 
@@ -263,8 +256,8 @@
 
             <div class="section-header text-center">
                 <div class="container">
-                    <h2 class="title">Hotel services</h2>
-                    <p>Experience & aminities</p>
+                    <h2 class="title">{% trans 'Hotel services' %}</h2>
+                    <p>{% trans 'Experience & aminities' %}</p>
                 </div>
             </div>
 
@@ -278,7 +271,7 @@
                             <figure>
                                 <figcaption>
                                     <span class="hotelicon hotelicon-roomservice"></span>
-                                    <p class="title">Roomservice</p>
+                                    <p class="title">{% trans 'Roomservice' %}</p>
                                 </figcaption>
                             </figure>
                         </div>
@@ -289,7 +282,7 @@
                             <figure>
                                 <figcaption>
                                     <span class="hotelicon hotelicon-wifi"></span>
-                                    <p class="title">Free Wifi</p>
+                                    <p class="title">{% trans 'Free Wifi' %}</p>
                                 </figcaption>
                             </figure>
                         </div>
@@ -300,7 +293,7 @@
                             <figure>
                                 <figcaption>
                                     <span class="hotelicon hotelicon-kitchen"></span>
-                                    <p class="title">Resturant</p>
+                                    <p class="title">{% trans 'Resturant' %}</p>
                                 </figcaption>
                             </figure>
                         </div>
@@ -311,7 +304,7 @@
                             <figure>
                                 <figcaption>
                                     <span class="hotelicon hotelicon-coctail"></span>
-                                    <p class="title">Coctail bar</p>
+                                    <p class="title">{% trans 'Coctail bar' %}</p>
                                 </figcaption>
                             </figure>
                         </div>
@@ -323,7 +316,7 @@
                             <figure>
                                 <figcaption>
                                     <span class="hotelicon hotelicon-parking"></span>
-                                    <p class="title">Free parking</p>
+                                    <p class="title">{% trans 'Free parking' %}</p>
                                 </figcaption>
                             </figure>
                         </div>
@@ -334,7 +327,7 @@
                             <figure>
                                 <figcaption>
                                     <span class="hotelicon hotelicon-pool"></span>
-                                    <p class="title">Pool</p>
+                                    <p class="title">{% trans 'Pool' %}</p>
                                 </figcaption>
                             </figure>
                         </div>
@@ -345,7 +338,7 @@
                             <figure>
                                 <figcaption>
                                     <span class="hotelicon hotelicon-elevator"></span>
-                                    <p class="title">Elevator</p>
+                                    <p class="title">{% trans 'Elevator' %}</p>
                                 </figcaption>
                             </figure>
                         </div>
@@ -356,7 +349,7 @@
                             <figure>
                                 <figcaption>
                                     <span class="hotelicon hotelicon-keys"></span>
-                                    <p class="title">Private rooms</p>
+                                    <p class="title">{% trans 'Private rooms' %}</p>
                                 </figcaption>
                             </figure>
                         </div>

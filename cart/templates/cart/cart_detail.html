@@ -5,7 +5,7 @@
 {% load i18n %}
 
 {% block page_title %}
-    Colina - Cart
+    کولینا - سبد خرید
 {% endblock %}
 
 {% block content %}
@@ -25,8 +25,8 @@
 
             <div class="page-header" style="background-image:url({% static 'assets/images/header.jpg' %})">
                 <div class="container">
-                    <h2 class="title">Make a reservation</h2>
-                    <p>Proceed to booking step 2</p>
+                    <h2 class="title">{% trans 'Make a reservation' %}</h2>
+                    <p>{% trans 'Proceed to booking step 2' %}</p>
                 </div>
             </div>
 
@@ -37,13 +37,13 @@
                     <div class="stepper">
                         <ul class="row">
                             <li class="col-md-4 active">
-                                <a><span data-text="Room & rates"></span></a>
+                                <a><span data-text="{% trans 'Room & rates' %}"></span></a>
                             </li>
                             <li class="col-md-4">
-                                <a><span data-text="Reservation"></span></a>
+                                <a><span data-text="{% trans 'Reservation' %}"></span></a>
                             </li>
                             <li class="col-md-4">
-                                <a><span data-text="Checkout"></span></a>
+                                <a><span data-text="{% trans 'Checkout' %}"></span></a>
                             </li>
                         </ul>
                     </div>
@@ -93,28 +93,28 @@
                                         </div>
 
                                         <p>
-                                            <strong>Arrival date</strong> <br/> {{ item.arrival_date }}
+                                            <strong>{% trans 'Arrival date' %}</strong> <br/> {{ item.arrival_date }}
                                         </p>
                                         <p>
-                                            <strong>Guests</strong> <br/> {{ item.adults }} adults
-                                            <br/>{{ item.children }} children
-                                            <br/>{{ item.infants }} infants
+                                            <strong>{% trans 'Guests' %}</strong> <br/> {{ item.adults }} {% trans 'adults' %}
+                                            <br/>{{ item.children }} {% trans 'children' %}
+                                            <br/>{{ item.infants }} {% trans 'infants' %}
                                         </p>
                                         <p>
-                                            <strong>Departure date</strong> <br/> {{ item.departure_date }}
+                                            <strong>{% trans 'Departure date' %}</strong> <br/> {{ item.departure_date }}
                                         </p>
                                         <p>
-                                            <strong>Nights</strong> <br/> {{ item.nights }}
+                                            <strong>{% trans 'Nights' %}</strong> <br/> {{ item.nights }}
                                         </p>
 
 
                                     </div>
                                     <div class="price">
                                         <span class="final h3">{{ item.room_obj.price_per_night|intcomma:False }}</span>
-                                        <span>price per night</span>
+                                        <span>{% trans 'price per night' %}</span>
                                         <br>
                                         <span class="final h3">{{ item.totally_price|intcomma:False }}</span>
-                                        <span>total price</span>
+                                        <span>{% trans 'total price' %}</span>
                                         <!--delete-this-item-->
 
                                         <a href="{% url 'cart:remove_to_cart' item.room_obj.id %}">
@@ -127,7 +127,7 @@
                                     {% csrf_token %}
 
                                     {{ item.room_update_quantity_form.inplace }}
-                                    <button type="submit" class="btn btn-clean-dark">Change</button>
+                                    <button type="submit" class="btn btn-clean-dark">{% trans 'Change' %}</button>
 
                                 </form>
 
@@ -140,15 +140,15 @@
                             <div class="cart-block cart-block-footer cart-block-footer-price clearfix">
                                 <span><div class="h2 title">{{ total_sum|intcomma:False }}</div></span>
                                 <div>
-                                    <a href="{% url 'orders:order_create' %}" class="btn btn-main">Reservation <span
+                                    <a href="{% url 'orders:order_create' %}" class="btn btn-main">{% trans 'Reservation' %} <span
                                             class="icon icon-chevron-right"></span></a>
                                 </div>
                             </div>
                         </div>
                         </div>
                         {% else %}
-                            <p> Cart is Empty! please add rooms to the cart</p>
-                            <a href="{% url 'rooms_list' %}">List Of Rooms</a>
+                            <p> {% trans 'Cart is Empty! please add rooms to the cart' %}</p>
+                            <a href="{% url 'rooms_list' %}">{% trans 'List Of Rooms' %}</a>
                         {% endif %}
 
                         </div>

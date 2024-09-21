@@ -1,6 +1,11 @@
 {% extends '_base.html' %}
 
 {% load static %}
+{% load i18n %}
+
+{% block page_title %}
+    {% trans 'ContactUs - Colina Hotel' %}
+{% endblock %}
 
 {% block content %}
     
@@ -17,8 +22,8 @@
 
             <div class="page-header" style="background-image:url({% static 'assets/images/header.jpg' %})">
                 <div class="container">
-                    <h2 class="title">Contact</h2>
-                    <p>The place, our services & our team</p>
+                    <h2 class="title">{% trans 'Contact' %}</h2>
+                    <p>{% trans 'The place, our services & our team' %}</p>
                 </div>
             </div>
 
@@ -45,14 +50,14 @@
                                 <div class="banner">
                                     <div class="row">
                                         <div class="col-md-offset-1 col-md-10 text-center">
-                                            <h2 class="title">Send an email</h2>
+                                            <h2 class="title">{% trans 'Send an email' %}</h2>
                                             <p>
-                                                Please use this form if you have any questions about our products <br /> and we'll get back with you very soon.
+                                                {% trans 'Please use this form if you have any questions about our products' %} <br /> {% trans "and we'll get back with you very soon." %}
                                             </p>
 
                                             <div class="contact-form-wrapper">
 
-                                                <a class="btn btn-clean open-form" data-text-open="Contact us via form" data-text-close="Close form">Contact us via form</a>
+                                                <a class="btn btn-clean open-form" data-text-open="Contact us via form" data-text-close="{% trans 'Close form' %}">{% trans 'Contact us via form' %}</a>
 
                                                 <div class="contact-form clearfix">
                                                     <form action="#" method="POST">
@@ -60,31 +65,31 @@
                                                         <div class="row">
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                    <input type="text" value="" class="form-control" placeholder="Your name" required="required">
+                                                                    <input type="text" value="" class="form-control" placeholder="{% trans 'Your name' %}" required="required">
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                    <input type="email" value="" class="form-control" placeholder="Your email" required="required">
+                                                                    <input type="email" value="" class="form-control" placeholder="{% trans 'Your email' %}" required="required">
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-12">
 
                                                                 <div class="form-group">
-                                                                    <input type="text" value="" class="form-control" placeholder="Subject" required="required">
+                                                                    <input type="text" value="" class="form-control" placeholder="{% trans 'Subject' %}" required="required">
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-12">
                                                                 <div class="form-group">
-                                                                    <textarea class="form-control" placeholder="Your message" rows="10"></textarea>
+                                                                    <textarea class="form-control" placeholder="{% trans 'Your message' %}" rows="10"></textarea>
                                                                 </div>
                                                             </div>
 
                                                             <div class="col-md-12 text-center">
-                                                                <input type="submit" class="btn btn-clean" value="Send message" />
+                                                                <input type="submit" class="btn btn-clean" value="{% trans 'Send message' %}" />
                                                             </div>
                                                         </div>
                                                     </form>
@@ -103,8 +108,8 @@
                                             <figure class="text-center">
                                                 <span class="icon icon-map-marker"></span>
                                                 <figcaption>
-                                                    <strong>Where are we?</strong>
-                                                    <span>Iran, Kashan <br />KS 10001, Iran</span>
+                                                    <strong>{% trans 'Where are we?' %}</strong>
+                                                    <span>{% trans 'Iran, Kashan' %} <br />{% trans 'Iran' %}</span>
                                                 </figcaption>
                                             </figure>
                                         </div>
@@ -112,7 +117,7 @@
                                             <figure class="text-center">
                                                 <span class="icon icon-phone"></span>
                                                 <figcaption>
-                                                    <strong>Call us</strong>
+                                                    <strong>{% trans 'Call us' %}</strong>
                                                     <span>
                                                         <strong>T</strong> +98 09917303269 <br />
                                                         <strong>T</strong> +98 09302230650
@@ -124,10 +129,10 @@
                                             <figure class="text-center">
                                                 <span class="icon icon-clock"></span>
                                                 <figcaption>
-                                                    <strong>Working hours</strong>
+                                                    <strong>{% trans 'Working hours' %}</strong>
                                                     <span>
-                                                        <strong>Mon</strong> - Sat: 10 am - 6 pm <br />
-                                                        <strong>Sun</strong> 12pm - 2 pm
+                                                        <strong>{% trans 'Mon' %}</strong> - Sat: 10 am - 6 pm <br />
+                                                        <strong>{% trans 'Sun' %}</strong> 12pm - 2 pm
                                                     </span>
                                                 </figcaption>
                                             </figure>

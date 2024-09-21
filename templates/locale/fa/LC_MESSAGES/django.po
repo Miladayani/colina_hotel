@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-19 14:16+0330\n"
-"PO-Revision-Date: 2024-09-19 14:17+0330\n"
+"POT-Creation-Date: 2024-09-19 18:28+0330\n"
+"PO-Revision-Date: 2024-09-19 18:29+0330\n"
 "Last-Translator: aa aa <miladayani526@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -86,132 +86,178 @@ msgstr "وبلاگ"
 msgid "Home - Booking Intro"
 msgstr "خانه - معرفی رزرو"
 
-#: .\home.html:34
+#: .\home.html:34 .\home2.html:44
 msgid "A moment of"
 msgstr "یک لحظه از"
 
-#: .\home.html:34
+#: .\home.html:34 .\home2.html:44
 msgid "pure prestige"
 msgstr "پرستیژ ناب"
 
-#: .\home.html:37
+#: .\home.html:37 .\home2.html:47
 msgid "Lavish social and business events"
 msgstr "رویدادهای اجتماعی و تجاری مجلل"
 
-#: .\home.html:40
+#: .\home.html:40 .\home2.html:50
 msgid "and unforgettable weddings."
 msgstr "و عروسی های فراموش نشدنی"
 
-#: .\home.html:52
+#: .\home.html:52 .\home2.html:25
 msgid "The privacy and"
 msgstr "حریم خصوصی و"
 
-#: .\home.html:53
+#: .\home.html:53 .\home2.html:26
 msgid "individuality of a custom"
 msgstr "فردیت یک عرف"
 
-#: .\home.html:56
+#: .\home.html:56 .\home2.html:29
 msgid "The Residences have their own dedicated private entrance as well"
 msgstr "اقامتگاه ها دارای ورودی اختصاصی اختصاصی خود نیز هستند"
 
-#: .\home.html:57
+#: .\home.html:57 .\home2.html:30
 msgid "as an anonymous \"celebrity\" entrance, for ultimate privacy."
 msgstr "به عنوان یک ورودی \"مشهور\" ناشناس، برای حفظ حریم خصوصی نهایی."
 
-#: .\home.html:77
+#: .\home.html:77 .\home2.html:61
 msgid "Fairmont managed!"
 msgstr "فرمونت موفق شد!"
 
-#: .\home.html:78
+#: .\home.html:78 .\home2.html:62
 msgid "The elegant Champagne Bar, the stylish Colina Club."
 msgstr "بار شامپاین زیبا، کلوب شیک کولینا."
 
-#: .\home.html:80
+#: .\home.html:80 .\home2.html:64
 msgid "Guestrooms and luxurious suites"
 msgstr "اتاق های مهمان و سوئیت های مجلل"
 
-#: .\home.html:98
+#: .\home.html:98 .\home2.html:80
 msgid "Resort facilities"
 msgstr "امکانات توچال"
 
-#: .\home.html:99
+#: .\home.html:99 .\home2.html:81
 msgid "Explore more"
 msgstr "بیشتر کاوش کنید"
 
-#: .\home.html:101
+#: .\home.html:101 .\home2.html:83
 msgid "With the best luxury spa, salon and fitness experiences"
 msgstr "با بهترین تجارب لوکس اسپا، سالن و تناسب اندام"
 
-#: .\home.html:116 .\home.html:121
+#: .\home.html:116 .\home.html:121 .\home2.html:98 .\home2.html:103
 msgid "Spa center"
 msgstr "مرکز اسپا"
 
-#: .\home.html:122
+#: .\home.html:122 .\home2.html:104
 msgid "Unparalleled devotion to luxury"
 msgstr "ارادت بی نظیر به تجمل گرایی"
 
 #: .\home.html:125 .\home.html:143 .\home.html:160 .\home.html:180
-#: .\home.html:189
+#: .\home.html:189 .\home2.html:107 .\home2.html:125 .\home2.html:142
+#: .\home2.html:162 .\home2.html:171
 msgid "Anchor link"
 msgstr ""
 
-#: .\home.html:134 .\home.html:139
+#: .\home.html:134 .\home.html:139 .\home2.html:116 .\home2.html:121
 msgid "Gym"
 msgstr "باشگاه"
 
-#: .\home.html:140
+#: .\home.html:140 .\home2.html:122
 msgid "Care about results"
 msgstr "به نتایج اهمیت دهید"
 
-#: .\home.html:152
+#: .\home.html:152 .\home2.html:134
 msgid "Fitness"
 msgstr "فیتنس"
 
-#: .\home.html:157
+#: .\home.html:157 .\home2.html:139
 msgid "Your daily activities"
 msgstr "فعالیت های روزانه شما"
 
-#: .\home.html:171 .\home.html:176
+#: .\home.html:171 .\home.html:176 .\home2.html:153 .\home2.html:158
 msgid "Beauty salon"
 msgstr "سالن زیبایی"
 
-#: .\home.html:177
+#: .\home.html:177 .\home2.html:159
 msgid "Hair salons and spas"
 msgstr "سالن های مو و اسپا"
 
-#: .\home.html:187
+#: .\home.html:187 .\home2.html:169
 msgid "Show more"
 msgstr "بیشتر ببینید"
 
-#: .\home.html:203
+#: .\home.html:203 .\home2.html:185
 msgid "Near by"
 msgstr "نزدیک به"
 
-#: .\home.html:203
+#: .\home.html:203 .\home2.html:185
 msgid "View all"
 msgstr "دیدن همه"
 
-#: .\home.html:204
+#: .\home.html:204 .\home2.html:186
 msgid "Here's a selection of ionic sites related to art, fashion and design."
 msgstr ""
 "در اینجا مجموعه ای از سایت های یونی مرتبط با هنر، مد و طراحی آمده است."
 
-#: .\home.html:218
+#: .\home.html:218 .\home2.html:200
 msgid "Museums"
 msgstr "موزه"
 
-#: .\home.html:229
+#: .\home.html:229 .\home2.html:211
 msgid "Nightlife"
 msgstr "زندگی شبانه"
 
-#: .\home.html:240
+#: .\home.html:240 .\home2.html:222
 msgid "Food & drink"
 msgstr "غذا و نوشیدنی"
 
-#: .\home.html:251
+#: .\home.html:251 .\home2.html:233
 msgid "Shopping"
 msgstr "خرید"
 
-#: .\home.html:262
+#: .\home.html:262 .\home2.html:244
 msgid "The City"
 msgstr "شهر"
+
+#: .\home2.html:6
+msgid "Hotel - Booking Box"
+msgstr "خانه - جعبه رزرو"
+
+#: .\home2.html:259
+msgid "Hotel services"
+msgstr "خدمات هتل"
+
+#: .\home2.html:260
+msgid "Experience & aminities"
+msgstr "تجربه و امکانات"
+
+#: .\home2.html:274
+#| msgid "Hotel services"
+msgid "Roomservice"
+msgstr "خدمات اتاق"
+
+#: .\home2.html:285
+msgid "Free Wifi"
+msgstr "وای فای رایگان"
+
+#: .\home2.html:296
+msgid "Resturant"
+msgstr "رستوران"
+
+#: .\home2.html:307
+msgid "Coctail bar"
+msgstr "کوکتل بار"
+
+#: .\home2.html:319
+msgid "Free parking"
+msgstr "پارکینگ رایگان"
+
+#: .\home2.html:330
+msgid "Pool"
+msgstr "استخر"
+
+#: .\home2.html:341
+msgid "Elevator"
+msgstr "آسانسور"
+
+#: .\home2.html:352
+msgid "Private rooms"
+msgstr "اتاق های خصوصی"

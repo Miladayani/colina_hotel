@@ -7,6 +7,7 @@ from django.http import HttpResponse
 
 from orders.models import Order
 
+
 def payment_process(request):
     # Get order id from session
     order_id = request.session.get('order_id')
@@ -32,10 +33,28 @@ def payment_process(request):
 
     res = requests.post(url=zarinpal_request_url, data=json.dumps(request_data), headers=request_header)
 
-    data = res.json()['data']
-    authority = data['authority']
-    order.zarinpal_authority = authority
-    order.save()
+    data = res.json()
+
+    # بررسی می‌کنیم که آیا پاسخ یک دیکشنری است و کلید 'data' در آن وجود دارد یا خیر
+    if isinstance(data, dict) and 'data' in data:
+        authority_data = data['data']
+
+        # بررسی می‌کنیم که آیا 'authority' در authority_data وجود دارد
+        if 'authority' in authority_data:
+            authority = authority_data['authority']
+            order.zarinpal_authority = authority
+            order.save()
+        else:
+            # هندل کردن خطای عدم وجود کلید 'authority'
+            print("Authority key is missing in the response.")
+    else:
+        # هندل کردن خطای عدم وجود داده یا اشتباه بودن نوع پاسخ
+        print("Response data is not a dictionary or missing 'data' key.")
+
+    # data = res.json()['data']
+    # authority = data['authority']
+    # order.zarinpal_authority = authority
+    # order.save()
 
     if 'errors' not in data or len(data['errors']) == 0:
         return redirect('https://www.zarinpal.com/pg/StartPay/{authority}'.format(authority=authority))

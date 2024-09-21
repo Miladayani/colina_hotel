@@ -2,9 +2,10 @@
 {% load static %}
 {% load comment_tags %}
 {% load humanize %}
+{% load i18n %}
 
 {% block page_title %}
-    Room OverView - Colina Hotel
+    {% trans 'Room OverView - Colina Hotel' %}
 {% endblock %}
 
 {% block content %}
@@ -56,7 +57,7 @@
 
                                 <!--=== date arrival ===-->
                                 <div class="col-xs-4 col-sm-3">
-                                    <div class="date" id="dateArrival" data-text="Arrival">
+                                    <div class="date" id="dateArrival" data-text="{% trans 'Arrival' %}">
                                         <input class="datepicker" name="arrival_date"/>
                                         <div class="date-value"></div>
                                     </div>
@@ -65,7 +66,7 @@
                                 <!--=== date departure ===-->
 
                                 <div class="col-xs-4 col-sm-3">
-                                    <div class="date" id="dateDeparture" data-text="Departure">
+                                    <div class="date" id="dateDeparture" data-text="{% trans 'Departure' %}">
                                         <input class="datepicker" name="departure_date"/>
                                         <div class="date-value"></div>
                                     </div>
@@ -75,7 +76,7 @@
 
                                 <div class="col-xs-4 col-sm-2">
 
-                                    <div class="guests" data-text="Guests">
+                                    <div class="guests" data-text="{% trans 'Guests' %}">
                                         <div class="result">
                                             <input class="qty-result" type="text" value="quantity" id="qty-result"
                                                    readonly="readonly"/>
@@ -87,7 +88,7 @@
                                         <ul class="guest-list">
 
                                             <li class="header">
-                                                Please choose number of guests <span class="qty-apply"><i
+                                                {% trans 'Please choose number of guests' %} <span class="qty-apply"><i
                                                     class="icon icon-cross"></i></span>
                                             </li>
 
@@ -103,7 +104,7 @@
                                                 </div>
 
                                                 <div>
-                                                    <span>Adults <small>16+ years</small></span>
+                                                    <span>{% trans 'Adults' %} <small>{% trans '16+ years' %}</small></span>
                                                 </div>
 
                                                 <!--=== Add/remove quantity buttons ===-->
@@ -131,7 +132,7 @@
                                                 <!--=== Label ===-->
 
                                                 <div>
-                                                    <span>Children <small>2-11 years</small></span>
+                                                    <span>{% trans 'Children' %} <small>{% trans '2-11 years' %}</small></span>
                                                 </div>
 
 
@@ -160,7 +161,7 @@
                                                 <!--=== Label ===-->
 
                                                 <div>
-                                                    <span>Infants <small>Under 2 years</small></span>
+                                                    <span>{% trans 'Infants' %} <small>{% trans 'Under 2 years' %}</small></span>
                                                 </div>
 
                                                 <!--=== Add/remove quantity buttons ===-->
@@ -179,8 +180,8 @@
                                 <!--=== button ===-->
                                 <div class="col-xs-12 col-sm-4">
                                     <button type="submit" class="btn btn-clean">
-                                        Book now
-                                        <small>Best Prices Guaranteed</small>
+                                        {% trans 'Book now' %}
+                                        <small>{% trans 'Best Prices Guaranteed' %}</small>
                                     </button>
                                 </div>
 
@@ -205,7 +206,7 @@
 
                             <div class="room-block room-aminities">
 
-                                <h2 class="title">Room aminities</h2>
+                                <h2 class="title">{% trans 'Room amenities' %}</h2>
 
                                 <div class="row">
 
@@ -215,7 +216,7 @@
                                         <figure>
                                             <figcaption>
                                                 <span class="hotelicon hotelicon-air-condition"></span>
-                                                <p>Aircondition</p>
+                                                <p>{% trans 'Aircondition' %}</p>
                                             </figcaption>
                                         </figure>
                                     </div>
@@ -226,7 +227,7 @@
                                         <figure>
                                             <figcaption>
                                                 <span class="hotelicon hotelicon-king-bed"></span>
-                                                <p>1 Kingsize bed</p>
+                                                <p>{% trans '1 Kingsize bed' %}</p>
                                             </figcaption>
                                         </figure>
                                     </div>
@@ -237,7 +238,7 @@
                                         <figure>
                                             <figcaption>
                                                 <span class="hotelicon hotelicon-guest"></span>
-                                                <p>2 People</p>
+                                                <p>{% trans '2 People' %}</p>
                                             </figcaption>
                                         </figure>
                                     </div>
@@ -248,7 +249,7 @@
                                         <figure>
                                             <figcaption>
                                                 <span class="hotelicon hotelicon-wifi"></span>
-                                                <p>Internet</p>
+                                                <p>{% trans 'Internet' %}</p>
                                             </figcaption>
                                         </figure>
                                     </div>
@@ -259,7 +260,7 @@
                                         <figure>
                                             <figcaption>
                                                 <span class="hotelicon hotelicon-washer"></span>
-                                                <p>Washer</p>
+                                                <p>{% trans 'Washer' %}</p>
                                             </figcaption>
                                         </figure>
                                     </div>
@@ -270,7 +271,7 @@
                                         <figure>
                                             <figcaption>
                                                 <span class="hotelicon hotelicon-roomservice"></span>
-                                                <p>Room service</p>
+                                                <p>{% trans 'Room service' %}</p>
                                             </figcaption>
                                         </figure>
                                     </div>
@@ -281,7 +282,7 @@
                             <!-- === Room block === -->
 
                             <div class="room-block">
-                                <h2 class="title">Room overview</h2>
+                                <h2 class="title">{% trans 'Room overview' %}</h2>
                                 <p>
                                     {{ room.description }}
                                 </p>
@@ -291,14 +292,14 @@
 
                             <div class="room-block">
 
-                                <h2 class="title">House rules</h2>
+                                <h2 class="title">{% trans 'House rules' %}</h2>
 
                                 <!-- === box === -->
 
                                 <div class="box">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <p><strong>Check-In</strong></p>
+                                            <p><strong>{% trans 'Check-In' %}</strong></p>
                                         </div>
                                         <div class="col-md-8">
                                             <p>14:00 - 22:00</p>
@@ -311,7 +312,7 @@
                                 <div class="box">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <p><strong>Check-out</strong></p>
+                                            <p><strong>{% trans 'Check-out' %}</strong></p>
                                         </div>
                                         <div class="col-md-8">
                                             <p>14:00 - 22:00</p>
@@ -324,7 +325,7 @@
                                 <div class="box">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <p><strong>Luggage storage</strong></p>
+                                            <p><strong>{% trans 'Luggage storage' %}</strong></p>
                                         </div>
                                         <div class="col-md-8">
                                             <p>14:00 - 22:00</p>
@@ -337,13 +338,11 @@
                                 <div class="box">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <p><strong>Cancellation/prepayment</strong></p>
+                                            <p><strong>{% trans 'Cancellation/prepayment' %}</strong></p>
                                         </div>
                                         <div class="col-md-8">
                                             <p>
-                                                Cancellation and prepayment policies vary according to room type. Please
-                                                enter the dates of your stay and check the conditions of your required
-                                                room.
+                                               {% trans ' Cancellation and prepayment policies vary according to room type. Pleaseenter the dates of your stay and check the conditions of your requiredroom.' %}
                                             </p>
                                         </div>
                                     </div>
@@ -354,15 +353,13 @@
                                 <div class="box">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <p><strong>Children and extra beds</strong></p>
+                                            <p><strong>{% trans 'Children and extra beds' %}</strong></p>
                                         </div>
                                         <div class="col-md-8">
-                                            <p>All children are welcome.</p>
-                                            <p>One child under 6 years is charged EUR 50 per night when using existing
-                                                beds.</p>
-                                            <p>There is no capacity for extra beds in the room.</p>
-                                            <p>Supplements are not calculated automatically in the total costs and will
-                                                have to be paid for separately during your stay. </p>
+                                            <p>{% trans 'All children are welcome.' %}</p>
+                                            <p>{% trans 'One child under 6 years is charged EUR 50 per night when using existing beds.' %}</p>
+                                            <p>{% trans 'There is no capacity for extra beds in the room.' %}</p>
+                                            <p>{% trans 'Supplements are not calculated automatically in the total costs and will have to be paid for separately during your stay.' %}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -372,10 +369,10 @@
                                 <div class="box">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <p><strong>Pets</strong></p>
+                                            <p><strong>{% trans 'Pets' %}</strong></p>
                                         </div>
                                         <div class="col-md-8">
-                                            <p>Pets are not allowed.</p>
+                                            <p>{% trans 'Pets are not allowed.' %}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -385,27 +382,22 @@
                                 <div class="box">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <p><strong>Additional info</strong></p>
+                                            <p><strong>{% trans 'Additional info' %}</strong></p>
                                         </div>
                                         <div class="col-md-8">
-                                            <p>Please note that the restaurant is closed each Sunday.</p>
-                                            <p>The restaurant will also be closed during Christmas (25-26 December).</p>
-                                            <p>Please note that parking spaces cannot be reserved or guaranteed.</p>
+                                            <p>{% trans 'Please note that the restaurant is closed each Sunday.' %}</p>
+                                            <p>{% trans 'The restaurant will also be closed during Christmas (25-26 December).' %}</p>
+                                            <p>{% trans 'Please note that parking spaces cannot be reserved or guaranteed.' %}</p>
                                             <p>
-                                                For a group booking more than 5 rooms up to 4 weeks prior to arrival
-                                                cancellation is
-                                                100% free of charge, within 2 until 4 weeks 50% free of charge, and
-                                                within 2 weeks the
-                                                property will charge you in full. Please note that Ozo hotel always
-                                                charges city tax
-                                                prior to your arrival with the non-refundable rate or group booking.
+                                                {% trans 'For a group booking more than 5 rooms up to 4 weeks prior to arrival cancellation is' %}
+                                                {% trans '100% free of charge, within 2 until 4 weeks 50% free of charge, and within 2 weeks the' %}
+                                                {% trans 'property will charge you in full. Please note that Ozo hotel always charges city tax' %}
+                                                {% trans 'prior to your arrival with the non-refundable rate or group booking.' %}
                                             </p>
                                             <p>
-                                                Please note that the credit card that is used for the booking needs to
-                                                be present at check-in.
-                                                When this credit card is not available please bring a photocopy of the
-                                                credit card with
-                                                authorization of the owner.
+                                                {% trans 'Please note that the credit card that is used for the booking needs to be present at check-in.' %}
+                                                {% trans 'When this credit card is not available please bring a photocopy of the credit card with' %}
+                                                {% trans 'authorization of the owner.' %}
                                             </p>
                                         </div>
                                     </div>
@@ -463,7 +455,7 @@
                                                             <h5>
                                                                 {{ reply.user.username }}
                                                                 <a href="#" class="btn btn-sm btn-main pull-right"><i
-                                                                        class="fa fa-reply"></i> Reply</a>
+                                                                        class="fa fa-reply"></i> {% trans 'Reply' %}</a>
                                                                 <small>{{ reply.date_created }}</small>
                                                             </h5>
                                                         </div>
@@ -491,8 +483,8 @@
                                 <div class="comment-add">
 
                                     <div class="comment-reply-message">
-                                        <div class="h3 title">Leave a Reply</div>
-                                        <p>Your email address will not be published.</p>
+                                        <div class="h3 title">{% trans 'Leave a Reply' %}</div>
+                                        <p>{% trans 'Your email address will not be published.' %}</p>
                                     </div>
 
                                     {% if user.is_authenticated %}
@@ -502,16 +494,16 @@
                                             <div class="form-group">
                                                                         <textarea rows="10" class="form-control"
                                                                                   name="body"
-                                                                                  placeholder="Your comment"
+                                                                                  placeholder="{% trans 'Your comment' %}"
                                                                                   required="required"></textarea>
                                             </div>
                                             <div class="clearfix text-center">
-                                                <input type="submit" class="btn btn-main" value="Add comment"/>
+                                                <input type="submit" class="btn btn-main" value="{% trans 'Add comment' %}"/>
                                             </div>
                                         </form>
                                     {% else %}
-                                        <p>if you want leave comment, you have to be <a
-                                                href="{% url 'account_login' %}">Login</a></p>
+                                        <p>{% trans 'If you want to comment, you must' %}<a
+                                                href="{% url 'account_login' %}">{% trans 'Login' %}</a></p>
                                     {% endif %}
 
                                 </div><!--/comment-add-->

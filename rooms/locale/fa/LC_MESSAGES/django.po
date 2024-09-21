@@ -1,0 +1,281 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-19 19:35+0330\n"
+"PO-Revision-Date: 2024-09-19 20:00+0330\n"
+"Last-Translator: aa aa <miladayani526@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\templates\rooms\room_detail.html:8
+msgid "Room OverView - Colina Hotel"
+msgstr "نمای کلی اتاق - هتل کولینا"
+
+#: .\templates\rooms\room_detail.html:60
+msgid "Arrival"
+msgstr "ورود"
+
+#: .\templates\rooms\room_detail.html:69
+msgid "Departure"
+msgstr "خروج"
+
+#: .\templates\rooms\room_detail.html:79
+msgid "Guests"
+msgstr "مهمانان"
+
+#: .\templates\rooms\room_detail.html:91
+msgid "Please choose number of guests"
+msgstr "لطفا تعداد مهمانان را انتخاب کنید"
+
+#: .\templates\rooms\room_detail.html:107
+msgid "Adults"
+msgstr "بزرگسال"
+
+#: .\templates\rooms\room_detail.html:107
+msgid "16+ years"
+msgstr "16+ سال"
+
+#: .\templates\rooms\room_detail.html:135
+msgid "Children"
+msgstr "کودکان"
+
+#: .\templates\rooms\room_detail.html:135
+msgid "2-11 years"
+msgstr "2-11 سال"
+
+#: .\templates\rooms\room_detail.html:164
+msgid "Infants"
+msgstr "نوزاد"
+
+#: .\templates\rooms\room_detail.html:164
+msgid "Under 2 years"
+msgstr "زیر 2 سال"
+
+#: .\templates\rooms\room_detail.html:183 .\templates\rooms\room_list.html:122
+msgid "Book now"
+msgstr " رزرو کنید"
+
+#: .\templates\rooms\room_detail.html:184
+msgid "Best Prices Guaranteed"
+msgstr "بهترین قیمت ها تضمینی"
+
+#: .\templates\rooms\room_detail.html:209
+msgid "Room amenities"
+msgstr "امکانات اتاق"
+
+#: .\templates\rooms\room_detail.html:219
+msgid "Aircondition"
+msgstr "کولر گازی"
+
+#: .\templates\rooms\room_detail.html:230
+msgid "1 Kingsize bed"
+msgstr "1 تخت کینگ"
+
+#: .\templates\rooms\room_detail.html:241
+msgid "2 People"
+msgstr "2 نفره"
+
+#: .\templates\rooms\room_detail.html:252
+msgid "Internet"
+msgstr "اینترنت"
+
+#: .\templates\rooms\room_detail.html:263
+msgid "Washer"
+msgstr "لباسشویی"
+
+#: .\templates\rooms\room_detail.html:274
+msgid "Room service"
+msgstr "خدمات اتاق"
+
+#: .\templates\rooms\room_detail.html:285
+msgid "Room overview"
+msgstr "نمای کلی اتاق"
+
+#: .\templates\rooms\room_detail.html:295
+msgid "House rules"
+msgstr "قوانین خانه"
+
+#: .\templates\rooms\room_detail.html:302
+msgid "Check-In"
+msgstr "ورود"
+
+#: .\templates\rooms\room_detail.html:315
+msgid "Check-out"
+msgstr "خروج"
+
+#: .\templates\rooms\room_detail.html:328
+msgid "Luggage storage"
+msgstr "انبار چمدان"
+
+#: .\templates\rooms\room_detail.html:341
+msgid "Cancellation/prepayment"
+msgstr "لغو / پیش پرداخت"
+
+#: .\templates\rooms\room_detail.html:345
+msgid ""
+" Cancellation and prepayment policies vary according to room type. "
+"Pleaseenter the dates of your stay and check the conditions of your "
+"requiredroom."
+msgstr ""
+"سیاست های لغو و پیش پرداخت بسته به نوع اتاق متفاوت است. لطفاً تاریخ های "
+"اقامت خود را وارد کرده و شرایط اتاق مورد نیاز خود را بررسی کنید."
+
+#: .\templates\rooms\room_detail.html:356
+msgid "Children and extra beds"
+msgstr "کودکان و تخت اضافی"
+
+#: .\templates\rooms\room_detail.html:359
+msgid "All children are welcome."
+msgstr "همه بچه ها خوش آمدید."
+
+#: .\templates\rooms\room_detail.html:360
+msgid ""
+"One child under 6 years is charged EUR 50 per night when using existing "
+"beds."
+msgstr ""
+"هزینه یک کودک زیر 6 سال در صورت استفاده از تخت های موجود، شبی 200 هزارتومان "
+"است."
+
+#: .\templates\rooms\room_detail.html:361
+msgid "There is no capacity for extra beds in the room."
+msgstr "ظرفیت تخت اضافی در اتاق وجود ندارد."
+
+#: .\templates\rooms\room_detail.html:362
+msgid ""
+"Supplements are not calculated automatically in the total costs and will "
+"have to be paid for separately during your stay."
+msgstr ""
+"مکمل ها به طور خودکار در کل هزینه ها محاسبه نمی شوند و باید در طول اقامت شما"
+" به طور جداگانه پرداخت شوند."
+
+#: .\templates\rooms\room_detail.html:372
+msgid "Pets"
+msgstr "حیوانات"
+
+#: .\templates\rooms\room_detail.html:375
+msgid "Pets are not allowed."
+msgstr "حیوانات خانگی مجاز نیستند."
+
+#: .\templates\rooms\room_detail.html:385
+msgid "Additional info"
+msgstr "اطلاعات اضافی"
+
+#: .\templates\rooms\room_detail.html:388
+msgid "Please note that the restaurant is closed each Sunday."
+msgstr "لطفا توجه داشته باشید که رستوران هر یکشنبه تعطیل است."
+
+#: .\templates\rooms\room_detail.html:389
+msgid "The restaurant will also be closed during Christmas (25-26 December)."
+msgstr "این رستوران همچنین در طول عید (1 تا 3 فروردین) تعطیل خواهد بود."
+
+#: .\templates\rooms\room_detail.html:390
+msgid "Please note that parking spaces cannot be reserved or guaranteed."
+msgstr "لطفا توجه داشته باشید که جای پارک را نمی توان رزرو یا تضمین کرد."
+
+#: .\templates\rooms\room_detail.html:392
+msgid ""
+"For a group booking more than 5 rooms up to 4 weeks prior to arrival "
+"cancellation is"
+msgstr "برای رزرو گروهی بیش از 5 اتاق تا 4 هفته قبل از ورود لغو می شود"
+
+#: .\templates\rooms\room_detail.html:393
+#, python-format
+msgid ""
+"100%% free of charge, within 2 until 4 weeks 50%% free of charge, and within"
+" 2 weeks the"
+msgstr "100٪ رایگان، در عرض 2 تا 4 هفته 50٪ رایگان، و در عرض 2 هفته"
+
+#: .\templates\rooms\room_detail.html:394
+msgid ""
+"property will charge you in full. Please note that Ozo hotel always charges "
+"city tax"
+msgstr ""
+"ملک شما را به طور کامل شارژ می کند. لطفا توجه داشته باشید که هتل اوزو همیشه "
+"مالیات شهری دریافت می کند"
+
+#: .\templates\rooms\room_detail.html:395
+msgid "prior to your arrival with the non-refundable rate or group booking."
+msgstr "قبل از ورود شما با نرخ غیر قابل استرداد یا رزرو گروهی."
+
+#: .\templates\rooms\room_detail.html:398
+msgid ""
+"Please note that the credit card that is used for the booking needs to be "
+"present at check-in."
+msgstr ""
+"لطفاً توجه داشته باشید که کارت اعتباری که برای رزرو استفاده می‌شود باید در "
+"هنگام ورود ارائه شود."
+
+#: .\templates\rooms\room_detail.html:399
+msgid ""
+"When this credit card is not available please bring a photocopy of the "
+"credit card with"
+msgstr ""
+"هنگامی که این کارت اعتباری در دسترس نیست، لطفا یک فتوکپی از کارت اعتباری "
+"همراه داشته باشید"
+
+#: .\templates\rooms\room_detail.html:400
+msgid "authorization of the owner."
+msgstr "مجوز مالک"
+
+#: .\templates\rooms\room_detail.html:458
+msgid "Reply"
+msgstr "پاسخ"
+
+#: .\templates\rooms\room_detail.html:486
+msgid "Leave a Reply"
+msgstr "یک پاسخ بگذارید"
+
+#: .\templates\rooms\room_detail.html:487
+msgid "Your email address will not be published."
+msgstr "آدرس ایمیل شما منتشر نخواهد شد."
+
+#: .\templates\rooms\room_detail.html:497
+msgid "Your comment"
+msgstr "کامنت شما"
+
+#: .\templates\rooms\room_detail.html:501
+msgid "Add comment"
+msgstr "کامنت بگذارید"
+
+#: .\templates\rooms\room_detail.html:505
+msgid "If you want to comment, you must"
+msgstr "اگر میخواهی کامنت بگذاری , شما باید"
+
+#: .\templates\rooms\room_detail.html:506
+msgid "Login"
+msgstr "لاگین کنی"
+
+#: .\templates\rooms\room_list.html:7
+msgid "List Of Rooms"
+msgstr "لیست اتاق ها"
+
+#: .\templates\rooms\room_list.html:36
+msgid "A moment of"
+msgstr "یک لحظه از"
+
+#: .\templates\rooms\room_list.html:36
+msgid "pure prestige"
+msgstr "پرستیژ ناب"
+
+#: .\templates\rooms\room_list.html:39
+msgid "Lavish social and business events"
+msgstr "رویداد های اجتماعی و تجاری ملل"
+
+#: .\templates\rooms\room_list.html:42
+msgid "and unforgettable weddings."
+msgstr "و عروسی های فراموش نشدنی"
+
+#: .\templates\rooms\room_list.html:126
+msgid "per night"
+msgstr "در هر شب"
