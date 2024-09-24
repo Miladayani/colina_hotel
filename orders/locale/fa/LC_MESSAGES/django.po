@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-19 20:13+0330\n"
+"POT-Creation-Date: 2024-09-23 23:24+0330\n"
 "PO-Revision-Date: 2024-09-19 20:18+0330\n"
 "Last-Translator: aa aa <miladayani526@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -126,3 +126,7 @@ msgstr ""
 #: .\templates\orders\order_create.html:252
 msgid "Back"
 msgstr "برگشت"
+
+#: .\views.py:19
+msgid "There are no orders in your cart."
+msgstr "هیچ سفارشی در سبد خرید شما وجود ندارد"

@@ -42,8 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'django.contrib.humanize',
+
+    'jalali_date',
 
     # local apps
     'accounts',
@@ -55,6 +56,7 @@ INSTALLED_APPS = [
     'cart',
     'orders',
     'payment',
+    'persian_translate',
 
     # third party
     'allauth',

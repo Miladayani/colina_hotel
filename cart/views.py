@@ -5,7 +5,7 @@ from django.views.decorators.http import require_POST
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 
-# from django.utils.translation import gettext as _
+from django.utils.translation import gettext as _
 
 from rooms.models import Room
 from .cart import Cart
@@ -98,8 +98,8 @@ def cart_clear(request):
 
     if len(cart):
         cart.clear()
-        messages.success(request, 'Cart cleared')
+        messages.success(request, _('Cart cleared'))
     else:
-        messages.error(request, 'your cart is already empty')
+        messages.error(request, _('your cart is already empty'))
 
     return redirect('room_list')

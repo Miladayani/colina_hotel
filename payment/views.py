@@ -135,7 +135,6 @@ def payment_process_sandbox(request):
     }
 
     res = requests.post(zarinpal_request_url, data=json.dumps(request_data), headers=request_header)
-    print(res)
 
     data = res.json()
     authority = data['Authority']

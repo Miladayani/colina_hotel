@@ -1,8 +1,10 @@
 {% extends '_base.html' %}
+
 {% load static %}
 {% load comment_tags %}
 {% load humanize %}
 {% load i18n %}
+{% load jalali_tags %}
 
 {% block page_title %}
     {% trans 'Room OverView - Colina Hotel' %}
@@ -431,7 +433,7 @@
                                                         {{ comment.author.username }}
                                                         <a href="#" class="btn btn-sm btn-main pull-right"><i
                                                                 class="fa fa-reply"></i> Reply</a>
-                                                        <small>{{ comment.date_created }}</small>
+                                                        <small>{{ comment.date_created|to_jalali:'%Y/%B/%d' }}</small>
                                                     </h5>
                                                 </div>
                                             </div>

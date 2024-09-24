@@ -1,6 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.utils.translation import gettext as _
 
 from cart.cart import Cart
 from .forms import OrderForm
@@ -15,7 +16,7 @@ def order_create_view(request):
     total_sum = sum(item['totally_price'] for item in cart.cart.values())
 
     if len(cart) == 0:
-        messages.warning(request, 'There are no orders in your cart.')
+        messages.warning(request, _('There are no orders in your cart.'))
         return redirect('rooms_list')
 
     if request.method == 'POST':

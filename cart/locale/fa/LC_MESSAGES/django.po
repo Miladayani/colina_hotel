@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-19 19:47+0330\n"
+"POT-Creation-Date: 2024-09-23 23:15+0330\n"
 "PO-Revision-Date: 2024-09-19 19:58+0330\n"
 "Last-Translator: aa aa <miladayani526@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\cart.py:65
+msgid "Room successfully removed from Cart"
+msgstr "اتاق با موفقیت از سبد خرید حذف شد."
 
 #: .\templates\cart\cart_detail.html:28
 msgid "Make a reservation"
@@ -27,7 +31,6 @@ msgid "Proceed to booking step 2"
 msgstr "به مرحله 2 رزرو بروید"
 
 #: .\templates\cart\cart_detail.html:40
-#| msgid "Room type"
 msgid "Room & rates"
 msgstr "نوع اتاق"
 
@@ -94,3 +97,11 @@ msgstr "سبد خرید خالی است! لطفا اتاق ها را به سبد
 #: .\templates\cart\cart_detail.html:151
 msgid "List Of Rooms"
 msgstr "لیست اتاق ها"
+
+#: .\views.py:101
+msgid "Cart cleared"
+msgstr "سبد خرید خالی شد."
+
+#: .\views.py:103
+msgid "your cart is already empty"
+msgstr "سبد خرید در حال حاضر خالی است."

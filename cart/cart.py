@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.utils.translation import gettext as _
 
 from rooms.models import Room
 
@@ -61,7 +62,7 @@ class Cart:
         if room_id in self.cart:
             del self.cart[room_id]
 
-        messages.success(self.request, 'Room successfully removed from Cart')
+        messages.success(self.request, _('Room successfully removed from Cart'))
 
         self.save()
 
