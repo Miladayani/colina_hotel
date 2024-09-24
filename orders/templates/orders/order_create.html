@@ -3,6 +3,7 @@
 {% load static %}
 {% load humanize %}
 {% load i18n %}
+{% load persian_translate_tags %}
 
 {% block page_title %}
     {% trans 'Colina - Orders' %}
@@ -226,10 +227,10 @@
 
                                         </div>
                                         <div class="price">
-                                            <span class="final h3">{{ item.room_obj.price_per_night|intcomma:False }}</span>
+                                            <span class="final h3">{{ item.room_obj.price_per_night|intcomma:False|translate_number }}</span>
                                             <span>{% trans 'price per night' %}</span>
                                             <br>
-                                            <span class="final h3">{{ item.totally_price|intcomma:False }}</span>
+                                            <span class="final h3">{{ item.totally_price|intcomma:False|translate_number }}</span>
                                             <span>{% trans 'total price' %}</span>
                                         </div>
                                         <!--delete-this-item-->
@@ -248,7 +249,7 @@
 
                             <div class="clearfix">
                                 <div class="cart-block cart-block-footer cart-block-footer-price clearfix">
-                                    <span><div class="h2 title">{{ total_sum|intcomma:False }}</div></span>
+                                    <span><div class="h2 title">{{ total_sum|intcomma:False|translate_number }}</div></span>
                                     <div><a href="{% url 'cart:cart_detail' %}" class="btn btn-clean-dark">{% trans 'Back' %}</a>
                                     </div>
                                 </div>

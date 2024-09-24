@@ -5,6 +5,7 @@
 {% load humanize %}
 {% load i18n %}
 {% load jalali_tags %}
+{% load persian_translate_tags %}
 
 {% block page_title %}
     {% trans 'Room OverView - Colina Hotel' %}
@@ -22,7 +23,7 @@
         <div class="page-header" style="background-image:url({% static 'assets/images/header.jpg' %})">
             <div class="container">
                 <h2 class="title">{{ room.name }}</h2>
-                <p>{{ room.price_per_night|intcomma:False }}</p>
+                <p>{{ room.price_per_night|intcomma:False|translate_number }}</p>
             </div>
         </div>
 
@@ -433,7 +434,7 @@
                                                         {{ comment.author.username }}
                                                         <a href="#" class="btn btn-sm btn-main pull-right"><i
                                                                 class="fa fa-reply"></i> Reply</a>
-                                                        <small>{{ comment.date_created|to_jalali:'%Y/%B/%d' }}</small>
+                                                        <small>{{ comment.date_created|to_jalali:'%Y/%B/%d'|translate_number }}</small>
                                                     </h5>
                                                 </div>
                                             </div>
