@@ -30,7 +30,11 @@ SECRET_KEY = env.str('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DJANGO_DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'grandcolina.ir',
+    'www.grandcolina.ir',
+    '127.0.0.1',
+]
 
 
 # Application definition
@@ -78,6 +82,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # Add the account middleware:
     "allauth.account.middleware.AccountMiddleware",
+    # add no access url admin
+    'config.middleware.AdminAccessRestrictionMiddleware',  # مسیر دقیق فایل middleware.py
+
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -109,12 +116,22 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'colina_hotel',
+        'NAME': 'grandcol_test_db',
+        'USER': 'grandcol_milad',
+        'PASSWORD': 'kosnanat0991',
         'HOST': 'localhost',
-        'USER': 'root',
-        'PASSWORD': 'kosnanat',
+        'PORT': '3306',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'colina_hotel',
+#         'HOST': 'localhost',
+#         'USER': 'root',
+#         'PASSWORD': 'kosnanat',
+#     }
+# }
 
 
 # Password validation

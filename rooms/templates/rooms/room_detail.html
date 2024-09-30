@@ -67,7 +67,6 @@
                                 </div>
 
                                 <!--=== date departure ===-->
-
                                 <div class="col-xs-4 col-sm-3">
                                     <div class="date" id="dateDeparture" data-text="{% trans 'Departure' %}">
                                         <input class="datepicker" name="departure_date"/>
@@ -345,7 +344,7 @@
                                         </div>
                                         <div class="col-md-8">
                                             <p>
-                                               {% trans ' Cancellation and prepayment policies vary according to room type. Pleaseenter the dates of your stay and check the conditions of your requiredroom.' %}
+                                                {% trans ' Cancellation and prepayment policies vary according to room type. Pleaseenter the dates of your stay and check the conditions of your requiredroom.' %}
                                             </p>
                                         </div>
                                     </div>
@@ -501,7 +500,8 @@
                                                                                   required="required"></textarea>
                                             </div>
                                             <div class="clearfix text-center">
-                                                <input type="submit" class="btn btn-main" value="{% trans 'Add comment' %}"/>
+                                                <input type="submit" class="btn btn-main"
+                                                       value="{% trans 'Add comment' %}"/>
                                             </div>
                                         </form>
                                     {% else %}
@@ -518,7 +518,6 @@
         </div>
 
     </section>
-
     </body>
 
 {% endblock %}
